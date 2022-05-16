@@ -25,20 +25,20 @@ gulp.task('browserSync-Local', () => {
   browserSync.init({
     logPrefix: "sebenasmart",
     open: false,
-    // http: true,
-    // online: true,
+    http: true,
+    online: false,
     notify: true,
     injectChanges: true,
     proxy: "localhost/sebenasmart/",
     files: ['dist/styles/**'],
-    port: 3025,
-    serveStatic: ["assets/css"],
-    files: "assets/css/sebenasmartEstilos.css",
+    port: 3030,
+    serveStatic: ["dist/styles"],
+    // files: "assets/css/sebenasmartStyles.css",
     snippetOptions: {
         rule: {
             match: /<\/head>/i,
             fn: function (snippet, match) {
-                return '<link rel="stylesheet" type="text/css" href="/sebenasmartEstilos.css"/>' + snippet + match;
+                return '<link rel="stylesheet" type="text/css" href="/sebenasmartStyles.css"/>' + snippet + match;
             }
         }
     }
@@ -49,7 +49,6 @@ gulp.task('browserSync-Local', () => {
 
 gulp.task('browserSync-Server', () => {
   //watch file
-
   browserSync.init({
     logPrefix: "sebenasmart",
     open: true,
@@ -108,7 +107,7 @@ gulp.task('js', () => {
         this.emit('end');
       }
     ))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('./dist/scripts/'))
     .pipe(browserSync.stream());
 });
@@ -117,7 +116,7 @@ gulp.task('jsGeneral', (cb) => {
   pump([
     gulp.src('./resources/assets/scripts/**/*.js'),
     // concat('funciones.js'),
-    // uglify(),
+    uglify(),
     gulp.dest('./dist/scripts/')
   ],
     cb
