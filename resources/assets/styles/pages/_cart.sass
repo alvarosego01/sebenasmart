@@ -1,0 +1,22 @@
+
+
+
+
+
+div#content
+    .container
+        @include responsivo(telefonoTable)
+            width: 95%
+        @include responsivo(pcMedio)
+            width: 90%
+        @include responsivo(general)
+            width: 100%!important
+            max-width: 1240px!important
+        @include responsivo(resto)
+            width: 100%!important
+            max-width: 1340px!important
+
+.woocommerce-cart
+    .woocommerce
+        .coupon
+            margin-bottom: 50px!important

@@ -2,8 +2,6 @@
 
 <?php
 
-echo get_stylesheet_directory_uri();
-
 function asset_path($dir = '')
 {
 
@@ -19,7 +17,9 @@ add_action('wp_enqueue_scripts', function () {
 
 	wp_register_script('Main.Js', get_stylesheet_directory_uri() . '/dist/scripts/main.js', ['jquery'], THEME_VERSION, true);
 	wp_enqueue_script('Main.Js');
+
 });
+
 
 
 ?>

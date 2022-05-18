@@ -7,8 +7,34 @@
     background-color: $whiteBase1!important
 
 
-
 header#site-header.minimized
     .header-main-wapper
         .header-main
             padding: 20px 0
+
+
+
+
+.page-header.page-header-page
+    h1.entry-title
+        padding-top: 75px
+        padding-bottom: 50px
+        @include responsivo(telefonoTable)
+            padding-top: 50px
+        @include responsivo(pcMedio)
+            padding-top: 50px
+
+
+
+
+div#content
+    padding-top: 0
+
+    .woocommerce-cart
+        .woocommerce
+            .coupon
+                margin-bottom: 50px
+                @include responsivo(telefonoTable)
+                    margin-bottom: 25px
+                @include responsivo(pcMedio)
+                    margin-bottom: 25px
