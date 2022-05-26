@@ -32,6 +32,21 @@ $hastaG: $desdeG + 500
     @media only screen and (min-width: $desde) and (max-width: $hasta)
         @content
 
+@mixin containerWidth()
+    @include responsivo(telefonoTable)
+        width: 95%
+    @include responsivo(pcMedio)
+        width: 90%
+        padding-left: 0
+        padding-right: 0
+    @include responsivo(general)
+        width: 100%!important
+        max-width: 1200px!important
+
+    @include responsivo(resto)
+        width: 100%!important
+        max-width: 1275px!important
+
 
 @import variables
 @import generals

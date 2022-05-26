@@ -1,0 +1,80 @@
+
+
+
+
+body.woocommerce-checkout.page.woocommerce-page
+    div#content
+        padding-top: 0
+
+
+
+    .customCheckout01
+        form.checkout.woocommerce-checkout
+            margin-top: 25px
+            textarea
+                min-height: 125px
+            .col-woo-checkout-details.checkoutFormCustom
+                @include responsivo(general)
+                    padding-right: 25px
+                @include responsivo(resto)
+                    padding-right: 25px
+                div#customer_details
+                    box-shadow: $shadow2
+                    background-color: $lightGray_color
+                    padding: 25px 35px
+                    p.form-row
+                        @include responsivo(general)
+                            padding-left: 10px
+                            padding-right: 10px
+                        @include responsivo(resto)
+                            padding-left: 10px
+                            padding-right: 10px
+                    .checkout-billing
+                        .woocommerce-billing-fields
+                            .woocommerce-billing-fields__field-wrapper
+                                display: flex
+                                flex-direction: column
+                                flex-flow: wrap
+                                p
+                                    position: relative
+                                    @include responsivo(general)
+                                        width: 50%
+
+                                    @include responsivo(resto)
+                                        width: 50%
+
+                                    label
+                                        @include responsivo(general)
+                                            position: absolute
+
+                                        @include responsivo(resto)
+                                            position: absolute
+
+                                    span.woocommerce-input-wrapper
+                                        display: block
+                                        height: 50px
+                                        @include responsivo(general)
+                                            margin-top: 35px
+                                        @include responsivo(resto)
+                                            margin-top: 35px
+
+            .checkoutPayCustom
+                box-shadow: $shadow2
+                background-color: $lightGray_color
+                padding: 25px 35px
+                height: fit-content
+                div#order_review
+                    table.shop_table.woocommerce-checkout-review-order-table
+                        border: none
+                        background-color: transparent
+                    div#payment
+                        border: none
+                        background-color: transparent
+                        ul.wc_payment_methods.payment_methods.methods
+                            border: none
+                            background-color: transparent
+                            padding: 15px 0
+                            padding-bottom: 0
+                        .form-row.place-order
+                            button#place_order
+                                margin-top: 0

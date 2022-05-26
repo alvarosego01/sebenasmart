@@ -2,21 +2,136 @@
 
 
 
+body.woocommerce-cart
+    div#content
+        padding-top: 0
 
-div#content
-    .container
-        @include responsivo(telefonoTable)
-            width: 95%
-        @include responsivo(pcMedio)
-            width: 90%
-        @include responsivo(general)
-            width: 100%!important
-            max-width: 1240px!important
-        @include responsivo(resto)
-            width: 100%!important
-            max-width: 1340px!important
+
 
 .woocommerce-cart
     .woocommerce
-        .coupon
-            margin-bottom: 50px!important
+        .col-coupon
+            box-shadow: $shadow2
+            .coupon
+                margin-bottom: 50px
+                @include responsivo(telefonoTable)
+                    margin-bottom: 25px
+                @include responsivo(pcMedio)
+                    margin-bottom: 25px
+
+
+            .coupon
+                margin-bottom: 0
+                background-color: $lightGray_color
+                padding: 15px 25px
+                padding-top: 10px
+                label
+                    margin-bottom: 0
+                    font-size: 16px
+                    a
+                        width: 100%
+                        color: black
+                        display: block
+                .couponContainer
+                    margin-top: 15px
+                    margin-bottom: 10px
+                    .collapseContain
+                        display: flex
+                        flex-direction: row
+                        justify-content: space-between
+                        input
+                            margin-bottom: 0
+                            height: 50px
+                        input#coupon_code
+                            width: 52.5%
+
+                        input.button
+                            background-color: $primaryColorYellow
+                            border: transparent
+
+
+    .customCart01
+        .sectionTopList
+            .buttosnSection
+                margin-bottom: 20px
+                padding-bottom: 15px
+                border-bottom: 1px solid rgba(0,0,0,0.15)
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                align-items: center
+                align-content: center
+                .iconSection
+                    i
+                        font-size: 30px
+                        padding: 10px
+                        background-color: var(--mf-primary-color)
+                        color: black
+                        border-radius: 360px
+        .cartList
+            background-color: $lightGray_color
+            padding: 25px 35px
+            box-shadow: $shadow2
+            form.woocommerce-cart-form
+                width: 100%
+                table.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents
+                    margin-bottom: 0
+                    thead
+                        display: none
+                    tbody
+                        tr.woocommerce-cart-form__cart-item.cart_item
+                            margin-bottom: 25px
+                            border: none
+                            display: flex
+                            flex-direction: row
+                            border-radius: 15px
+                            // box-shadow: $shadow1
+                            box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px
+                            background-color: white
+
+                            td
+                                border-bottom: none
+                                display: flex
+                                justify-content: center
+                                align-content: center
+                                justify-items: center
+                                align-items: center
+                                padding-top: 20px
+                                padding-bottom: 20px
+
+                            td.product-name
+                                @include responsivo(general)
+                                    max-width: 225px
+                                @include responsivo(resto)
+                                    max-width: 225px
+                                a
+                                    transition: $trans
+                                    color: black
+                                    font-weight: 500
+                                    &:hover
+
+                                        color: var(--mf-primary-color)
+
+                        td.actions
+                            display: flex
+                            padding-top: 15px
+                            padding-bottom: 0
+                            button.button.empty-cart-button
+                                background-color: white
+
+        .cart_totals
+            margin-bottom: 0
+            table.shop_table.shop_table_responsive
+                // background-color: $lightGray_color!important
+                background-color: $lightGray_color!important
+                margin-bottom: 0!important
+                border: none!important
+            .ripTicket
+                background-color: #eee
+            .wc-proceed-to-checkout
+                background-color: $lightGray_color!important
+                padding: 15px 25px
+                padding-top: 5px
+                a.checkout-button.button.alt.wc-forward
+                    margin-bottom: 0
+

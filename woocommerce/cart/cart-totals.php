@@ -90,6 +90,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</table>
 
+	<div class="ticketShape">
+		<span class="shape"></span>
+	</div>
+
 	<div class="wc-proceed-to-checkout">
 		<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 	</div>
@@ -97,3 +101,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php do_action( 'woocommerce_after_cart_totals' ); ?>
 
 </div>
+
+	<!-- cupones -->
+	<?php if ( wc_coupons_enabled() ) { ?>
+            <div class=" col-coupon">
+                <div class="coupon">
+                    <label for="coupon_code">
+					<a  data-bs-toggle="collapse" href="#couponContainer" role="button" aria-expanded="false" aria-controls="couponContainer">
+				  		<?php esc_html_e( 'Coupon Discount', 'martfury' ); ?>
+				  	</a>
+					</label>
+					<div class="collapse couponContainer" id="couponContainer">
+						<div class="collapseContain">
+
+							<input type="text" name="coupon_code" class="input-text" id="coupon_code" value=""
+							placeholder="<?php esc_attr_e( 'Coupon code', 'martfury' ); ?>"/>
+							<input type="submit" class="button" name="apply_coupon"
+							value="<?php esc_attr_e( 'Apply coupon', 'martfury' ); ?>"/>
+							<?php do_action( 'woocommerce_cart_coupon' ); ?>
+
+						</div>
+					</div>
+                </div>
+            </div>
+
+	<?php } ?>

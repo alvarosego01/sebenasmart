@@ -20,7 +20,36 @@ defined( 'ABSPATH' ) || exit;
 do_action( 'woocommerce_before_cart' ); ?>
 
 <div class="row customCart01">
-<form class="woocommerce-cart-form col-md-12 col-lg-8" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+
+
+<div class="cartList col-md-12 col-lg-8">
+
+	<div class="sectionTopList">
+
+
+		<div class="buttosnSection">
+		<a href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', get_permalink( get_option( 'woocommerce_shop_page_id' ) ) ) ); ?>"
+                   class="btn-shop thinButton"><i class="icon-arrow-left"></i> <?php esc_html_e( 'Back To Shop', 'martfury' ); ?>
+        </a>
+
+		<div class="iconSection">
+
+		<i class="las la-shopping-bag"></i>
+
+		</div>
+
+		</div>
+
+		<div class="customPageSubTitle">
+			<p class="text">
+				<?php echo 'Items in your cart' ?>
+			</p>
+		</div>
+
+	</div>
+
+<form class="woocommerce-cart-form " action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
     <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
@@ -175,9 +204,7 @@ do_action( 'woocommerce_before_cart' ); ?>
         <tr>
             <td colspan="6" class="actions">
 
-                <a href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', get_permalink( get_option( 'woocommerce_shop_page_id' ) ) ) ); ?>"
-                   class="btn-shop"><i class="icon-arrow-left"></i> <?php esc_html_e( 'Back To Shop', 'martfury' ); ?>
-                </a>
+
 
 				<?php
 				$hidden = '';
@@ -198,32 +225,19 @@ do_action( 'woocommerce_before_cart' ); ?>
 		<?php do_action( 'woocommerce_after_cart_contents' ); ?>
         </tbody>
     </table>
+
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>
 
 </form>
+</div>
+
 <?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
+
 <div class="cart-collaterals col-md-12 col-lg-4">
     <div class="row">
 
-        <div class="col-12  col-colla">
-
-		<?php if ( wc_coupons_enabled() ) { ?>
-            <div class=" col-coupon">
-                <div class="coupon">
-                    <label for="coupon_code"><?php esc_html_e( 'Coupon Discount', 'martfury' ); ?></label>
-                    <input type="text" name="coupon_code" class="input-text" id="coupon_code" value=""
-                           placeholder="<?php esc_attr_e( 'Coupon code', 'martfury' ); ?>"/>
-                    <input type="submit" class="button" name="apply_coupon"
-                           value="<?php esc_attr_e( 'Apply coupon', 'martfury' ); ?>"/>
-					<?php do_action( 'woocommerce_cart_coupon' ); ?>
-                </div>
-            </div>
-	<?php } ?>
-
-        </div>
-
 		<?php
-		$cart_class = 'col-12  col-colla';
+		$cart_class = 'col-12  col-colla ';
 		if ( 'yes' === get_option( 'woocommerce_enable_shipping_calc' ) && WC()->cart->needs_shipping() ) {
 			$cart_class = 'col-12  col-colla';
 			?>
