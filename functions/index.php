@@ -33,6 +33,10 @@ add_action('wp_enqueue_scripts', function () {
 });
 
 
+// remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
+
+// add_action( 'woocommerce_review_order_after_payment', 'woocommerce_checkout_coupon_form' );
+
 
 // require get_stylesheet_directory() . '/functions/classes/index.php';
 

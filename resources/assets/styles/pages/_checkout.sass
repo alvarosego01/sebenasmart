@@ -10,7 +10,7 @@ body.woocommerce-checkout.page.woocommerce-page
 
     .customCheckout01
         form.checkout.woocommerce-checkout
-            margin-top: 25px
+            margin-top: 0
             textarea
                 min-height: 125px
             .col-woo-checkout-details.checkoutFormCustom
@@ -22,6 +22,8 @@ body.woocommerce-checkout.page.woocommerce-page
                     box-shadow: $shadow2
                     background-color: $lightGray_color
                     padding: 25px 35px
+                    @include responsivo(general)
+                        padding: 25px
                     p.form-row
                         @include responsivo(general)
                             padding-left: 10px
@@ -46,6 +48,7 @@ body.woocommerce-checkout.page.woocommerce-page
                                     label
                                         @include responsivo(general)
                                             position: absolute
+                                            font-size: 12.5px
 
                                         @include responsivo(resto)
                                             position: absolute
@@ -61,8 +64,14 @@ body.woocommerce-checkout.page.woocommerce-page
             .checkoutPayCustom
                 box-shadow: $shadow2
                 background-color: $lightGray_color
-                padding: 25px 35px
+                padding: 25px 0
                 height: fit-content
+                h3#order_review_heading
+                    padding: 0 30px
+                    margin-bottom: 5px
+                .sectionTopList
+                    padding: 0 30px
+
                 div#order_review
                     table.shop_table.woocommerce-checkout-review-order-table
                         border: none
@@ -70,11 +79,20 @@ body.woocommerce-checkout.page.woocommerce-page
                     div#payment
                         border: none
                         background-color: transparent
+                        .ticketShape
+                            margin-top: 20px
+                            margin-bottom: 0
                         ul.wc_payment_methods.payment_methods.methods
                             border: none
                             background-color: transparent
-                            padding: 15px 0
-                            padding-bottom: 0
+                            padding: 0
+                            li.woocommerce-notice.woocommerce-notice--info.woocommerce-info
+                                background-color: transparent
+                                padding-top: 10px!important
+                                padding-bottom: 10px!important
+
                         .form-row.place-order
+                            padding-left: 30px
+                            padding-right: 30px
                             button#place_order
                                 margin-top: 0

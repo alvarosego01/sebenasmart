@@ -57,6 +57,25 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 				<?php endif; ?>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-5 checkoutPayCustom">
+
+				<div class="sectionTopList">
+
+					<div class="lineTitleSection">
+						<h3><?php esc_html_e( 'Billing details', 'woocommerce' ); ?></h3>
+
+
+					<div class="iconSection">
+
+						<i class="las la-cash-register"></i>
+
+					</div>
+
+					</div>
+
+
+				</div>
+
+
 				<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'martfury' ); ?></h3>
 
 				<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>

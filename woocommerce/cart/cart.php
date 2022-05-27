@@ -26,8 +26,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 	<div class="sectionTopList">
 
-
-		<div class="buttosnSection">
+		<div class="lineTitleSection">
 		<a href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', get_permalink( get_option( 'woocommerce_shop_page_id' ) ) ) ); ?>"
                    class="btn-shop thinButton"><i class="icon-arrow-left"></i> <?php esc_html_e( 'Back To Shop', 'martfury' ); ?>
         </a>

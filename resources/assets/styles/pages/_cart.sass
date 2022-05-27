@@ -51,23 +51,12 @@ body.woocommerce-cart
 
 
     .customCart01
-        .sectionTopList
-            .buttosnSection
-                margin-bottom: 20px
-                padding-bottom: 15px
-                border-bottom: 1px solid rgba(0,0,0,0.15)
-                display: flex
-                flex-direction: row
-                justify-content: space-between
-                align-items: center
-                align-content: center
-                .iconSection
-                    i
-                        font-size: 30px
-                        padding: 10px
-                        background-color: var(--mf-primary-color)
-                        color: black
-                        border-radius: 360px
+
+        .cart-collaterals
+            @include responsivo(general)
+                padding-right: 0
+            @include responsivo(resto)
+                padding-right: 0
         .cartList
             background-color: $lightGray_color
             padding: 25px 35px
@@ -88,7 +77,7 @@ body.woocommerce-cart
                             // box-shadow: $shadow1
                             box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px
                             background-color: white
-
+                            justify-content: space-around
                             td
                                 border-bottom: none
                                 display: flex
@@ -98,6 +87,11 @@ body.woocommerce-cart
                                 align-items: center
                                 padding-top: 20px
                                 padding-bottom: 20px
+                                @include responsivo(general)
+                                    padding-left: 10px
+                                    padding-right: 10px
+                                    width: fit-content
+
 
                             td.product-name
                                 @include responsivo(general)
