@@ -51,20 +51,20 @@ gulp.task('browserSync-Server', () => {
   //watch file
   browserSync.init({
     logPrefix: "sebenasmart",
-    open: true,
+    open: false,
     https: true,
     online: true,
     notify: true,
     injectChanges: true,
-    proxy: "https://sebenasmart.com/",
+    proxy: "https://general1.sebenas.com/",
 
   serveStatic: ["dist/styles"],
-    files: "dist/styles/global.css",
+    files: ['dist/styles/main.css'],
     snippetOptions: {
         rule: {
             match: /<\/head>/i,
             fn: function (snippet, match) {
-                return '<link rel="stylesheet" type="text/css" href="/sebenasmartEstilos.css"/>' + snippet + match;
+                return '<link rel="stylesheet" type="text/css" href="/main.css"/>' + snippet + match;
             }
         }
     }

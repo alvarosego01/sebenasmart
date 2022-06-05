@@ -1,9 +1,27 @@
 
-
-
 body#tracking_template
-
     div#page
 
         div#content
             padding-top: 0
+
+
+    .trackContainer
+        background-color: $lightGray_color
+        padding: 50px
+
+        .trackingShortCode
+            .elementor-widget-wrap.elementor-element-populated
+                display: flex
+                justify-items: center
+                align-content: center
+                align-items: center
+                justify-items: center
+                .elementor-widget-shortcode
+                    display: block
+                    margin-top: auto
+                    margin-bottom: auto
+                    @include responsivo(general)
+                        padding-left: 25px
+                    @include responsivo(resto)
+                        padding-left: 25px
