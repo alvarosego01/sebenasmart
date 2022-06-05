@@ -38,6 +38,7 @@
                                 'regular_template' => 'Regular',
                                 'cart_template' => 'Cart template',
                                 'checkout_template' => 'Checkout template',
+                                'tracking_template' => 'Track order template',
 
                             ),
                         ),
