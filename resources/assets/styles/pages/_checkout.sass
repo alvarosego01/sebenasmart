@@ -2,7 +2,10 @@
 
 
 
-body.woocommerce-checkout.page.woocommerce-page
+body#checkout_template.woocommerce-checkout.page.woocommerce-page
+
+    .woocommerce-form-coupon-toggle
+        display: none!important
     div#content
         padding-top: 0
 
@@ -16,8 +19,10 @@ body.woocommerce-checkout.page.woocommerce-page
             .col-woo-checkout-details.checkoutFormCustom
                 @include responsivo(general)
                     padding-right: 25px
+                    padding-left: 0
                 @include responsivo(resto)
                     padding-right: 25px
+                    padding-left: 0
                 div#customer_details
                     box-shadow: $shadow2
                     background-color: $lightGray_color
@@ -39,13 +44,22 @@ body.woocommerce-checkout.page.woocommerce-page
                                 flex-flow: wrap
                                 p
                                     position: relative
+                                    // @include responsivo(telefonoTable)
+
+                                    @include responsivo(pcMedio)
+                                        width: 50%
+                                        padding-left: 10px
+                                        padding-right: 10px
                                     @include responsivo(general)
                                         width: 50%
-
                                     @include responsivo(resto)
                                         width: 50%
 
                                     label
+
+                                        @include responsivo(pcMedio)
+                                            position: absolute
+
                                         @include responsivo(general)
                                             position: absolute
                                             font-size: 12.5px
@@ -55,16 +69,32 @@ body.woocommerce-checkout.page.woocommerce-page
 
                                     span.woocommerce-input-wrapper
                                         display: block
-                                        height: 50px
+                                        height: 45px
+
+                                        @include responsivo(pcMedio)
+                                            margin-top: 30px
+
                                         @include responsivo(general)
                                             margin-top: 35px
                                         @include responsivo(resto)
                                             margin-top: 35px
+                                        input.input-text,
+                                        span.select2.select2-container.select2-container--default.select2-container--below
+                                            height: 45px
+                                            min-height: unset
+                                            line-height: 1
+
+                                        .select2-container
+                                            .select2-selection--single
+                                                min-height: unset
+                                                height: 45px
+                                                line-height: 1
 
             .checkoutPayCustom
                 box-shadow: $shadow2
                 background-color: $lightGray_color
                 padding: 25px 0
+                padding-bottom: 10px
                 height: fit-content
                 h3#order_review_heading
                     padding: 0 30px
@@ -73,6 +103,8 @@ body.woocommerce-checkout.page.woocommerce-page
                     padding: 0 30px
 
                 div#order_review
+                    span.woocommerce-Price-amount.amount
+                        color: black
                     table.shop_table.woocommerce-checkout-review-order-table
                         border: none
                         background-color: transparent
@@ -96,3 +128,11 @@ body.woocommerce-checkout.page.woocommerce-page
                             padding-right: 30px
                             button#place_order
                                 margin-top: 0
+
+                        .woocommerce-terms-and-conditions-wrapper
+                            margin-top: 0
+
+                        .woocommerce-privacy-policy-text
+                            p
+                                margin-bottom: 15px
+

@@ -2,11 +2,11 @@
 
 
 // responsivo
-$desdeT: 320px
+$desdeT: 150px
 $hastaT: 767px
 
 $desdeM: $hastaT + 1
-$hastaM: 991px
+$hastaM: 992px
 
 $desdeG: $hastaM
 $hastaG: $desdeG + 500
@@ -24,8 +24,11 @@ $hastaG: $desdeG + 500
     @else if $media == resto
         @media only screen and (min-width: $hastaG + 1)
             @content
-    @else if $media == specialTablet
-        @media only screen and (min-width: 992px) and (max-width: 1150px)
+    @else if $media == specialTexts
+        @media only screen and (min-width: 992px) and (max-width: 1199px)
+            @content
+    @else if $media == smallPcTablet
+        @media only screen and (min-width: 992px) and (max-width: 1199px)
             @content
 
 @mixin responsivoSpecial($desde, $hasta)
@@ -34,9 +37,9 @@ $hastaG: $desdeG + 500
 
 @mixin containerWidth()
     @include responsivo(telefonoTable)
-        width: 95%
-    @include responsivo(pcMedio)
         width: 90%
+    @include responsivo(pcMedio)
+        width: 75%
         padding-left: 0
         padding-right: 0
     @include responsivo(general)

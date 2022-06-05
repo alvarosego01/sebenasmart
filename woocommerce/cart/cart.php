@@ -183,7 +183,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						<?php
 						echo apply_filters(
 							'woocommerce_cart_item_remove_link', sprintf(
-							'<a href="%s" class="mf-remove" aria-label="%s" data-product_id="%s" data-product_sku="%s"><i class="icon-cross2"></i></a>',
+							'<a href="%s" class="mf-remove hiperRed" aria-label="%s" data-product_id="%s" data-product_sku="%s"><i class="lar la-trash-alt"></i></a>',
 							esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
 							esc_html__( 'Remove this item', 'martfury' ),
 							esc_attr( $product_id ),
@@ -226,6 +226,31 @@ do_action( 'woocommerce_before_cart' ); ?>
     </table>
 
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>
+
+		<?php if ( wc_coupons_enabled() ) { ?>
+            <div class="real_coupon col-coupon">
+                <div class="coupon">
+                    <label for="coupon_code">
+					<a  data-bs-toggle="collapse" href="#couponContainer" role="button" aria-expanded="false" aria-controls="couponContainer">
+					<?php esc_html_e( 'Coupon Discount', 'martfury' ); ?>
+				  	</a>
+					</label>
+					<div class="collapse couponContainer" id="couponContainer">
+						<div class="collapseContain">
+
+							<input type="text" name="coupon_code" class="input-text" id="coupon_code" value=""
+							placeholder="<?php esc_attr_e( 'Coupon code', 'martfury' ); ?>"/>
+
+							<input type="submit" class="button" name="apply_coupon"
+							value="<?php esc_attr_e( 'Apply coupon', 'martfury' ); ?>"/>
+							<?php do_action( 'woocommerce_cart_coupon' ); ?>
+
+						</div>
+					</div>
+                </div>
+            </div>
+
+	<?php } ?>
 
 </form>
 </div>

@@ -20,6 +20,12 @@ header#site-header
         .header-main
             .container
                 @include containerWidth()
+                .row.header-row
+                    ul.extras-menu
+                        li
+                            a
+                                [class^="la-"], [class*=" la-"]
+                                    font-size: 42px
 
     .main-menu
         .container
@@ -48,3 +54,5 @@ header#site-header
         @include responsivo(resto)
             padding-left: 15px
             padding-right: 15px
+
+

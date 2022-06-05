@@ -24,7 +24,22 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+
+
+<?php
+	$class = _getField('custom_parent_class_section');
+	$id = _getField('template_custom');
+
+
+
+	specialInitFiles( get_the_ID() );
+
+
+?>
+
+
+
+<body <?php body_class( $class ); ?> id="<?php echo $id ?>" >
 <?php martfury_body_open(); ?>
 
 <div id="page" class="hfeed site">

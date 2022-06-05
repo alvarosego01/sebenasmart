@@ -37,7 +37,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 	<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 		<div class="row">
-		<div class="col-xs-12 col-sm-12 col-md-7 col-woo-checkout-details checkoutFormCustom">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-woo-checkout-details checkoutFormCustom">
 			<?php if ( $checkout->get_checkout_fields() ) : ?>
 
 				<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
@@ -56,7 +56,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 				<?php endif; ?>
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-5 checkoutPayCustom">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 checkoutPayCustom">
 
 				<div class="sectionTopList">
 

@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
 			<tr class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
 				<th><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
-				<td data-title="<?php echo esc_attr( wc_cart_totals_coupon_label( $coupon, false ) ); ?>"><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
+				<td class="innerDiscount" data-title="<?php echo esc_attr( wc_cart_totals_coupon_label( $coupon, false ) ); ?>"><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
 			</tr>
 		<?php endforeach; ?>
 
@@ -102,27 +102,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </div>
 
-	<!-- cupones -->
-	<?php if ( wc_coupons_enabled() ) { ?>
-            <div class=" col-coupon">
-                <div class="coupon">
-                    <label for="coupon_code">
-					<a  data-bs-toggle="collapse" href="#couponContainer" role="button" aria-expanded="false" aria-controls="couponContainer">
-				  		<?php esc_html_e( 'Coupon Discount', 'martfury' ); ?>
-				  	</a>
-					</label>
-					<div class="collapse couponContainer" id="couponContainer">
-						<div class="collapseContain">
 
-							<input type="text" name="coupon_code" class="input-text" id="coupon_code" value=""
-							placeholder="<?php esc_attr_e( 'Coupon code', 'martfury' ); ?>"/>
-							<input type="submit" class="button" name="apply_coupon"
-							value="<?php esc_attr_e( 'Apply coupon', 'martfury' ); ?>"/>
-							<?php do_action( 'woocommerce_cart_coupon' ); ?>
 
-						</div>
-					</div>
-                </div>
-            </div>
 
-	<?php } ?>

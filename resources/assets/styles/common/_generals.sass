@@ -45,6 +45,10 @@ input.a,
             top: -2.5px
             position: relative
 
+.hiperRed
+    &:hover
+        color: red!important
+
 
 .sectionParent
     background-color: $whiteBase1!important
@@ -56,6 +60,8 @@ header#site-header.minimized
             padding: 20px 0
 
 
+a#scroll-top
+    display: none!important
 
 
 .page-header.page-header-page
@@ -64,8 +70,10 @@ header#site-header.minimized
         padding-bottom: 75px
         @include responsivo(telefonoTable)
             padding-top: 50px
+            padding-bottom: 50px
         @include responsivo(pcMedio)
             padding-top: 50px
+            padding-bottom: 50px
 
 .dropdown-toggle::after
     border: none!important
@@ -190,3 +198,108 @@ div#content
 
         h3
             margin: auto 0!important
+
+
+.elementor-column-gap-default
+    display: none
+    max-width: unset!important
+
+
+
+
+.widget_shopping_cart_content .woocommerce-mini-cart__total .woocommerce-Price-amount,
+.woocommerce-cart .woocommerce .cart-collaterals .cart_totals table.shop_table .order-total .woocommerce-Price-amount
+    color: black
+    // font-weight: 900!important
+
+// a.woocommerce-remove-coupon
+//     color: red
+//     margin-left: 2.5px
+
+.cart-discount
+    .innerDiscount
+        color: red!important
+        display: flex
+        flex-direction: row
+        justify-content: center
+        justify-items: center
+        align-content: center
+        align-items: center
+        border: none!important
+        span.woocommerce-Price-amount.amount
+            color: red!important
+            margin-right: 5px
+
+
+
+.customCouponSection
+    .coupon_custom
+        margin-bottom: 50px
+        margin-bottom: 0
+        background-color: $lightGray_color
+        // padding: 15px 25px
+        padding-top: 15px
+        padding-bottom: 15px
+        @include responsivo(telefonoTable)
+            margin-bottom: 25px
+        @include responsivo(pcMedio)
+            margin-bottom: 25px
+        label
+            margin-bottom: 0
+            font-size: 16px
+            display: block
+            width: 100%
+            a
+                width: 100%
+                color: black
+                display: flex
+                justify-content: space-between
+                align-content: center
+                align-items: center
+                transition: $trans
+                i
+                    transition: $trans
+                span.have
+                    display: block
+                span.deploy
+                    display: none
+            a[aria-expanded="true"]
+                span.have
+                    display: none
+                span.deploy
+                    display: block
+                i
+                    transform: rotate(90deg)
+        .couponContainer_custom
+            margin-top: 15px
+            margin-bottom: 10px
+            .collapseContain
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                input
+                    margin-top: 0
+                    margin-bottom: 0
+                    height: 50px
+                input#coupon_code_custom
+                    @include responsivo(general)
+                        width: 60%!important
+                    @include responsivo(smallPcTablet)
+                        width: 55%!important
+                    @include responsivo(resto)
+                        width: 60%!important
+
+
+                input.button
+                    background-color: $primaryColorYellow
+                    border: transparent
+                    margin-top: 0!important
+                    @include responsivo(general)
+                        font-size: 14px
+                        width: 40%!important
+                    @include responsivo(smallPcTablet)
+                        font-size: 13px
+                        width: 45%!important
+                    @include responsivo(resto)
+                        font-size: 15px
+                        width: 40%!important
