@@ -30,11 +30,6 @@ add_action( 'template_redirect', 'get_current_post_ID' );
 
 
 
-
-
-
-
-
     }
     add_action('wp_enqueue_scripts', init_scripts_styles() );
 
@@ -103,12 +98,13 @@ add_action( 'template_redirect', 'get_current_post_ID' );
 
 	<?php }
 
-
     }
-
     add_action( 'woocommerce_after_cart_totals', 'customCouponField' );
     add_action( 'woocommerce_review_order_after_submit', 'customCouponField' );
 
+
+    // remove sku
+    add_filter( 'wc_product_sku_enabled', '__return_false' );
 
 
 
