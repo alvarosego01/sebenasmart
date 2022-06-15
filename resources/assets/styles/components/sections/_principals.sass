@@ -1,0 +1,111 @@
+
+
+
+section.principalComponent1
+    // &.blackBackground
+    padding-left: 50px!important
+    padding-right: 50px!important
+    @include responsivo(telefonoTable)
+        padding-left: 0!important
+        padding-right: 0!important
+        padding-bottom: 0!important
+        padding-top: 50px!important
+    @include responsivo(pcMedio)
+        padding-left: 0!important
+        padding-right: 0!important
+        padding-top: 50px!important
+
+
+    .elementor-container.elementor-column-gap-wide
+        @include responsivo(pcMedio)
+            display: flex
+            flex-direction: column
+        .columnContainer
+            @include responsivo(pcMedio)
+                width: 100%
+            .elementor-widget-wrap.elementor-element-populated
+                display: flex
+                flex-direction: column
+                .titleElement
+                    margin-top: auto
+                    display: block
+                    .elementor-widget-container
+                        h2.elementor-heading-title.elementor-size-default
+                            @include h2_title_contain()
+
+                .textElement
+                    @include responsivo(telefonoTable)
+                        padding: 0 25px
+                    @include responsivo(pcMedio)
+                        padding: 25px
+                    .elementor-widget-container
+                        margin-top: 20px
+                        @include responsivo(telefonoTable)
+                            margin-top: 0
+                        @include responsivo(pcMedio)
+                            margin-top: 0
+                        p,
+                        div
+                            @include p_title_contain()
+                            span
+                                width: 100%
+
+                .imageElement
+                    .elementor-widget-container
+                        img
+
+                            @include responsivo(pcMedio)
+                                height: 350px
+                                width: auto
+
+        .columnContainer
+
+            &:nth-last-of-type(2)
+                .elementor-widget-wrap.elementor-element-populated
+                    @include responsivo(pcMedio)
+                        display: flex
+                        flex-direction: column-reverse
+
+    &.blackBackground
+        background-color: $blackColor
+        .elementor-container.elementor-column-gap-wide
+            .columnContainer
+                .elementor-widget-wrap.elementor-element-populated
+                    .titleElement
+                        .elementor-widget-container
+                            h2.elementor-heading-title.elementor-size-default
+                                color: $primaryColorYellow
+
+                    .textElement
+                        .elementor-widget-container
+                            p,
+                            div
+                                color: $whiteBase1
+    &.whiteBackground
+        background-color: $whiteBase1
+        .elementor-container.elementor-column-gap-wide
+            .columnContainer
+                .elementor-widget-wrap.elementor-element-populated
+                    .titleElement
+                        .elementor-widget-container
+                            h2.elementor-heading-title.elementor-size-default
+                                color: $blackColor
+                    .textElement
+                        .elementor-widget-container
+                            p,
+                            div
+                                color: $grayColor
+    &.grayBackground
+        background-color: $lightGray_color
+        .elementor-container.elementor-column-gap-wide
+            .columnContainer
+                .elementor-widget-wrap.elementor-element-populated
+                    .titleElement
+                        .elementor-widget-container
+                            h2.elementor-heading-title.elementor-size-default
+                                color: $blackColor
+                    .textElement
+                        .elementor-widget-container
+                            p,
+                            div
+                                color: $blackColor

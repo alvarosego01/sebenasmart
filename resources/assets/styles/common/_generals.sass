@@ -17,8 +17,6 @@ button
     transition: $trans
 
 .button,
-.button,
-.button,
 input.a,
 .mf-button,
 .btn-shop,
@@ -52,6 +50,15 @@ input.a,
 
 .sectionParent
     background-color: $whiteBase1!important
+
+
+.containerImage.containImageHover
+    overflow: hidden
+    img
+        transition: $trans
+    &:hover
+        img
+            transform: scale(1.1)
 
 
 header#site-header.minimized
@@ -130,6 +137,65 @@ div#content
     i
         font-size: 16px!important
         margin-right: 5px
+
+
+// .sbn_buttonCustom.sbn_primaryButton.left_side
+
+.sbn_buttonCustom
+    display: flex
+    flex-direction: row
+    justify-content: center
+    justify-items: center
+    align-content: center
+    align-items: center
+    text-decoration: none
+    font-size: 20px
+    line-height: 1
+    padding: 15px 40px!important
+    // border-radius: 7px
+    width: fit-content
+    transition: $trans
+    transform: scale(1)
+    @include responsivo(telefonoTable)
+        font-size: 13px!important
+        padding: 12.5px 25px!important
+    @include responsivo(pcMedio)
+        font-size: 18px!important
+        padding: 15px 40px!important
+    @include responsivo(smallPcTablet)
+        padding: 15px 30px!important
+        font-size: 18px!important
+    .icon-container
+        i
+            margin-right: 5px
+            @include responsivo(telefonoTable)
+                font-size: 15px
+            @include responsivo(pcMedio)
+                font-size: 15px
+            @include responsivo(general)
+                font-size: 18px
+            @include responsivo(smallPcTablet)
+                font-size: 16px
+            @include responsivo(resto)
+                font-size: 18px
+
+
+    &:hover
+        transform: scale(1.05)
+    &.sbn_primaryButton
+        background-color: $primaryColorYellow
+        color: $blackColor
+    &.sbn_secondaryButton
+        background-color: $lightGray_color
+        color: $blackColor
+    &.sbn_thirdButton
+        background-color: $blackColor
+        color: $whiteBase1
+    &.sbn_transparentButton
+        border: 1px solid $blackColor
+        background-color: transparent
+    &.sbn_underlineButton
+        color: $blackColor
 
 
 

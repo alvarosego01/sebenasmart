@@ -1,0 +1,91 @@
+
+
+
+    // left black
+.sectionInfoComponent_2c
+    @include responsivo(general)
+        padding: 75px!important
+    @include responsivo(resto)
+        padding: 75px!important
+    .elementor-container.elementor-column-gap-no
+        max-width: 100%!important
+        @include responsivo(pcMedio)
+            display: flex
+            flex-direction: column
+
+        .columnContainer
+            @include responsivo(pcMedio)
+                width: 100%
+            .elementor-widget-wrap.elementor-element-populated
+                .imageElement
+                    .elementor-widget-container
+                        overflow: hidden
+                        // img
+
+                .h3_titleElement
+                    .elementor-widget-container
+                        h3
+                            line-height: 1
+                            @include h3_title_contain()
+
+                .textElement
+                    .elementor-widget-container
+                        p,
+                        div
+                            @include p_title_contain()
+                            span
+                                width: 100%
+                            &:last-of-type
+                                margin-bottom: 0!important
+
+    &.blackBackground
+        background-color: $blackColor
+        .elementor-container.elementor-column-gap-no
+            .columnContainer
+                .elementor-widget-wrap.elementor-element-populated
+
+                    .h3_titleElement
+                        .elementor-widget-container
+                            h3
+                                color: $whiteBase1
+
+                    .textElement
+                    .elementor-widget-container
+                        p,
+                        div
+                            color: $whiteBase1
+    &.whiteBackground
+        background-color: $whiteBase1
+        .elementor-container.elementor-column-gap-no
+            .columnContainer
+                .elementor-widget-wrap.elementor-element-populated
+
+                    .h3_titleElement
+                        .elementor-widget-container
+                            h3
+                                color: $blackColor
+
+                    .textElement
+                    .elementor-widget-container
+                        p,
+                        div
+                            color: $grayColor
+    &.grayBackground
+        background-color: $lightGray_color
+        .elementor-container.elementor-column-gap-no
+            .columnContainer
+                .elementor-widget-wrap.elementor-element-populated
+
+                    .h3_titleElement
+                        .elementor-widget-container
+                            h3
+                                color: $blackColor
+
+                    .textElement
+                    .elementor-widget-container
+                        p,
+                        div
+                            color: $blackColor
+
+
+
