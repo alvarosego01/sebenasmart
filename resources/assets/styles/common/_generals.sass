@@ -67,6 +67,9 @@ header#site-header.minimized
             padding: 20px 0
 
 
+
+
+
 a#scroll-top
     display: none!important
 
@@ -152,7 +155,6 @@ div#content
     font-size: 20px
     line-height: 1
     padding: 15px 40px!important
-    // border-radius: 7px
     width: fit-content
     transition: $trans
     transform: scale(1)
@@ -166,8 +168,14 @@ div#content
         padding: 15px 30px!important
         font-size: 18px!important
     .icon-container
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-content: center
+        align-items: center
         i
-            margin-right: 5px
+            display: block
+            margin: auto
             @include responsivo(telefonoTable)
                 font-size: 15px
             @include responsivo(pcMedio)
@@ -179,9 +187,10 @@ div#content
             @include responsivo(resto)
                 font-size: 18px
 
-
     &:hover
         transform: scale(1.05)
+        cursor: pointer
+
     &.sbn_primaryButton
         background-color: $primaryColorYellow
         color: $blackColor
@@ -196,6 +205,17 @@ div#content
         background-color: transparent
     &.sbn_underlineButton
         color: $blackColor
+
+    &.right_side
+        display: flex
+        flex-direction: row-reverse
+        .icon-container
+            margin-left: 10px
+    &.left_side
+        display: flex
+        flex-direction: row
+        .icon-container
+            margin-right: 10px
 
 
 
