@@ -34,8 +34,10 @@ if ( post_password_required() ) {
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
-
 	<div class="mf-product-detail">
+
+		vista prueba
+
 		<?php
 		/**
 		 * woocommerce_before_single_product_summary hook.
