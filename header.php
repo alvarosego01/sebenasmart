@@ -10,15 +10,16 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 	<?php wp_head(); ?>
 
 
-
-	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 
@@ -27,10 +28,9 @@
 
 
 <?php
-	$class = _getField('custom_parent_class_section');
-	$id = _getField('template_custom');
 
-
+	$class = _getField('custom_parent_class_section' , get_the_ID());
+	$id = _getField('template_custom' , get_the_ID());
 
 	specialInitFiles( get_the_ID() );
 

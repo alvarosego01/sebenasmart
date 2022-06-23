@@ -11,5 +11,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+
+
 ?>
-<div id="primary" class="content-area <?php martfury_content_columns() ?>">
+<!-- martfury_content_columns -->
+
+<div id="primary" class="content-area <?php sbn_content_columns() ?>">
+

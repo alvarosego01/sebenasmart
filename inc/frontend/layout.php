@@ -73,6 +73,7 @@ function martfury_body_classes( $classes ) {
 		$product_layout = martfury_get_product_layout();
 		$classes[]      = 'single-product-layout-' . $product_layout;
 
+
 		$sticky_product = apply_filters( 'martfury_sticky_product_info', martfury_get_option( 'sticky_product_info' ) );
 		if ( intval( $sticky_product ) ) {
 			$classes[] = 'sticky-header-info';

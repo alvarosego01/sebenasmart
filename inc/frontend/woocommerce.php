@@ -3303,7 +3303,7 @@ class Martfury_WooCommerce {
 			return;
 		}
 
-		if ( martfury_get_product_layout() != '1' ) {
+		if ( martfury_get_product_layout() != '1' || martfury_get_product_layout() != '2' ) {
 			return;
 		}
 

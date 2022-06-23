@@ -39,7 +39,7 @@
                                 'cart_template' => 'Cart template',
                                 'checkout_template' => 'Checkout template',
                                 'tracking_template' => 'Track order template',
-
+                                'shop_template' => 'Shop page template',
                             ),
                         ),
 
@@ -135,11 +135,6 @@
 
 
 
-      function aaa(){
-
-        echo 'AAA FUNCION FUNCIONA';
-
-    }
 
 
     add_action('acf/init', setACF() );

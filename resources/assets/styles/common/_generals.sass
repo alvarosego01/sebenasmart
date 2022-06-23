@@ -81,9 +81,17 @@ a#scroll-top
         @include responsivo(telefonoTable)
             padding-top: 50px
             padding-bottom: 50px
+            font-size: 30px
         @include responsivo(pcMedio)
             padding-top: 50px
             padding-bottom: 50px
+            font-size: 35px
+        @include responsivo(general)
+            font-size: 40px
+        @include responsivo(smallPcTablet)
+            padding: 50px 0
+        @include responsivo(resto)
+            font-size: 45px
 
 .dropdown-toggle::after
     border: none!important
@@ -96,13 +104,13 @@ a#scroll-top
     margin: 0!important
 
 div#content
+    @include responsivo(telefonoTable)
+        padding-top: 0
+    @include responsivo(pcMedio)
+        padding-top: 0
     .container-fluid
         padding-left: 0
         padding-right: 0
-    // .row > *
-        // padding-left: 0
-        // padding-right: 0
-
     .container
         @include containerWidth()
 
@@ -114,8 +122,7 @@ div#content
         .row
             .elementor-section
                 .elementor-container
-                    @include containerWidth()
-
+                    @include elementor_containerWidth()
                     .row
                         flex-wrap: unset
 
@@ -144,78 +151,7 @@ div#content
 
 // .sbn_buttonCustom.sbn_primaryButton.left_side
 
-.sbn_buttonCustom
-    display: flex
-    flex-direction: row
-    justify-content: center
-    justify-items: center
-    align-content: center
-    align-items: center
-    text-decoration: none
-    font-size: 20px
-    line-height: 1
-    padding: 15px 40px!important
-    width: fit-content
-    transition: $trans
-    transform: scale(1)
-    @include responsivo(telefonoTable)
-        font-size: 13px!important
-        padding: 12.5px 25px!important
-    @include responsivo(pcMedio)
-        font-size: 18px!important
-        padding: 15px 40px!important
-    @include responsivo(smallPcTablet)
-        padding: 15px 30px!important
-        font-size: 18px!important
-    .icon_container
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-content: center
-        align-items: center
-        i
-            display: block
-            margin: auto
-            @include responsivo(telefonoTable)
-                font-size: 15px
-            @include responsivo(pcMedio)
-                font-size: 15px
-            @include responsivo(general)
-                font-size: 18px
-            @include responsivo(smallPcTablet)
-                font-size: 16px
-            @include responsivo(resto)
-                font-size: 18px
 
-    &:hover
-        transform: scale(1.05)
-        cursor: pointer
-
-    &.sbn_primaryButton
-        background-color: $primaryColorYellow
-        color: $blackColor
-    &.sbn_secondaryButton
-        background-color: $lightGray_color
-        color: $blackColor
-    &.sbn_thirdButton
-        background-color: $blackColor
-        color: $whiteBase1
-    &.sbn_transparentButton
-        border: 1px solid $blackColor
-        background-color: transparent
-    &.sbn_underlineButton
-        color: $blackColor
-
-    &.right_side
-        display: flex
-        flex-direction: row-reverse
-        .icon_container
-            margin-left: 10px
-    &.left_side
-        display: flex
-        flex-direction: row
-        .icon_container
-            margin-right: 10px
 
 
 
@@ -264,6 +200,7 @@ div#content
 
 
 
+
 .sectionTopList
     .lineTitleSection
         margin-bottom: 20px
@@ -284,6 +221,10 @@ div#content
 
         h3
             margin: auto 0!important
+            @include responsivo(telefonoTable)
+                font-size: 18px!important
+            @include responsivo(pcMedio)
+                font-size: 18px!important
 
 
 .elementor-column-gap-default
@@ -327,9 +268,9 @@ div#content
         padding-top: 15px
         padding-bottom: 15px
         @include responsivo(telefonoTable)
-            margin-bottom: 25px
+            margin-bottom: 0
         @include responsivo(pcMedio)
-            margin-bottom: 25px
+            margin-bottom: 0
         label
             margin-bottom: 0
             font-size: 16px
@@ -356,6 +297,12 @@ div#content
                     display: block
                 i
                     transform: rotate(90deg)
+
+            @include responsivo(general)
+                font-size: 14px
+            @include responsivo(smallPcTablet)
+                font-size: 13px
+
         .couponContainer_custom
             margin-top: 15px
             margin-bottom: 10px
@@ -368,6 +315,10 @@ div#content
                     margin-bottom: 0
                     height: 50px
                 input#coupon_code_custom
+                    @include responsivo(telefonoTable)
+                        width: 65%!important
+                    @include responsivo(pcMedio)
+                        width: 65%!important
                     @include responsivo(general)
                         width: 60%!important
                     @include responsivo(smallPcTablet)
@@ -380,6 +331,10 @@ div#content
                     background-color: $primaryColorYellow
                     border: transparent
                     margin-top: 0!important
+                    @include responsivo(telefonoTable)
+                        width: 35%!important
+                    @include responsivo(pcMedio)
+                        width: 35%!important
                     @include responsivo(general)
                         font-size: 14px
                         width: 40%!important
@@ -433,3 +388,28 @@ div#content
                         .compare-button.mf-compare-button
                             margin: 0
 
+
+header#site-header
+    .header-mobile-v1,
+    .header-mobile-v2
+        .container
+            .header-main.header-row
+                padding: 20px 0
+                .header-extras
+                    ul.extras-menu
+                        @include responsivo(telefonoTable)
+                            margin-left: 0
+                        @include responsivo(pcMedio)
+                            margin-left: 0
+                        li.extra-menu-item
+                            a
+                                padding-top: 0
+                                i
+                                    font-size: 37.5px
+
+
+
+.slick-slide
+    a
+        img
+            width: 100%

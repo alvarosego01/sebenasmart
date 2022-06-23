@@ -47,6 +47,8 @@ if ( ! function_exists( 'martfury_get_layout' ) ) :
 			$layout = 'list';
 		}
 
+
+
 		return apply_filters( 'martfury_site_layout', $layout );
 	}
 
@@ -65,10 +67,14 @@ if ( ! function_exists( 'martfury_get_content_columns' ) ) :
 		$layout  = $layout ? $layout : martfury_get_layout();
 		$classes = array( 'col-md-9', 'col-sm-12', 'col-xs-12' );
 
+		if(martfury_get_product_layout() == '2'){
+			$classes = array( 'col-md-12', 'col-sm-12', 'col-xs-12' );
+		}
 
 		if ( ! in_array( $layout, array( 'sidebar-content', 'content-sidebar', 'small-thumb' ) ) ) {
 			$classes = array( 'col-md-12' );
 		}
+
 
 		return $classes;
 	}
@@ -88,6 +94,7 @@ if ( ! function_exists( 'martfury_content_columns' ) ) :
 
 	}
 endif;
+
 /**
  * Get classes for content area
  *

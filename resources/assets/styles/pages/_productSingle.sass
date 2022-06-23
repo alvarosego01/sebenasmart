@@ -7,3 +7,27 @@ body.product-template-default.single.single-product.woocommerce.woocommerce-page
             .row
                 div#primary
                     .mf-product-layout-2.product
+                        .mf-product-detail
+                            .woocommerce-product-gallery
+                                // .flex-viewport
+                                ol.flex-control-nav.flex-control-thumbs
+                                    li
+                                        width: fit-content
+                                        img
+                                            height: 65px!important
+                                            width: 65px!important
+
+                        .summary-sep
+                            height: 50px
+
+                        .mf-product-summary
+                            .woocommerce-tabs.wc-tabs-wrapper
+                                ul.tabs.wc-tabs
+                                    @include responsivo(general)
+                                        display: flex
+                                        justify-content: center
+                                        align-content: center
+                                    @include responsivo(resto)
+                                        display: flex
+                                        justify-content: center
+                                        align-content: center

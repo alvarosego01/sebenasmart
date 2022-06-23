@@ -4,8 +4,7 @@
 
 
 
-
- 	function martfury_extra_cart() {
+function martfury_extra_cart() {
 		$extras = martfury_menu_extras();
 
 		if ( empty( $extras ) || ! in_array( 'cart', $extras ) ) {
@@ -50,7 +49,8 @@
  *
  * @return string
  */
-	function martfury_extra_account() {
+
+ function martfury_extra_account() {
 		$extras = martfury_menu_extras();
 
 		if ( empty( $extras ) || ! in_array( 'account', $extras ) ) {
@@ -146,8 +146,6 @@
 
 			}
 
-
-
 			echo sprintf(
 				'<li class="extra-menu-item menu-item-account logined %s">
 				<a href="%s">%s</a>
@@ -199,6 +197,7 @@
 
 	}
 
+
 	function martfury_extra_wislist() {
 		$extras = martfury_menu_extras();
 
@@ -228,12 +227,14 @@
 
 	}
 
+
 	function cartFloatSide(){
 
 		echo '<i class="las la-shopping-cart"></i>';
 
 	}
 	add_action('xoo_wsc_basket_content', 'cartFloatSide');
+
 
 	function terms_side_cart(){
 
@@ -243,6 +244,7 @@
 
 	}
 	add_action('xoo_wsc_footer_end', 'terms_side_cart');
+
 
 
 	function martfury_header_bar() {

@@ -38,17 +38,40 @@ $hastaG: $desdeG + 500
 @mixin containerWidth()
     padding-left: 0
     padding-right: 0
+    margin-left: auto!important
+    margin-right: auto!important
     @include responsivo(telefonoTable)
         width: 90%
     @include responsivo(pcMedio)
         width: 80%
     @include responsivo(general)
         width: 100%!important
-        max-width: 1200px!important
+        max-width: 1240px!important
+    @include responsivo(smallPcTablet)
+        max-width: 1000px!important
+
     @include responsivo(resto)
         width: 100%!important
-        max-width: 1275px!important
+        max-width: 1340px!important
 
+@mixin elementor_containerWidth()
+    padding-left: 0
+    padding-right: 0
+    margin-left: auto!important
+    margin-right: auto!important
+    // @include responsivo(telefonoTable)
+    //     width: 90%
+    // @include responsivo(pcMedio)
+    //     width: 80%
+    @include responsivo(general)
+        width: 100%!important
+        max-width: 1240px!important
+    @include responsivo(smallPcTablet)
+        max-width: 1000px!important
+
+    @include responsivo(resto)
+        width: 100%!important
+        max-width: 1340px!important
 
 @mixin h2_title_contain()
     line-height: 0.9

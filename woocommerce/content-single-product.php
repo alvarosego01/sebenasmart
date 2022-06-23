@@ -31,58 +31,126 @@ if ( post_password_required() ) {
 
 	return;
 }
+
 ?>
+
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
-	<div class="mf-product-detail">
+	<?php if( martfury_get_product_layout() != 2 ){ ?>
 
-		vista prueba
-
-		<?php
-		/**
-		 * woocommerce_before_single_product_summary hook.
-		 *
-		 * @hooked woocommerce_show_product_sale_flash - 10
-		 * @hooked woocommerce_show_product_images - 20
-		 */
-		do_action( 'woocommerce_before_single_product_summary' );
-		?>
-
-		<div class="summary entry-summary">
+		<div class="mf-product-detail">
 
 			<?php
 			/**
-			 * woocommerce_single_product_summary hook.
+			 * woocommerce_before_single_product_summary hook.
 			 *
-			 * @hooked woocommerce_template_single_title - 5
-			 * @hooked woocommerce_template_single_rating - 10
-			 * @hooked woocommerce_template_single_price - 10
-			 * @hooked woocommerce_template_single_excerpt - 20
-			 * @hooked woocommerce_template_single_add_to_cart - 30
-			 * @hooked woocommerce_template_single_meta - 40
-			 * @hooked woocommerce_template_single_sharing - 50
-			 * @hooked WC_Structured_Data::generate_product_data() - 60
+			 * @hooked woocommerce_show_product_sale_flash - 10
+			 * @hooked woocommerce_show_product_images - 20
 			 */
-			do_action( 'woocommerce_single_product_summary' );
+			do_action( 'woocommerce_before_single_product_summary' );
 			?>
 
+			<div class="summary entry-summary">
+
+				<?php
+				/**
+				 * woocommerce_single_product_summary hook.
+				 *
+				 * @hooked woocommerce_template_single_title - 5
+				 * @hooked woocommerce_template_single_rating - 10
+				 * @hooked woocommerce_template_single_price - 10
+				 * @hooked woocommerce_template_single_excerpt - 20
+				 * @hooked woocommerce_template_single_add_to_cart - 30
+				 * @hooked woocommerce_template_single_meta - 40
+				 * @hooked woocommerce_template_single_sharing - 50
+				 * @hooked WC_Structured_Data::generate_product_data() - 60
+				 */
+				do_action( 'woocommerce_single_product_summary' );
+				?>
+
+			</div>
+			<!-- .summary -->
 		</div>
-		<!-- .summary -->
-	</div>
-	<div class="summary-sep clear"></div>
-	<div class="mf-product-summary">
-		<?php
-		/**
-		 * woocommerce_after_single_product_summary hook.
-		 *
-		 * @hooked woocommerce_output_product_data_tabs - 10
-		 * @hooked woocommerce_upsell_display - 15
-		 * @hooked woocommerce_output_related_products - 20
-		 */
-		do_action( 'woocommerce_after_single_product_summary' );
-		?>
-	</div>
+		<div class="summary-sep clear"></div>
+		<div class="mf-product-summary">
+			<?php
+			/**
+			 * woocommerce_after_single_product_summary hook.
+			 *
+			 * @hooked woocommerce_output_product_data_tabs - 10
+			 * @hooked woocommerce_upsell_display - 15
+			 * @hooked woocommerce_output_related_products - 20
+			 */
+			do_action( 'woocommerce_after_single_product_summary' );
+			?>
+		</div>
+
+	<?php } else { ?>
+
+		<div class="mf-product-detail row">
+			<div class="custom_singleProduct col-md-12 col-lg-9">
+			<?php
+				/**
+				 * woocommerce_before_single_product_summary hook.
+				 *
+				 * @hooked woocommerce_show_product_sale_flash - 10
+				 * @hooked woocommerce_show_product_images - 20
+				 */
+				do_action( 'woocommerce_before_single_product_summary' );
+				?>
+
+				<div class="summary entry-summary">
+
+					<?php
+					/**
+					 * woocommerce_single_product_summary hook.
+					 *
+					 * @hooked woocommerce_template_single_title - 5
+					 * @hooked woocommerce_template_single_rating - 10
+					 * @hooked woocommerce_template_single_price - 10
+					 * @hooked woocommerce_template_single_excerpt - 20
+					 * @hooked woocommerce_template_single_add_to_cart - 30
+					 * @hooked woocommerce_template_single_meta - 40
+					 * @hooked woocommerce_template_single_sharing - 50
+					 * @hooked WC_Structured_Data::generate_product_data() - 60
+					 */
+					do_action( 'woocommerce_single_product_summary' );
+					?>
+
+				</div>
+			</div>
+			<?php
+				$sidebar = 'product-sidebar';
+			?>
+			<aside id="primary-sidebar"
+               class="widgets-area primary-sidebar col-md-12 col-lg-3 <?php echo esc_attr( $sidebar ) ?>">
+				<?php
+				if ( is_active_sidebar( $sidebar ) ) {
+					dynamic_sidebar( $sidebar );
+				}
+				?>
+        	</aside>
+
+		</div>
+
+		<div class="summary-sep clear"></div>
+		<div class="mf-product-summary">
+			<?php
+			/**
+			 * woocommerce_after_single_product_summary hook.
+			 *
+			 * @hooked woocommerce_output_product_data_tabs - 10
+			 * @hooked woocommerce_upsell_display - 15
+			 * @hooked woocommerce_output_related_products - 20
+			 */
+			do_action( 'woocommerce_after_single_product_summary' );
+			?>
+		</div>
+
+	<?php } ?>
 
 </div><!-- #product-<?php the_ID(); ?> -->
 
-<?php do_action( 'woocommerce_after_single_product' ); ?>
+<?php
+ do_action( 'woocommerce_after_single_product' );
+?>

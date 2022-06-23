@@ -12,11 +12,40 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
 
 
     .customCheckout01
+        h3
+            @include responsivo(telefonoTable)
+                font-size: 18px!important
+            @include responsivo(pcMedio)
+                font-size: 18px!important
+        p.form-row
+            @include responsivo(telefonoTable)
+                padding-left: 0
+                padding-right: 0
+            @include responsivo(pcMedio)
+                padding-left: 10px
+                padding-right: 10px
+            @include responsivo(general)
+                padding-left: 10px
+                padding-right: 10px
+            @include responsivo(resto)
+                padding-left: 10px
+                padding-right: 10px
         form.checkout.woocommerce-checkout
             margin-top: 0
             textarea
                 min-height: 125px
+                @include responsivo(telefonoTable)
+                    min-height: 100px
+                @include responsivo(pcMedio)
+                    min-height: 100px
+
             .col-woo-checkout-details.checkoutFormCustom
+                @include responsivo(telefonoTable)
+                    padding: 0
+                    margin-bottom: 25px
+                @include responsivo(pcMedio)
+                    padding: 0
+                    margin-bottom: 25px
                 @include responsivo(general)
                     padding-right: 25px
                     padding-left: 0
@@ -27,15 +56,13 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
                     box-shadow: $shadow2
                     background-color: $lightGray_color
                     padding: 25px 35px
+                    @include responsivo(telefonoTable)
+                        padding: 25px
+                    @include responsivo(pcMedio)
+                        padding: 25px
                     @include responsivo(general)
                         padding: 25px
-                    p.form-row
-                        @include responsivo(general)
-                            padding-left: 10px
-                            padding-right: 10px
-                        @include responsivo(resto)
-                            padding-left: 10px
-                            padding-right: 10px
+
                     .checkout-billing
                         .woocommerce-billing-fields
                             .woocommerce-billing-fields__field-wrapper
@@ -44,16 +71,22 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
                                 flex-flow: wrap
                                 p
                                     position: relative
-                                    // @include responsivo(telefonoTable)
-
+                                    span.ywccp_error
+                                        position: relative
+                                        top: -2.5px
+                                    @include responsivo(telefonoTable)
+                                        width: 100%
+                                        margin-bottom: 15px
                                     @include responsivo(pcMedio)
                                         width: 50%
-                                        padding-left: 10px
-                                        padding-right: 10px
+                                        margin-bottom: 15px
                                     @include responsivo(general)
                                         width: 50%
                                     @include responsivo(resto)
                                         width: 50%
+
+                                    &:last-child
+                                        margin-bottom: 0
 
                                     label
 
@@ -89,6 +122,10 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
                                                 min-height: unset
                                                 height: 45px
                                                 line-height: 1
+                    .checkout-shipping
+                        .woocommerce-additional-fields
+                            h3
+                                margin-bottom: 15px
 
             .checkoutPayCustom
                 box-shadow: $shadow2
@@ -96,11 +133,24 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
                 padding: 25px 0
                 padding-bottom: 10px
                 height: fit-content
+                h3
+                    @include responsivo(telefonoTable)
+                        font-size: 18px!important
+                    @include responsivo(pcMedio)
+                        font-size: 18px!important
                 h3#order_review_heading
                     padding: 0 30px
                     margin-bottom: 5px
+                    @include responsivo(telefonoTable)
+                        padding: 0 25px
+                    @include responsivo(pcMedio)
+                        padding: 0 25px
                 .sectionTopList
                     padding: 0 30px
+                    @include responsivo(telefonoTable)
+                        padding: 0 25px
+                    @include responsivo(pcMedio)
+                        padding: 0 25px
 
                 div#order_review
                     span.woocommerce-Price-amount.amount
@@ -108,6 +158,30 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
                     table.shop_table.woocommerce-checkout-review-order-table
                         border: none
                         background-color: transparent
+                        @include responsivo(telefonoTable)
+                            padding: 0 25px
+                        @include responsivo(pcMedio)
+                            padding: 0 25px
+                        tbody
+                            tr
+                                @include responsivo(telefonoTable)
+                                    *
+                                        font-size: 14px
+                                @include responsivo(pcMedio)
+                                    *
+                                        font-size: 14px
+                                @include responsivo(general)
+                                    *
+                                        font-size: 14px
+                                @include responsivo(smallPcTablet)
+                                    *
+                                        font-size: 13px
+                                @include responsivo(resto)
+                                    *
+                                        font-size: 16px
+                                td.product-total
+                                    span
+                                        font-weight: 600
                     div#payment
                         border: none
                         background-color: transparent
@@ -128,9 +202,38 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
                             padding-right: 30px
                             button#place_order
                                 margin-top: 0
+                            @include responsivo(telefonoTable)
+                                padding: 0 25px
+                            @include responsivo(pcMedio)
+                                padding: 0 25px
 
                         .woocommerce-terms-and-conditions-wrapper
                             margin-top: 0
+                            *
+                                line-height: 1.25
+                            label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox
+                                margin-bottom: 15px
+                            .woocommerce-privacy-policy-text
+                                p
+                                    @include responsivo(telefonoTable)
+                                        text-align: center
+                                    @include responsivo(pcMedio)
+                                        text-align: center
+                            @include responsivo(telefonoTable)
+                                *
+                                    font-size: 13px
+                            @include responsivo(pcMedio)
+                                *
+                                    font-size: 14px
+                            @include responsivo(general)
+                                *
+                                    font-size: 14px
+                            @include responsivo(smallPcTablet)
+                                *
+                                    font-size: 13px
+                            @include responsivo(resto)
+                                *
+                                    font-size: 15px
 
                         .woocommerce-privacy-policy-text
                             p

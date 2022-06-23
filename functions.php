@@ -35,8 +35,3 @@ require get_stylesheet_directory() . '/functions/index.php';
 
 
 
-
-
-
-
-
