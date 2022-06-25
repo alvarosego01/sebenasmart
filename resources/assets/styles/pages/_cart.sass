@@ -221,6 +221,8 @@ body#cart_template.woocommerce-cart
                                     &:hover
                                         background-color: $primaryColorYellow
                                         color: $blackColor!important
+                                @include responsivo(general)
+                                    right: -10px
 
                     tbody.mobileElement
                         tr
@@ -324,6 +326,11 @@ body#cart_template.woocommerce-cart
                                 top: -20px
                                 right: -25px
                                 padding: 0
+                                @include responsivo(telefonoTable)
+                                    top: -10px
+                                @include responsivo(pcMedio)
+                                    top: -10px
+
                                 a
                                     border-radius: 360px
                                     background-color: $blackColor
@@ -344,6 +351,13 @@ body#cart_template.woocommerce-cart
                                     &:hover
                                         background-color: $primaryColorYellow
                                         color: $blackColor
+
+                                    @include responsivo(telefonoTable)
+                                        width: 30px
+                                        height: 30px
+                                    @include responsivo(pcMedio)
+                                        width: 30px
+                                        height: 30px
 
 
 
