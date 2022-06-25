@@ -1,12 +1,16 @@
 
 
 
-body.product-template-default.single.single-product.woocommerce.woocommerce-page.single-product-layout-2
+body#product_template
     div#page
         div#content
+            @include responsivo(telefonoTable)
+                padding-top: 25px
+            @include responsivo(pcMedio)
+                padding-top: 25px
             .row
                 div#primary
-                    .mf-product-layout-2.product
+                    .product
                         .mf-product-detail
                             .woocommerce-product-gallery
                                 // .flex-viewport
@@ -14,13 +18,138 @@ body.product-template-default.single.single-product.woocommerce.woocommerce-page
                                     li
                                         width: fit-content
                                         img
-                                            height: 65px!important
-                                            width: 65px!important
+                                            @include responsivo(telefonoTable)
+                                                width: 8px!important
+                                                height: 8px!important
+                                            @include responsivo(pcMedio)
+                                                width: 8px!important
+                                                height: 8px!important
+                                            @include responsivo(general)
+                                                height: 65px!important
+                                                width: 65px!important
+
+                                            @include responsivo(resto)
+                                                height: 65px!important
+                                                width: 65px!important
+
+
+                            .summary.entry-summary
+                                @include responsivo(telefonoTable)
+                                    margin-top: 25px
+                                @include responsivo(pcMedio)
+                                    margin-top: 25px
+                                .mf-entry-product-header
+                                    .entry-left
+                                        h1.product_title.entry-title
+                                            @include responsivo(telefonoTable)
+                                                text-align: center
+                                            @include responsivo(pcMedio)
+                                                text-align: center
+
+                                        ul.entry-meta
+                                            @include responsivo(telefonoTable)
+                                                display: flex
+                                                flex-direction: row
+                                                justify-content: center
+                                            @include responsivo(pcMedio)
+                                                display: flex
+                                                flex-direction: row
+                                                justify-content: center
+                                p.price
+                                    @include responsivo(telefonoTable)
+                                        text-align: center
+                                    @include responsivo(pcMedio)
+                                        text-align: center
+
+                                .mf-summary-header
+                                    @include responsivo(telefonoTable)
+                                        display: flex
+                                        flex-direction: row
+                                        justify-content: center
+                                    @include responsivo(pcMedio)
+                                        display: flex
+                                        flex-direction: row
+                                        justify-content: center
+
+                                .woocommerce-product-details__short-description
+                                    ul
+                                        @include responsivo(telefonoTable)
+                                            width: fit-content
+                                            margin: 0 auto
+                                        @include responsivo(pcMedio)
+                                            width: fit-content
+                                            margin: 0 auto
+
+                                form.cart
+                                    @include responsivo(telefonoTable)
+                                        display: flex
+                                        flex-direction: row
+                                        justify-content: center
+                                        align-content: center
+                                    @include responsivo(pcMedio)
+                                        display: flex
+                                        flex-direction: row
+                                        justify-content: center
+                                        align-content: center
+                                    .quantity
+                                        @include responsivo(telefonoTable)
+                                            margin-right: 25px
+                                        @include responsivo(pcMedio)
+                                            margin-right: 25px
+                                        .qty-box
+                                            .input-text.qty.text
+                                                @include responsivo(telefonoTable)
+                                                    min-width: unset
+                                                    width: 75px
+                                                @include responsivo(pcMedio)
+                                                    min-width: unset
+                                                    width: 100px
+
+                                    .actions-button
+                                        @include responsivo(telefonoTable)
+                                            width: fit-content
+                                            margin-top: 0
+                                            padding-top: 0
+                                            display: flex
+                                            flex-direction: row
+                                            justify-content: center
+                                            align-content: center
+                                            align-items: center
+
+                                        @include responsivo(pcMedio)
+                                            width: fit-content
+                                            margin-top: 0
+                                            padding-top: 0
+                                            display: flex
+                                            flex-direction: row
+                                            justify-content: center
+                                            align-content: center
+                                            align-items: center
+
+                                .product_meta
+                                    span.posted_in,
+                                    span.tagged_as
+                                        @include responsivo(telefonoTable)
+                                            text-align: center
+                                        @include responsivo(pcMedio)
+                                            text-align: center
+                                .social-links
+                                    display: flex
+                                    flex-direction: row
+                                    @include responsivo(telefonoTable)
+                                        justify-content: center
+                                        align-content: center
+                                        align-items: center
+                                    @include responsivo(pcMedio)
+                                        justify-content: center
+                                        align-content: center
+                                        align-items: center
 
                         .summary-sep
                             height: 50px
 
                         .mf-product-summary
+                            // display: none
                             .woocommerce-tabs.wc-tabs-wrapper
                                 ul.tabs.wc-tabs
                                     @include responsivo(general)

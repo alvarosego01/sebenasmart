@@ -29,10 +29,36 @@
 
 <?php
 
-	$class = _getField('custom_parent_class_section' , get_the_ID());
-	$id = _getField('template_custom' , get_the_ID());
+	$page_id = null;
+	$class = null;
+	$id = null;
 
-	specialInitFiles( get_the_ID() );
+	if ( function_exists( 'is_shop' ) && is_shop() ) {
+
+		$page_id = get_option( 'woocommerce_shop_page_id' );
+
+		$class = _getField('custom_parent_class_section' , $page_id);
+		$id = _getField('template_custom' , $page_id);
+		specialInitFiles( $page_id, null );
+
+	}elseif ( function_exists( 'is_product' ) && is_product() ) {
+
+		$page_id = get_the_ID();
+
+		$class = 'sbn_productPage';
+		$id = 'product_template';
+		specialInitFiles( null, $id );
+
+	}else{
+
+		$page_id = get_the_ID();
+
+		$class = _getField('custom_parent_class_section' , $page_id);
+		$id = _getField('template_custom' , $page_id);
+		specialInitFiles( $page_id, null );
+
+	}
+
 
 
 ?>

@@ -1,5 +1,31 @@
 
 
 
+body#shop_template
 
-div#primary
+    div#page
+        div#content
+            @include responsivo(telefonoTable)
+                padding-top: 25px
+            @include responsivo(pcMedio)
+                padding-top: 25px
+            .container
+                .mf-catalog-banners
+                    margin-bottom: 25px
+                    @include responsivo(telefonoTable)
+                        padding: 0
+                    @include responsivo(pcMedio)
+                        padding: 0
+                div#primary
+                    @include responsivo(general)
+                        padding: 0 10px
+                    @include responsivo(resto)
+                        padding: 0 10px
+                    nav.woocommerce-pagination
+                            margin: 25px 0
+                            margin-top: 0
+
+
+                aside#primary-sidebar
+                    @include responsivo(pcMedio)
+                        margin-top: 25px

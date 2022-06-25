@@ -1,0 +1,29 @@
+
+
+body.home.page-template
+
+    div#page
+        .toggle-product-cats.nav
+            @include responsivo(smallPcTablet)
+                opacity: 1
+                z-index: 1000
+                width: 230px
+                min-width: unset
+                left: -10px
+                top: 147.5%
+
+            ul#menu-shop-by-department
+                @include responsivo(smallPcTablet)
+                    width: 100%
+                li.menu-item
+                    a
+                        @include responsivo(smallPcTablet)
+                            font-size: 13px
+                            i
+                                margin-right: 10px
+        // div#content
+        //     .container-fluid
+        //         .row
+        //             .home_section_0
+        //                 .elementor-container
+        //                     .homeMenu

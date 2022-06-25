@@ -103,20 +103,22 @@ a#scroll-top
 .row
     margin: 0!important
 
-div#content
-    @include responsivo(telefonoTable)
-        padding-top: 0
-    @include responsivo(pcMedio)
-        padding-top: 0
-    .container-fluid
-        padding-left: 0
-        padding-right: 0
-    .container
+div#page
+    .container,
+    .martfury-container
         @include containerWidth()
-
-        div#primary
+    div#content
+        @include responsivo(telefonoTable)
+            padding-top: 0
+        @include responsivo(pcMedio)
+            padding-top: 0
+        .container-fluid
             padding-left: 0
             padding-right: 0
+
+            div#primary
+                padding-left: 0
+                padding-right: 0
 
     .container-fluid
         .row
@@ -125,7 +127,11 @@ div#content
                     @include elementor_containerWidth()
                     .row
                         flex-wrap: unset
-
+                    // .elementor-column
+                    //     @include responsivo(telefonoTable)
+                    //         width: 100%
+                    //     @include responsivo(pcMedio)
+                    //         width: 100%
 
 
 
@@ -271,37 +277,48 @@ div#content
             margin-bottom: 0
         @include responsivo(pcMedio)
             margin-bottom: 0
-        label
-            margin-bottom: 0
+
+
+        a
+            width: 100%
+            color: black
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-content: center
+            align-items: center
+            transition: $trans
             font-size: 16px
             display: block
             width: 100%
-            a
-                width: 100%
-                color: black
-                display: flex
-                justify-content: space-between
-                align-content: center
-                align-items: center
+            i
                 transition: $trans
-                i
-                    transition: $trans
-                span.have
-                    display: block
-                span.deploy
-                    display: none
-            a[aria-expanded="true"]
-                span.have
-                    display: none
-                span.deploy
-                    display: block
-                i
-                    transform: rotate(90deg)
+                // padding-right: 15px
+                font-size: 18px
+                padding: 7.5px
+                background-color: $primaryColorYellow
+                border-radius: 100%
+            span
+                width: fit-content
+            span.have
+                display: flex
+            span.deploy
+                display: none
+            &:hover
+                cursor: pointer
 
             @include responsivo(general)
                 font-size: 14px
             @include responsivo(smallPcTablet)
                 font-size: 13px
+
+        a.active
+            span.have
+                display: none
+            span.deploy
+                display: block
+            i
+                transform: rotate(90deg)
 
         .couponContainer_custom
             margin-top: 15px
@@ -393,6 +410,7 @@ header#site-header
     .header-mobile-v1,
     .header-mobile-v2
         .container
+            @include containerWidth()
             .header-main.header-row
                 padding: 20px 0
                 .header-extras
@@ -407,9 +425,54 @@ header#site-header
                                 i
                                     font-size: 37.5px
 
-
-
+.slick-track,
 .slick-slide
+    li
+        @include responsivo(telefonoTable)
+            width: 100%
+        @include responsivo(pcMedio)
+            width: 100%
     a
+        // width: 100%
         img
             width: 100%
+
+
+
+.collapsableContain
+    display: none
+
+
+.mf-products-top-carousel
+    @include responsivo(telefonoTable)
+        margin-bottom: 50px!important
+    @include responsivo(pcMedio)
+        margin-bottom: 50px!important
+
+    ul.slick-dots
+        @include responsivo(telefonoTable)
+            margin: 0!important
+            margin-bottom: 15px!important
+
+        @include responsivo(pcMedio)
+            margin: 0!important
+            margin-bottom: 15px!important
+
+        li
+            button
+                background-color: $lightGray_color
+        li.slick-active
+            button
+                background-color: $primaryColorYellow
+
+
+ul.products
+    li.product.type-product
+        @include responsivo(telefonoTable)
+            margin-bottom: 12.5px!important
+        @include responsivo(pcMedio)
+            margin-bottom: 12.5px!important
+
+.martfury-container,
+div#primary
+    padding: 0!important

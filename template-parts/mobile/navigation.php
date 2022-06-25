@@ -27,7 +27,7 @@ if ( empty( $els ) ) {
 					$cart_active = 'active';
 				}
 				global $woocommerce;
-				echo sprintf( '<a href="%s" class="navigation-icon navigation-mobile_cart cart-contents %s"><i class="icon-bag2"></i><span class="mini-item-counter mf-background-primary">%s</span> %s</a>', esc_url( wc_get_cart_url() ), esc_attr( $cart_active ),intval( $woocommerce->cart->cart_contents_count), esc_html( martfury_get_option( 'navigation_cart_mobile' ) ) );
+				echo sprintf( '<a href="%s" openCartButton class="navigation-icon navigation-mobile_cart cart-contents %s"><i class="icon-bag2"></i><span class="mini-item-counter mf-background-primary">%s</span> %s</a>', esc_url( wc_get_cart_url() ), esc_attr( $cart_active ),intval( $woocommerce->cart->cart_contents_count), esc_html( martfury_get_option( 'navigation_cart_mobile' ) ) );
 			} elseif ( 'wishlist' == $el ) {
 				if ( ! function_exists( 'YITH_WCWL' ) ) {
 					continue;

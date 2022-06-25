@@ -1,5 +1,71 @@
 
+<label for="coupon_code_custom">
+    <a class="collapsible" collapse_target="couponContainer_custom" open="0">
+
+        <span class="have">
+            Have a coupon? <strong>Click here</strong>
+        </span>
+
+        <span class="deploy">
+            <?php esc_html_e( 'Enter your Coupon Discount', 'martfury' ); ?>
+        </span>
+        <i class="las la-angle-right"></i>
+
+    </a>
+</label>
+<div class="collapse content couponContainer_custom" id="couponContainer_custom" >
+
+    <form onsubmit="event.preventDefault(); sendCouponCart(this)" class="woocommerce-cart-form_custom">
+        <div class="collapseContain">
+
+            <input required type="text" name="coupon_code_custom" class="input-text" id="coupon_code_custom" value=""
+                placeholder="<?php esc_attr_e( 'Coupon code', 'martfury' ); ?>" />
+            <input type="submit" class="button" name="apply_coupon_custom"
+                value="<?php esc_attr_e( 'Apply coupon', 'martfury' ); ?>" />
+            <?php do_action( 'woocommerce_cart_coupon' ); ?>
+
+        </div>
+    </form>
+
+</div>
+
+<!--  -->
 
 
+<label for="coupon_code_custom">
+    <a data-bs-toggle="collapse" href="#couponContainer_custom" role="button" aria-expanded="false"
+        aria-controls="couponContainer_custom">
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque exercitationem voluptatibus earum iste placeat eius unde velit? Quia suscipit earum soluta odit distinctio quo? Tempora quaerat nemo repellendus error labore!
+        <span class="have">
+            Have a coupon? <strong>Click here</strong>
+        </span>
+
+        <span class="deploy">
+            <?php esc_html_e( 'Enter your Coupon Discount', 'martfury' ); ?>
+        </span>
+        <i class="las la-angle-right"></i>
+
+    </a>
+</label>
+<div class="collapse couponContainer_custom" id="couponContainer_custom">
+
+    <form onsubmit="event.preventDefault(); sendCouponCart(this)" class="woocommerce-cart-form_custom">
+        <div class="collapseContain">
+
+            <input required type="text" name="coupon_code_custom" class="input-text" id="coupon_code_custom" value=""
+                placeholder="<?php esc_attr_e( 'Coupon code', 'martfury' ); ?>" />
+            <input type="submit" class="button" name="apply_coupon_custom"
+                value="<?php esc_attr_e( 'Apply coupon', 'martfury' ); ?>" />
+            <?php do_action( 'woocommerce_cart_coupon' ); ?>
+
+        </div>
+    </form>
+
+</div>
+
+<!--  -->
+
+<button type="button" class="collapsible">Open Collapsible</button>
+<div class="content" >
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>

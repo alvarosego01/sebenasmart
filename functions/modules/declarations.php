@@ -18,25 +18,27 @@ function init_scripts_styles()
 
 	wp_enqueue_script('Main.js', get_stylesheet_directory_uri() . '/dist/scripts/main.js', ['jquery'], wp_get_theme()->get('Version') , true);
 
-	wp_enqueue_style('bootstrapCss',  get_stylesheet_directory_uri() . '/resources/assets/library/bootstrap/css/bootstrap.min.css', array(), rand(), 'all');
+    wp_enqueue_script('_global.js', get_stylesheet_directory_uri() . '/dist/scripts/global.js', ['jquery'], wp_get_theme()->get('Version') , true);
 
-	wp_enqueue_script('bootstrapJs',  get_stylesheet_directory_uri() . '/resources/assets/library/bootstrap/js/bootstrap.min.js', array('jquery'), rand(), 'all');
+	// wp_enqueue_style('bootstrapCss',  get_stylesheet_directory_uri() . '/resources/assets/library/bootstrap/css/bootstrap.min.css', array(), rand(), 'all');
+
+	// wp_enqueue_script('bootstrapJs',  get_stylesheet_directory_uri() . '/resources/assets/library/bootstrap/js/bootstrap.min.js', array('jquery'), rand(), 'all');
 
 	wp_enqueue_style('lineAwesome', get_stylesheet_directory_uri() . '/resources/assets/library/line-awesome/css/line-awesome.min.css', array(), rand(), 'all');
+
+    wp_enqueue_style('animate.css', get_stylesheet_directory_uri() . '/resources/assets/library/animate/animate.min.css', array(), rand(), 'all');
 
 }
 add_action('wp_enqueue_scripts', 'init_scripts_styles');
 
 
-    function specialInitFiles( $id ){
+    function specialInitFiles( $id = null, $custom = null ){
 
         if( $id != null ){
-
 
             $l = null;
 
             $l = _getField('template_custom', $id);
-
 
             if( isset($l) && $l == 'cart_template' ){
                 // echo 'funciona esto '. $l;
@@ -44,10 +46,20 @@ add_action('wp_enqueue_scripts', 'init_scripts_styles');
                 wp_enqueue_script('shoppingCart.js');
 
             }
+
             if( isset($l) && $l == 'checkout_template' ){
                 // echo 'funciona esto '. $l;
                 wp_register_script('checkout.js', get_stylesheet_directory_uri() . '/dist/scripts/pages/checkout.js', ['jquery'], wp_get_theme()->get('Version') , true);
                 wp_enqueue_script('checkout.js');
+
+            }
+
+        }
+
+        if( $custom != null ){
+
+            if( isset($custom) && $custom == 'product_template' ){
+                // echo 'funciona esto '. $l;
 
             }
 
@@ -60,36 +72,44 @@ add_action('wp_enqueue_scripts', 'init_scripts_styles');
     function customCouponField(){
 
         if ( wc_coupons_enabled() ) { ?>
+
+
             <div class=" customCouponSection">
                 <div class="coupon_custom">
-                    <label for="coupon_code_custom">
-					<a  data-bs-toggle="collapse" href="#couponContainer_custom" role="button" aria-expanded="false" aria-controls="couponContainer_custom">
 
-						<span class="have">
-						Have a coupon? <strong>Click here</strong>
-						</span>
 
-						<span class="deploy">
-							<?php esc_html_e( 'Enter your Coupon Discount', 'martfury' ); ?>
-						</span>
-						<i class="las la-angle-right"></i>
-				  	</a>
-					</label>
-					<div class="collapse couponContainer_custom" id="couponContainer_custom">
-					<form onsubmit="event.preventDefault(); sendCouponCart(this)" class="woocommerce-cart-form_custom" >
-						<div class="collapseContain">
+                    <a class="collapsibleButton"  collapse_target="couponContainer_custom" open="0">
 
-							<input required type="text" name="coupon_code_custom" class="input-text" id="coupon_code_custom" value=""
-							placeholder="<?php esc_attr_e( 'Coupon code', 'martfury' ); ?>"/>
-							<input type="submit" class="button" name="apply_coupon_custom"
-							value="<?php esc_attr_e( 'Apply coupon', 'martfury' ); ?>"/>
-							<?php do_action( 'woocommerce_cart_coupon' ); ?>
+                        <span class="have">
+                            Have a coupon?&nbsp;<strong>Click here</strong>
+                        </span>
 
-						</div>
-						</form>
-					</div>
+                        <span class="deploy">
+                            <?php esc_html_e( 'Enter your Coupon Discount', 'martfury' ); ?>
+                        </span>
+
+                        <i class="las la-angle-right"></i>
+
+                    </a>
+
+                <div class="collapsableContain content couponContainer_custom animate__animated animate__fadeIn" id="couponContainer_custom" >
+
+                    <form onsubmit="event.preventDefault(); sendCouponCart(this)" class="woocommerce-cart-form_custom">
+                        <div class="collapseContain">
+
+                            <input required type="text" name="coupon_code_custom" class="input-text" id="coupon_code_custom" value=""
+                                placeholder="<?php esc_attr_e( 'Coupon code', 'martfury' ); ?>" />
+                            <input type="submit" class="button" name="apply_coupon_custom"
+                                value="<?php esc_attr_e( 'Apply coupon', 'martfury' ); ?>" />
+                            <?php do_action( 'woocommerce_cart_coupon' ); ?>
+
+                        </div>
+                    </form>
+
                 </div>
+
             </div>
+        </div>
 
 	<?php }
 

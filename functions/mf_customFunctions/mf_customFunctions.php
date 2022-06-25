@@ -23,7 +23,7 @@ function martfury_extra_cart() {
 
 		printf(
 			'<li class="extra-menu-item menu-item-cart mini-cart woocommerce">
-				<a class="cart-contents" id="icon-cart-contents" href="%s">
+				<a openCartButton class="cart-contents" id="icon-cart-contents" href="%s">
 					<i class="las la-shopping-cart extra-icon"></i>
 					<span class="mini-item-counter mf-background-primary">
 						%s
