@@ -27,14 +27,32 @@
             @include responsivo(pcMedio)
                 display: none!important
 
-        // .xoo-wsc-header
+        .xoo-wsc-header
+            padding: 10px
+            padding-bottom: 0
+            .xoo-wsch-top
+                // span.xoo-wsch-close.xoo-wsc-icon-cross
+                //     font-size: 22px
+                //     @include responsivo(telefonoTable)
+                //         font-size: 18px
+                //     @include responsivo(pcMedio)
+                //         font-size: 18px
+                span
+                    font-size: 18px
+                    @include responsivo(telefonoTable)
+                        font-size: 16px
+                    @include responsivo(pcMedio)
+                        font-size: 16px
+                    @include responsivo(general)
+                        font-size: 16px
         .xoo-wsc-body
             .xoo-wsc-products
                 .xoo-wsc-product
+                    padding: 5px 10px
                     @include responsivo(telefonoTable)
-                        padding: 10px
+                        padding: 5px 10px
                     @include responsivo(pcMedio)
-                        padding: 10px
+                        padding: 5px 10px
                     .xoo-wsc-img-col
                         display: flex
                         @include responsivo(telefonoTable)
@@ -68,12 +86,14 @@
                                     width: 100px!important
 
                     .xoo-wsc-sum-col
+                        padding-left: 10px
                         @include responsivo(telefonoTable)
                             padding-left: 5px
                         @include responsivo(pcMedio)
                             padding-left: 5px
                         .xoo-wsc-sm-info
                             .xoo-wsc-sm-left
+                                padding-right: 7.5px
                                 span.xoo-wsc-pname
                                     a
                                         line-height: 1
@@ -81,6 +101,8 @@
                                             font-size: 14px
                                         @include responsivo(pcMedio)
                                             font-size: 16px
+                                        @include responsivo(general)
+                                            font-size: 14px
                                 .xoo-wsc-qty-price
                                     @include responsivo(telefonoTable)
                                         font-size: 12px
@@ -91,34 +113,84 @@
                                         *
                                             font-size: 14px
 
+                                    @include responsivo(general)
+                                        font-size: 14px
+                                        *
+                                            font-size: 14px
+
+
+                            .xoo-wsc-sm-right
+                                padding: 0
+                                span.xoo-wsc-smr-del
+                                    margin: 0
+                                    margin-top: 5px
+                                    color: $blackColor
+                                    border-radius: 100%
+                                    display: flex
+                                    justify-content: center
+                                    align-content: center
+                                    align-items: center
+
+
+
         .xoo-wsc-footer
+            padding-top: 0
+            padding-bottom: 15px
             @include responsivo(telefonoTable)
                 padding: 10px
             @include responsivo(pcMedio)
                 padding: 10px
             .xoo-wsc-ft-totals
+                padding: 0
                 .xoo-wsc-ft-amt.xoo-wsc-ft-amt-subtotal
+                    padding: 0
                     *
+                        font-size: 16px
                         @include responsivo(telefonoTable)
                             font-size: 14px
                         @include responsivo(pcMedio)
                             font-size: 16px
+                        @include responsivo(general)
+                            font-size: 14px
                     // margin-right: 0
             .xoo-wsc-ft-buttons-cont
-                padding-bottom: 25px
-                padding-left: 15px
-                padding-right: 15px
-                margin-bottom: 20px
+                padding-bottom: 15px
+                padding-left: 0
+                padding-right: 0
+                margin-bottom: 15px
                 border-bottom: 1px solid #eee
-                a
-                    background-color: var(--mf-background-primary-color)
-                    font-size: 16px
+                display: flex
+                flex-direction: column
+                .layer1
+                    width: 100%
+                    display: flex
+                    .sbn_buttonCustom
+                        margin: 0 auto
+                        @include responsivo(general)
+                            width: 100%!important
+                        @include responsivo(resto)
+                            width: 100%!important
+                .layer2
+                    width: 100%
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    align-content: center
+                    align-items: center
+                    .sbn_buttonCustom
+                        @include responsivo(general)
+                            width: 47.5%!important
+                        @include responsivo(resto)
+                            width: 47.5%!important
             p.sideText
                 font-size: 14px
                 padding: 0 15px
+                margin-bottom: 0
                 @include responsivo(telefonoTable)
                     font-size: 12px
                 @include responsivo(pcMedio)
+                    font-size: 12px
+                @include responsivo(general)
                     font-size: 12px
 
 

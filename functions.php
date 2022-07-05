@@ -1,7 +1,10 @@
 <?php
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly.
+}
+?>
 
-
-
+<?php
 
 define('THEME_VERSION', wp_get_theme()->get('Version'));
 define( 'CHILD_DIR', get_stylesheet_directory_uri() );

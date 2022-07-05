@@ -68,6 +68,103 @@ header#site-header.minimized
 
 
 
+.desktopElement
+    @include responsivo(telefonoTable)
+        display: none!important
+    @include responsivo(pcMedio)
+        display: none!important
+    @include responsivo(general)
+        display: block!important
+    @include responsivo(resto)
+        display: block!important
+.mobileElement
+    @include responsivo(telefonoTable)
+        display: block!important
+    @include responsivo(pcMedio)
+        display: block!important
+    @include responsivo(general)
+        display: none!important
+    @include responsivo(resto)
+        display: none!important
+.tabletElement
+    @include responsivo(telefonoTable)
+        display: none!important
+    @include responsivo(pcMedio)
+        display: block!important
+    @include responsivo(general)
+        display: none!important
+    @include responsivo(resto)
+        display: none!important
+
+.desktopTabletElement
+    @include responsivo(telefonoTable)
+        display: none!important
+    @include responsivo(pcMedio)
+        display: block!important
+
+    @include responsivo(general)
+        display: block!important
+
+    @include responsivoSpecial(1000px, 1125px)
+        display: none!important
+
+    @include responsivo(resto)
+        display: block!important
+
+.mobileSmallElement
+    @include responsivo(telefonoTable)
+        display: block!important
+    @include responsivo(pcMedio)
+        display: none!important
+    @include responsivo(general)
+        display: none!important
+    @include responsivo(resto)
+        display: none!important
+
+.desktopElement_flex
+    @include responsivo(telefonoTable)
+        display: none!important
+    @include responsivo(pcMedio)
+        display: none!important
+    @include responsivo(general)
+        display: flex!important
+    @include responsivo(resto)
+        display: flex!important
+.mobileElement_flex
+    @include responsivo(telefonoTable)
+        display: flex!important
+    @include responsivo(pcMedio)
+        display: flex!important
+    @include responsivo(general)
+        display: none!important
+    @include responsivo(resto)
+        display: none!important
+
+.desktopTabletElement_flex
+    @include responsivo(telefonoTable)
+        display: none!important
+    @include responsivo(pcMedio)
+        display: flex!important
+
+    @include responsivo(general)
+        display: flex!important
+
+    @include responsivoSpecial(1000px, 1125px)
+        display: none!important
+
+    @include responsivo(resto)
+        display: flex!important
+
+.mobileSmallElement_flex
+    @include responsivo(telefonoTable)
+        display: flex!important
+    @include responsivo(pcMedio)
+        display: none!important
+    @include responsivo(general)
+        display: none!important
+    @include responsivo(resto)
+        display: none!important
+
 
 
 a#scroll-top
@@ -155,8 +252,7 @@ div#page
         margin-right: 5px
 
 
-// .sbn_buttonCustom.sbn_primaryButton.left_side
-
+// .sbn_buttonCustom sbn_btn_normal.sbn_primaryButton.left_side
 
 
 
@@ -259,6 +355,8 @@ div#page
         align-content: center
         align-items: center
         border: none!important
+        width: fit-content
+        margin-left: auto
         span.woocommerce-Price-amount.amount
             color: red!important
             margin-right: 5px
@@ -413,6 +511,7 @@ header#site-header
             @include containerWidth()
             .header-main.header-row
                 padding: 20px 0
+
                 .header-extras
                     ul.extras-menu
                         @include responsivo(telefonoTable)
@@ -424,6 +523,16 @@ header#site-header
                                 padding-top: 0
                                 i
                                     font-size: 37.5px
+
+header#site-header.minimized
+    .container
+        .header-main.header-row
+            @include responsivo(telefonoTable)
+                padding-left: 5%
+                padding-right: 5%
+            @include responsivo(pcMedio)
+                padding-left: 5%
+                padding-right: 5%
 
 .slick-track,
 .slick-slide
@@ -476,3 +585,5 @@ ul.products
 .martfury-container,
 div#primary
     padding: 0!important
+
+

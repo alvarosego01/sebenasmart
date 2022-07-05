@@ -14,6 +14,16 @@
 //             width: 100%!important
 //             max-width: 1340px!important
 
+div#top-promotion
+    @include responsivo(general)
+        height: 100px
+    @include responsivo(resto)
+        height: 100px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-content: center
+    align-items: center
 
 header#site-header
     .header-main-wapper
@@ -38,7 +48,12 @@ header#site-header
                         @include responsivo(pcMedio)
                             padding-right: 0
                         ul.extras-menu
+                            margin-top: 0
                             li
+                                @include responsivo(general)
+                                    padding: 0 10px
+                                @include responsivo(resto)
+                                    padding: 0 10px
                                 a
                                     @include responsivo(telefonoTable)
                                         height: fit-content!important
@@ -49,6 +64,10 @@ header#site-header
                                         @include responsivo(telefonoTable)
                                             font-size: 32.5px
                                         @include responsivo(pcMedio)
+                                            font-size: 32.5px
+                                        @include responsivo(general)
+                                            font-size: 35px
+                                        @include responsivo(smallPcTablet)
                                             font-size: 32.5px
 
 
@@ -72,12 +91,40 @@ header#site-header
                 padding-right: 25px
 
     .mini-cart-content
+        min-width: unset
         .widget_shopping_cart_content
+            @include responsivo(general)
+                padding: 20px
+            @include responsivo(resto)
+                padding: 20px
+            ul.woocommerce-mini-cart.cart_list.product_list_widget
+                li.woocommerce-mini-cart-item.mini_cart_item
+                    @include responsivo(general)
+                        padding-right: 20px
+                        padding-top: 10px
+                    @include responsivo(resto)
+                        padding-right: 20px
+                        padding-top: 10px
+                    &:first-of-type
+                        padding-top: 0
+
             .mf-cart-panel-footer
+                p.woocommerce-mini-cart__total.total
+                    margin-top: 10px
                 p.woocommerce-mini-cart__buttons.buttons
                     flex-wrap: unset
+                    margin-bottom: 0
                     a
                         margin-bottom: 0
+
+        @include responsivo(general)
+            width: 375px
+        @include responsivo(smallPcTablet)
+            width: 350px
+        @include responsivo(resto)
+            width: 425px
+
+
 
 
 .page-header.page-header-page

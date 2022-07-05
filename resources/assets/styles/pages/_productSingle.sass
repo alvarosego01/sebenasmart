@@ -15,6 +15,8 @@ body#product_template
                             .woocommerce-product-gallery
                                 // .flex-viewport
                                 ol.flex-control-nav.flex-control-thumbs
+                                    margin-left: 0
+                                    margin-right: 0
                                     li
                                         width: fit-content
                                         img
@@ -25,12 +27,11 @@ body#product_template
                                                 width: 8px!important
                                                 height: 8px!important
                                             @include responsivo(general)
-                                                height: 65px!important
-                                                width: 65px!important
-
+                                                height: 50px!important
+                                                width: 50px!important
                                             @include responsivo(resto)
-                                                height: 65px!important
-                                                width: 65px!important
+                                                height: 60px!important
+                                                width: 60px!important
 
 
                             .summary.entry-summary
@@ -83,19 +84,37 @@ body#product_template
                                 form.cart
                                     @include responsivo(telefonoTable)
                                         display: flex
-                                        flex-direction: row
+                                        flex-direction: column
                                         justify-content: center
                                         align-content: center
                                     @include responsivo(pcMedio)
                                         display: flex
-                                        flex-direction: row
+                                        flex-direction: column
                                         justify-content: center
                                         align-content: center
+                                    table.variations
+                                        @include responsivo(telefonoTable)
+                                            width: fit-content
+                                            margin: 0 auto
+                                            display: block
+                                        @include responsivo(pcMedio)
+                                            width: fit-content
+                                            margin: 0 auto
+                                            display: block
                                     .quantity
                                         @include responsivo(telefonoTable)
-                                            margin-right: 25px
+                                            margin: 0 auto
+                                            margin-bottom: 15px
+                                            width: 60%
                                         @include responsivo(pcMedio)
-                                            margin-right: 25px
+                                            margin: 0 auto
+                                            margin-bottom: 15px
+                                            width: 60%
+                                        label
+                                            @include responsivo(telefonoTable)
+                                                text-align: center
+                                            @include responsivo(pcMedio)
+                                                text-align: center
                                         .qty-box
                                             .input-text.qty.text
                                                 @include responsivo(telefonoTable)
@@ -115,6 +134,7 @@ body#product_template
                                             justify-content: center
                                             align-content: center
                                             align-items: center
+                                            margin: 0 auto
 
                                         @include responsivo(pcMedio)
                                             width: fit-content
@@ -125,6 +145,12 @@ body#product_template
                                             justify-content: center
                                             align-content: center
                                             align-items: center
+                                            margin: 0 auto
+                                        div
+                                            @include responsivo(telefonoTable)
+                                                margin-top: 0
+                                            @include responsivo(pcMedio)
+                                                margin-top: 0
 
                                 .product_meta
                                     span.posted_in,
@@ -151,7 +177,9 @@ body#product_template
                         .mf-product-summary
                             // display: none
                             .woocommerce-tabs.wc-tabs-wrapper
+                                margin-bottom: 25px
                                 ul.tabs.wc-tabs
+                                    margin-bottom: 0
                                     @include responsivo(general)
                                         display: flex
                                         justify-content: center
@@ -160,3 +188,11 @@ body#product_template
                                         display: flex
                                         justify-content: center
                                         align-content: center
+
+                                    // div#tab-description
+
+                                div#tab-reviews
+                                    padding: 0 25px
+                                    padding-top: 50px
+
+

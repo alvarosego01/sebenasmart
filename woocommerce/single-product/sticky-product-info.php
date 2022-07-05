@@ -41,7 +41,10 @@ if ( function_exists( 'wc_get_image_size' ) ) {
             <div class="sc-product-cart">
                 <p class="price"><?php echo wp_kses_post( $product->get_price_html() ); ?></p>
 				<?php if ( $product->get_stock_status() != 'outofstock' ) : ?>
-                    <a href="#" class="button">
+                    <a href="#" class="sbn_buttonCustom sbn_btn_small sbn_primaryButton left_side">
+                        <span class="icon_container">
+		                	<i aria-hidden="true" class="fas fa-cart-plus"></i>
+		                </span>
 						<?php
 						echo apply_filters( 'martfury_product_info_add_to_cart_text', esc_html__( 'Add to Cart', 'martfury' ) );
 						?>
