@@ -21,6 +21,7 @@ div#top-promotion
             padding: 25px 0
 
 header#site-header
+    background-color: unset
     .main-menu.hidden-xs.hidden-sm
         .container
             .row.header-row
@@ -35,6 +36,7 @@ header#site-header
                                 li.menu-item
                                     padding-left: 15px
                                     padding-right: 15px
+                                    transition: $trans
                                     a
                                         height: 40px
                                         i
@@ -46,8 +48,21 @@ header#site-header
                                         @include responsivo(smallPcTablet)
                                             font-size: 12px
 
+                                    &:hover
+                                        // background-color: $primaryColor
+                                        background-color: $yellow_color
+                                        // *
+                                            // color: $whiteBase1!important
+
+    .main-menu
+        background-color: $whiteBase1!important
+        border: none
+        border-bottom: 1px solid $gray_ult_color
+        // box-shadow: $shadow2!important
     .header-main-wapper
         .header-main
+            background-color: $darkBlue_color!important
+            // background-color:
             @include responsivo(telefonoTable)
                 margin-bottom: 10px
                 padding-bottom: 0
@@ -58,6 +73,7 @@ header#site-header
                 @include regular_section_row_width()
                 .row.header-row
                     .header-logo
+                        margin: 0
                         @include responsivo(telefonoTable)
                             padding: 0
                         @include responsivo(pcMedio)
@@ -67,9 +83,31 @@ header#site-header
                             padding-right: 0
                         @include responsivo(pcMedio)
                             padding-right: 0
+                        .product-extra-search
+                            form.products-search
+                                .psearch-content
+                                    button.search-submit.mf-background-primary
+                                        background-color: $yellow_color
+                                        color: $blackColor
+                                        transition: $trans
+                                        &:hover
+                                            background-color: $primaryColor
+                                            color: $whiteBase1
+
+
+                            ul.hot-words
+                                li
+                                    a
+                                        color: $whiteBase1
+
+                                    &:hover
+                                        a
+                                            color: $primaryColor
                         ul.extras-menu
+                            margin-top: 0
                             li
                                 a
+                                    color: $whiteBase1
                                     @include responsivo(telefonoTable)
                                         height: fit-content!important
                                     @include responsivo(pcMedio)
@@ -80,11 +118,61 @@ header#site-header
                                             font-size: 32.5px
                                         @include responsivo(pcMedio)
                                             font-size: 32.5px
+                                &:hover
+                                    a
+                                        color: $primaryColor
+                            li.extra-menu-item.menu-item-account
+                                // display: none
+                                ul
+                                    li
+                                        a
+                                            transition: $trans!important
+                                            color: $grayColor
+                                            &:hover
+                                                color: $primaryColor!important
+                            li.extra-menu-item.menu-item-cart.mini-cart
+                                span.mini-item-counter.mf-background-primary
+                                    background-color: $yellow_color!important
+                                    color: $blackColor
+
+
 
 
     .main-menu
         .container
             @include regular_section_row_width()
+
+            .row.header-row
+                .i-product-cats.mr-extra-department
+                .col-nav-menu.mr-header-menu
+                    .recently-viewed
+                        h3.recently-title
+                            transition: $trans
+                        &:hover
+                            h3.recently-title
+                                color: $primaryColor
+                    .col-header-menu
+                        .primary-nav.nav
+                            ul.menu
+                                li.menu-item
+                                    a
+                                        transition: $trans
+                                        color: $grayColor
+
+                                    &:hover
+                                        a
+                                            color: $primaryColor
+
+                                    ul.dropdown-submenu
+                                        li.menu-item
+                                            a
+                                                transition: $trans!important
+                                                color: $grayColor
+
+                                            &:hover
+                                                a
+                                                    color: $primaryColor
+
         .cats-menu-title
             @include responsivo(general)
                 padding-left: 0
@@ -139,6 +227,12 @@ header#site-header
                     @include responsivo(resto)
                         padding-left: 10px
 
+                    .product-name
+                        a
+                            color: $darkBlue_color!important
+                            &:hover
+                                color: $primaryColor!important
+
 
 
 .page-header.page-header-page
@@ -152,3 +246,12 @@ header#site-header
             padding-right: 15px
 
 
+.page-header
+    .breadcrumbs
+        color: $darkBlue_color!important
+        span[aria-current]
+            color: $primaryColor
+        a
+            color: $darkBlue_color!important
+            &:hover
+                color: $primaryColor!important

@@ -129,6 +129,12 @@ body#product_template
                                             margin: 15px 0
                                             margin-top: 10px
                                     table.variations
+                                        @include responsivo(telefonoTable)
+                                            width: fit-content
+                                            margin: 0 auto
+                                        @include responsivo(pcMedio)
+                                            width: fit-content
+                                            margin: 0 auto
                                         tbody
                                             width: fit-content
                                             tr
@@ -213,6 +219,10 @@ body#product_template
                                         display: flex
                                         justify-content: center
                                         align-content: center
+    div#footer-history-products
+
+        @include responsivo(pcMedio)
+            bottom: 50px!important
 
 // body#product_template.mobile-version
 //     div#page

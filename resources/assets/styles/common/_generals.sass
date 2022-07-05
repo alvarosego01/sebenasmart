@@ -2,8 +2,14 @@
 
 
 @media (min-width: 992px)
+//
+    // div.slick-track
+        // li.col-xs-6.col-sm-4.col-md-3.col-lg-3.un-4-cols.product.type-product.slick-slide.slick-cloned
+            // width: fit-content!important
     .col-lg-3
-        width: 25%!important
+        &:not(.product.type-product.slick-slide.slick-cloned)
+            width: 25%!important
+
 
 @media (min-width: 992px)
     .col-lg-4
@@ -64,6 +70,7 @@ input.a,
 .customButton
     transition: $trans
     padding: 0
+
     &.wIcon
         display: flex!important
         flex-direction: row!important
@@ -78,12 +85,20 @@ input.a,
             position: relative
 
 .hiperRed
+    font-weight: 600
     &:hover
         color: red!important
 
-.hiperLink
+.hiperLink,
+a.content-link,
+a.woocommerce-privacy-policy-link
+    color: $darkBlue_color
+    transition: $trans
+    font-weight: 600
     &:hover
         color: $primaryColor!important
+
+
 
 
 .sectionParent
@@ -104,6 +119,12 @@ header#site-header.minimized
         .header-main
             padding: 20px 0
             z-index: 1000!important
+
+a
+    color: $darkBlue_color
+    // color: red
+    &:hover
+        text-decoration: none!important
 
 
 
@@ -364,9 +385,10 @@ body#regular_document_template
             i
                 font-size: 30px
                 padding: 10px
-                background-color: var(--mf-primary-color)
-                color: black
+                background-color: $yellow_color
+                color: $blackColor
                 border-radius: 360px
+
 
         h3
             margin: auto 0!important
@@ -380,8 +402,18 @@ body#regular_document_template
     i
         font-size: 30px
         padding: 10px
-        background-color: var(--mf-primary-color)
-        color: black
+        background-color: $yellow_color
+        color: $blackColor
+        // border: 1px solid $blackColor
+        border-radius: 360px
+        box-shadow: $shadow2
+
+.iconSection.grey
+    i
+        font-size: 30px
+        padding: 10px
+        background-color: $lightGray_color
+        color: $blackColor
         border-radius: 360px
 
 
@@ -447,8 +479,10 @@ body#regular_document_template
                 // padding-right: 15px
                 font-size: 18px
                 padding: 7.5px
-                background-color: $primaryColor
+                background-color: $yellow_color
                 border-radius: 100%
+                color: $blackColor
+                box-shadow: $shadow2
             span
                 width: fit-content
             span.have
@@ -495,9 +529,11 @@ body#regular_document_template
                         width: 60%!important
 
                 input.button
-                    background-color: $primaryColor
+                    background-color: $yellow_color
+                    color: $blackColor
                     border: transparent
                     margin-top: 0!important
+                    box-shadow: $shadow2
                     @include responsivo(telefonoTable)
                         width: 35%!important
                     @include responsivo(pcMedio)
@@ -578,14 +614,30 @@ header#site-header
                                     font-size: 37.5px
 
 header#site-header.minimized
-    .container
-        .header-main.header-row
-            @include responsivo(telefonoTable)
-                padding-left: 5%
-                padding-right: 5%
-            @include responsivo(pcMedio)
-                padding-left: 5%
-                padding-right: 5%
+    .header-main-wapper
+        .header-main
+            .container
+                .header-row
+                    @include responsivo(telefonoTable)
+                        padding-left: 5%
+                        padding-right: 5%
+                    @include responsivo(pcMedio)
+                        padding-left: 5%
+                        padding-right: 5%
+
+                    .d-department.hidden-xs.hidden-sm
+                        .products-cats-menu
+                            .cats-menu-title
+                                color: $whiteBase1
+                                transition: $trans
+                                span.text
+                                    transition: $trans
+                                    color: $whiteBase1
+
+                                &:hover
+                                    color: $primaryColor
+
+
 
 .slick-track,
 .slick-slide
@@ -681,8 +733,25 @@ div#primary
 .noShadow
     box-shadow: none!important
 
+.mf-slides
+    .slick-slide-inner
+        .mf-slide-button
+            background-color: $primaryColor!important
+            color: $whiteBase1!important
+
+
 // botones
-.sbn_buttonCustom
+
+.sbn_btn_primary
+    // background-color: $yellow_color!important
+    background-color: $primaryColor!important
+    transition: $trans
+    color: $whiteBase1!important
+    border-radius: 7.5px!important
+
+
+.sbn_buttonCustom,
+.mf-button
     display: flex!important
     flex-direction: row!important
     justify-content: center
@@ -698,7 +767,7 @@ div#primary
     min-height: unset!important
     min-width: unset!important
     box-shadow: $shadow2!important
-
+    border-radius: 7.5px
     .icon_container
         display: flex
         flex-direction: column
@@ -808,19 +877,22 @@ div#primary
 
 
     &.sbn_primaryButton
-        background-color: $primaryColor
-        color: $blackColor
+        background-color: $primaryColor!important
+        color: $whiteBase1!important
     &.sbn_secondaryButton
-        background-color: $lightGray_color
-        color: $blackColor
+        background-color: $lightGray_color!important
+        color: $blackColor!important
     &.sbn_thirdButton
-        background-color: $blackColor
-        color: $whiteBase1
+        background-color: $blackColor!important
+        color: $whiteBase1!important
+    &.sbn_yellowButton
+        background-color: $yellow_color!important
+        color: $blackColor!important
     &.sbn_transparentButton
-        border: 1px solid $blackColor
+        border: 1px solid $blackColor!important
         background-color: transparent
     &.sbn_underlineButton
-        color: $blackColor
+        color: $blackColor!important
 
     &.right_side
         display: flex
@@ -834,6 +906,8 @@ div#primary
         .icon_container,
         .icon_container
             margin-right: 10px
+
+
 
 
 
@@ -932,6 +1006,8 @@ div#primary
                                                     margin-bottom: 5px
 
 
+
+
                             span.slick-arrow
                                 top: -40px
 
@@ -941,6 +1017,26 @@ div#primary
                         padding-left: 20px
                         h2.side-title
                             margin-bottom: 15px
+
+
+.mf-product-details
+    .mf-product-content
+        h2.woo-loop-product__title
+            a
+                transition: $trans
+                color: $darkBlue_color!important
+                &:hover
+                    color: $primaryColor!important
+
+li.product
+    .product-inners
+        h2
+            a
+                transition: $trans
+                color: $darkBlue_color!important
+                &:hover
+                    color: $primaryColor!important
+
 
 
 .elementor-element.elementor-widget.elementor-widget-martfury-icons-list
@@ -1067,3 +1163,74 @@ div#mf-quick-view-modal
 
 
 
+div#footer-history-products
+    // position: relative
+    // height: 50px
+    bottom: 65px
+    @include responsivo(telefonoTable)
+        display: none
+
+    h4.recently-title
+        margin: 0
+        // position: absolute
+        // top: -75px
+        // position: absolute
+        // right: 0
+
+    .container.rv-container
+        .product-list
+            padding-bottom: 15px
+
+
+.stepsProcess
+    ol.steps
+        display: flex
+        flex-direction: row
+        list-style: none
+        padding: 0
+        margin: 0
+        li.item
+            margin-bottom: 0
+            margin: 0 25px
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+
+            .iconSection
+                margin-right: 10px
+            p
+                margin-bottom: 0
+
+            &:first-child
+                @include responsivo(general)
+                    margin-left: 0
+                @include responsivo(resto)
+                    margin-left: 0
+
+            &:last-child
+                @include responsivo(general)
+                    margin-right: 0
+                @include responsivo(resto)
+                    margin-right: 0
+
+
+.fsbe-wrap
+    display: none!important
+
+.ribbons
+    span.onsale.ribbon
+        background-color: $primaryColor!important
+        color: $whiteBase1!important
+
+
+
+
+// // p,
+// // span
+//     a
+//         color: $darkBlue_color!important
+//         transition: $trans!important
+//         font-weight: 600
+//         &:hover
+//             color: $primaryColor!important
