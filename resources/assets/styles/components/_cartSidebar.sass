@@ -21,6 +21,7 @@
             transition: $trans
             box-shadow: $shadow2
             right: 15px
+            background-color: $yellow_color
             span.xoo-wsc-items-count
                 width: 30px
                 height: 30px
@@ -30,9 +31,12 @@
                 display: none
             i
                 font-size: 37.5px
-                color: black
+                color: $blackColor
+                transition: $trans
             &:hover
                 background-color: $primaryColor
+                i
+                    color: $whiteBase1
 
             @include responsivo(telefonoTable)
                 display: none!important

@@ -294,6 +294,6 @@ function sets_tepsProcess_shop()
 <?php
 }
 
-add_action('special_preTitle_section', 'sets_tepsProcess_shop', 'prueba de parametro');
+// add_action('special_preTitle_section', 'sets_tepsProcess_shop', 'prueba de parametro');
 
 ?>

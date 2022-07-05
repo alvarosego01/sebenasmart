@@ -269,6 +269,10 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
                             padding-right: 30px
                             button#place_order
                                 margin-top: 0
+                                border-radius: 7.5px
+                                background-color: $primaryColor!important
+                                transition: $trans!important
+                                color: $whiteBase1!important
                             @include responsivo(telefonoTable)
                                 padding: 0 25px
                             @include responsivo(pcMedio)
@@ -484,7 +488,7 @@ tr.woocommerce-shipping-totals.shipping
                             content: ""
                             height: 100px
                             width: 55px
-                            background-color: $primaryColor
+                            background-color: $yellow_color
                             position: absolute
                             transform: rotate(-50deg)
                             top: -50px
@@ -496,6 +500,7 @@ tr.woocommerce-shipping-totals.shipping
                             font-size: 22px
                             z-index: 10
                             position: relative
+                            color: $blackColor
                             @include responsivo(general)
                                 font-size: 20px
 

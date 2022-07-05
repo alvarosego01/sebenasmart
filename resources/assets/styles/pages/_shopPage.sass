@@ -21,7 +21,11 @@ body#shop_template
                         padding: 0 10px
                     @include responsivo(resto)
                         padding: 0 10px
-                    nav.woocommerce-pagination
+
+                    .mf-shop-content
+                        // ul.products:not(.slick-slider)
+                            // li.product
+                        nav.woocommerce-pagination
                             margin: 25px 0
                             margin-top: 0
 
@@ -29,3 +33,14 @@ body#shop_template
                 aside#primary-sidebar
                     @include responsivo(pcMedio)
                         margin-top: 25px
+
+body#shop_template.woocommerce.shop-view-list
+    div#page
+        div#content
+            .container
+                div#primary
+                    .mf-shop-content
+                        ul.products:not(.slick-slider)
+                            margin-bottom: 25px
+                            li.product
+                                width: 100%!important

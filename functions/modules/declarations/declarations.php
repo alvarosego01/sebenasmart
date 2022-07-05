@@ -66,8 +66,6 @@ add_action('wp_enqueue_scripts', 'init_scripts_styles');
         }
     }
 
-
-
     function customCouponField()
     {
         if (wc_coupons_enabled()) { ?>
@@ -98,7 +96,7 @@ add_action('wp_enqueue_scripts', 'init_scripts_styles');
 
                             <input required type="text" name="coupon_code_custom" class="input-text" id="coupon_code_custom" value=""
                                 placeholder="<?php esc_attr_e('Coupon code', 'martfury'); ?>" />
-                            <input type="submit" class="button" name="apply_coupon_custom"
+                            <input type="submit" class="button sbn_yellowButton" name="apply_coupon_custom"
                                 value="<?php esc_attr_e('Apply coupon', 'martfury'); ?>" />
                             <?php do_action('woocommerce_cart_coupon'); ?>
 
