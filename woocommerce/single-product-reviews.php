@@ -105,13 +105,8 @@ if ( get_option( 'woocommerce_enable_review_rating' ) === 'no' || $average_ratin
 							'title_reply_after'   => '</span>',
 							'comment_notes_after' => '',
 							'label_submit'        => esc_html__( 'Submit', 'martfury' ),
-							'class_submit' => 'sbn_buttonCustom sbn_primaryButton left_side sbn_btn_normal',
 							'logged_in_as'        => '',
 							'comment_field'       => '',
-
-
-
-
 						);
 
 						$name_email_required = (bool) get_option( 'require_name_email', 1 );
@@ -150,7 +145,7 @@ if ( get_option( 'woocommerce_enable_review_rating' ) === 'no' || $average_ratin
 							/* translators: %s opening and closing link tags respectively */
 							$comment_form['must_log_in'] = '<p class="must-log-in">' . sprintf( esc_html__( 'You must be %1$slogged in%2$s to post a review.', 'martfury' ), '<a href="' . esc_url( $account_page_url ) . '">', '</a>' ) . '</p>';
 						}
-
+						
 						if ( wc_review_ratings_enabled() ) {
 							$comment_form['comment_field'] = '<div class="comment-form-rating"><label for="rating">' . esc_html__( 'Your rating of this product', 'martfury' ) . '</label><select name="rating" id="rating" aria-required="true" required>
 							<option value="">' . esc_html__( 'Rate&hellip;', 'martfury' ) . '</option>
