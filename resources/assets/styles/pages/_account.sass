@@ -2,7 +2,6 @@
 
 body#dashboard_template
 
-
     div#content
         background-color: $lightGray_color
         padding: 75px 0
@@ -13,6 +12,7 @@ body#dashboard_template
         .container
             padding: 50px
             background-color: $whiteBase1
+            box-shadow: $shadow2
             @include responsivo(telefonoTable)
                 padding: 50px 25px
                 padding-bottom: 25px
@@ -46,6 +46,10 @@ body#dashboard_template
                                     label
                                         @include responsivo(telefonoTable)
                                             font-size: 12px
+
+    button,
+    a.button
+        box-shadow: $shadow2
 
 
 
