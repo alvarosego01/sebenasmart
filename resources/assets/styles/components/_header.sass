@@ -1,29 +1,42 @@
 
 
-
-// div#content
-//     .container
-//         @include responsivo(telefonoTable)
-//             width: 95%
-//         @include responsivo(pcMedio)
-//             width: 90%
-//         @include responsivo(general)
-//             width: 100%!important
-//             max-width: 1240px!important
-//         @include responsivo(resto)
-//             width: 100%!important
-//             max-width: 1340px!important
-
 div#top-promotion
+    @include responsivo(telefonoTable)
+        min-height: 75px
+    @include responsivo(pcMedio)
+        min-height: 75px
     @include responsivo(general)
-        height: 100px
+        min-height: 100px
     @include responsivo(resto)
-        height: 100px
+        min-height: 100px
     display: flex
     flex-direction: column
     justify-content: center
     align-content: center
     align-items: center
+    .container
+        @include responsivo(general)
+            padding-left: 25px!important
+            padding-right: 25px!important
+
+        .promotion-content
+            display: flex
+            flex-direction: row
+            @include responsivo(telefonoTable)
+                flex-direction: column
+
+            .promo-inner
+                @include responsivo(telefonoTable)
+                    padding-bottom: 15px
+                    width: 100%
+                    text-align: center
+                    display: block
+            .promo-link
+                @include responsivo(telefonoTable)
+                    margin: auto 0
+                @include responsivo(pcMedio)
+                    margin: auto 0
+
 
 header#site-header
     .header-main-wapper
@@ -69,6 +82,42 @@ header#site-header
                                             font-size: 35px
                                         @include responsivo(smallPcTablet)
                                             font-size: 32.5px
+
+                            li.extra-menu-item
+                                min-height: 40px
+
+                            li.extra-menu-item.menu-item-account.logined.icon
+                                a#menu-extra-login
+                                    span.login-text
+                                        position: relative
+                                        top: 12.5px
+                                        right: 7.5px
+
+                                ul
+                                    // background-color: white
+                                    li
+                                        padding: 10px 15px
+
+                                        h3
+                                            margin: 0
+                                        &:first-of-type
+
+                                            padding-bottom: 0
+                                        ul
+                                            li
+                                                padding: 0
+                                                padding-bottom: 5px!important
+                                                &:last-of-type
+                                                    padding-bottom: 0!important
+                                    li.line-space
+                                        // display: none
+                                        padding: 0
+                                    *
+                                        font-family: "Work Sans", Arial, sans-serif
+
+
+
+
 
 
     .main-menu

@@ -1,0 +1,124 @@
+
+
+body#dashboard_template
+
+
+    div#content
+        background-color: $lightGray_color
+        padding: 75px 0
+        @include responsivo(telefonoTable)
+            padding: 50px 0
+        @include responsivo(pcMedio)
+            padding: 50px 0
+        .container
+            padding: 50px
+            background-color: $whiteBase1
+            @include responsivo(telefonoTable)
+                padding: 50px 25px
+                padding-bottom: 25px
+            @include responsivo(pcMedio)
+                padding: 50px
+                padding-bottom: 25px
+
+
+            div#primary
+                main#main
+
+                    article.page
+
+                        .entry-content
+                            .woocommerce
+                                // .account-info
+
+                                // nav.woocommerce-MyAccount-navigation
+
+                                .woocommerce-MyAccount-content
+                                    p.woocommerce-form-row
+
+
+                                        em
+                                            font-size: 12px
+                                            line-height: 1
+                                            @include responsivo(telefonoTable)
+                                                font-size: 11px
+
+
+                                    label
+                                        @include responsivo(telefonoTable)
+                                            font-size: 12px
+
+
+
+
+body#dashboard_template.woocommerce-edit-account
+
+    div#content
+        .container
+            div#primary
+                main#main
+                    article.page
+                        .entry-content
+                            .woocommerce
+                                // .account-info
+
+                                // nav.woocommerce-MyAccount-navigation
+
+                                .woocommerce-MyAccount-content
+                                    display: flex
+                                    flex-flow: wrap
+                                    flex-direction: row
+                                    position: relative
+                                    p.woocommerce-form-row
+                                        @include responsivo(general)
+                                            width: 375px
+                                        @include responsivo(smallPcTablet)
+                                            width: 300px
+                                        @include responsivo(resto)
+                                            width: 425px
+
+                                        em
+                                            font-size: 12px
+                                            line-height: 1
+                                            @include responsivo(telefonoTable)
+                                                font-size: 11px
+
+
+                                    label
+                                        @include responsivo(telefonoTable)
+                                            font-size: 12px
+
+
+                                    fieldset
+                                        @include responsivo(general)
+                                            position: absolute
+                                            right: 0
+                                            top: 0
+                                            bottom: 0
+
+                                        @include responsivo(resto)
+                                            position: absolute
+                                            right: 0
+                                            top: 0
+                                            bottom: 0
+
+                                        legend
+                                            @include responsivo(general)
+                                                position: absolute
+                                                top: -40px
+                                                left: 0
+                                                margin: 0
+
+                                            @include responsivo(resto)
+                                                position: absolute
+                                                top: -40px
+                                                left: 0
+                                                margin: 0
+
+                                        p.woocommerce-form-row
+                                            width: 100%
+                                            @include responsivo(general)
+                                                width: 375px
+                                            @include responsivo(smallPcTablet)
+                                                width: 300px
+                                            @include responsivo(resto)
+                                                width: 425px

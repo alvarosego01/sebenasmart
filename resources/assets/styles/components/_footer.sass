@@ -21,4 +21,15 @@ footer.site-footer
             padding: 25px 0
 
     .footer-bottom
-        padding: 25px 0
+        padding: 25px 0!important
+
+        .col-footer-copyright
+            @include responsivo(telefonoTable)
+                padding: 0
+            @include responsivo(pcMedio)
+                padding: 0
+            .footer-copyright
+                @include responsivo(telefonoTable)
+                    text-align: center
+                @include responsivo(pcMedio)
+                    text-align: center

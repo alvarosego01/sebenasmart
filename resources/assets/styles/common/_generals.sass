@@ -10,7 +10,9 @@
         flex: 0 0 auto
         width: 66.66666667%!important
 
-
+body
+    background-color: $whiteBase1!important
+    // background-color: red!important
 
 a,
 button
@@ -65,7 +67,6 @@ header#site-header.minimized
     .header-main-wapper
         .header-main
             padding: 20px 0
-
 
 
 .desktopElement
@@ -231,12 +232,10 @@ div#page
                     //         width: 100%
 
 
-
 .customPageSubTitle
     p.text
         font-weight: 500
         font-size: 16px
-
 
 
 .thinButton
@@ -253,9 +252,6 @@ div#page
 
 
 // .sbn_buttonCustom sbn_btn_normal.sbn_primaryButton.left_side
-
-
-
 
 .ticketShape
     height: 25px
@@ -334,8 +330,6 @@ div#page
     max-width: unset!important
 
 
-
-
 .widget_shopping_cart_content .woocommerce-mini-cart__total .woocommerce-Price-amount,
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals table.shop_table .order-total .woocommerce-Price-amount
     color: black
@@ -375,7 +369,6 @@ div#page
             margin-bottom: 0
         @include responsivo(pcMedio)
             margin-bottom: 0
-
 
         a
             width: 100%
@@ -440,7 +433,6 @@ div#page
                         width: 55%!important
                     @include responsivo(resto)
                         width: 60%!important
-
 
                 input.button
                     background-color: $primaryColorYellow
@@ -587,3 +579,164 @@ div#primary
     padding: 0!important
 
 
+
+
+.boxShadow2
+    box-shadow: $shadow2
+
+.noShadow
+    box-shadow: none!important
+
+// botones
+.sbn_buttonCustom
+    display: flex!important
+    flex-direction: row!important
+    justify-content: center
+    justify-items: center
+    align-content: center
+    align-items: center
+    text-decoration: none
+    line-height: 1!important
+    width: fit-content
+    transition: $trans
+    // transform: scale(1)
+    height: auto!important
+    min-height: unset!important
+    min-width: unset!important
+
+
+    .icon_container
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-content: center
+        align-items: center
+        font-size: unset
+
+    &:hover
+        transform: scale(1.1)
+        cursor: pointer
+
+    &.sbn_btn_normal
+        @include responsivo(telefonoTable)
+            font-size: 13px!important
+            padding: 12.5px 25px!important
+        @include responsivo(pcMedio)
+            font-size: 18px!important
+            padding: 15px 40px!important
+        @include responsivo(general)
+            padding: 15px 35px!important
+            font-size: 18px!important
+
+        @include responsivo(smallPcTablet)
+            padding: 10px 25px!important
+            font-size: 16px!important
+        @include responsivo(resto)
+            font-size: 20px!important
+            padding: 15px 40px!important
+
+        .icon_container
+            i[class*="fa"]
+                display: block
+                margin: auto
+                line-height: 1
+                @include responsivo(telefonoTable)
+                    font-size: 15px!important
+                @include responsivo(pcMedio)
+                    font-size: 15px!important
+                @include responsivo(general)
+                    font-size: 18px!important
+                @include responsivo(smallPcTablet)
+                    font-size: 16px!important
+                @include responsivo(resto)
+                    font-size: 20px!important
+            i.las
+                display: block
+                margin: auto
+                line-height: 1
+                @include responsivo(telefonoTable)
+                    font-size: 20px!important
+                @include responsivo(pcMedio)
+                    font-size: 20px!important
+                @include responsivo(general)
+                    font-size: 27.5px!important
+                @include responsivo(smallPcTablet)
+                    font-size: 25px!important
+                @include responsivo(resto)
+                    font-size: 30px!important
+
+    &.sbn_btn_small
+        @include responsivo(telefonoTable)
+            font-size: 13px!important
+            padding: 12.5px 25px!important
+        @include responsivo(pcMedio)
+            font-size: 14px!important
+            padding: 10px 25px!important
+        @include responsivo(general)
+            font-size: 14px!important
+            padding: 10px 20px!important
+        @include responsivo(smallPcTablet)
+            font-size: 12px!important
+            padding: 10px 20px!important
+        @include responsivo(resto)
+            font-size: 16px!important
+            padding: 10px 20px!important
+
+        .icon_container
+            i[class*="fa"]
+                display: block
+                margin: auto
+                line-height: 1
+                @include responsivo(telefonoTable)
+                    font-size: 14px!important
+                @include responsivo(pcMedio)
+                    font-size: 14px!important
+                @include responsivo(general)
+                    font-size: 14px!important
+                @include responsivo(smallPcTablet)
+                    font-size: 14px!important
+                @include responsivo(resto)
+                    font-size: 16px!important
+            i.las
+                display: block
+                margin: auto
+                line-height: 1
+                @include responsivo(telefonoTable)
+                    font-size: 14px!important
+                @include responsivo(pcMedio)
+                    font-size: 14px!important
+                @include responsivo(general)
+                    font-size: 16px!important
+                @include responsivo(smallPcTablet)
+                    font-size: 14px!important
+                @include responsivo(resto)
+                    font-size: 18px!important
+
+
+    &.sbn_primaryButton
+        background-color: $primaryColorYellow
+        color: $blackColor
+    &.sbn_secondaryButton
+        background-color: $lightGray_color
+        color: $blackColor
+    &.sbn_thirdButton
+        background-color: $blackColor
+        color: $whiteBase1
+    &.sbn_transparentButton
+        border: 1px solid $blackColor
+        background-color: transparent
+    &.sbn_underlineButton
+        color: $blackColor
+
+    &.right_side
+        display: flex
+        flex-direction: row-reverse
+        .icon_container,
+        .icon_container
+            margin-left: 10px
+    &.left_side
+        display: flex
+        flex-direction: row
+        .icon_container,
+        .icon_container
+            margin-right: 10px

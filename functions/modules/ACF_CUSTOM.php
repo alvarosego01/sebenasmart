@@ -45,6 +45,7 @@ if (!defined('ABSPATH')) {
                                 'checkout_template' => 'Checkout template',
                                 'tracking_template' => 'Track order template',
                                 'shop_template' => 'Shop page template',
+                                'dashboard_template' => 'Dashboard page template',
                             ),
                         ),
 
