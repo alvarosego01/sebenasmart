@@ -33,23 +33,21 @@ if (!defined('ABSPATH')) {
                         'type' => 'text',
                     ),
 
-                        array(
-                            'key' => 'template_custom',
-                            'label' => 'Template base',
-                            'name' => 'Template base',
-                            'type' => 'select',
-                            'choices' => array(
-                                'regular_template' => 'Regular',
-                                'home_template' => 'Home template',
-                                'cart_template' => 'Cart template',
-                                'checkout_template' => 'Checkout template',
-                                'tracking_template' => 'Track order template',
-                                'shop_template' => 'Shop page template',
-                                'dashboard_template' => 'Dashboard page template',
-                            ),
+                    array(
+                        'key' => 'template_custom',
+                        'label' => 'Template base',
+                        'name' => 'Template base',
+                        'type' => 'select',
+                        'choices' => array(
+                            'regular_template' => 'Regular',
+                            'home_template' => 'Home template',
+                            'cart_template' => 'Cart template',
+                            'checkout_template' => 'Checkout template',
+                            'tracking_template' => 'Track order template',
+                            'shop_template' => 'Shop page template',
+                            'dashboard_template' => 'Dashboard page template',
                         ),
-
-
+                    ),
 
                 ),
                     'location' => array(
@@ -75,7 +73,7 @@ if (!defined('ABSPATH')) {
         if( count($fieldsPack) > 0 ){
 
             foreach ($fieldsPack as $key => $fieldGroup) {
-                // $fieldGroup['location'] = self::$rules[$key];
+
                 if ( function_exists('acf_add_local_field_group') ) {
 
                     acf_add_local_field_group($fieldGroup);

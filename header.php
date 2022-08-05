@@ -65,13 +65,36 @@ if (!defined('ABSPATH')) {
 
 	}
 
+	// $args = array(
+	// 	'sort_order' => 'asc',
+	// 	'sort_column' => 'post_title',
+	// 	'post_type' => 'page',
+	// 	'post_status' => 'publish'
+	// );
+	// $all_pages = get_pages($args); // get all pages based on supplied args
+
+	// $all_ids = get_posts( array(
+	// 	'post_type' => 'product',
+	// 	'numberposts' => -1,
+	// 	'post_status' => 'publish',
+	// 	// 'fields' => 'ids',
+	// 	'tax_query' => array(
+	// 	//    array(
+	// 	// 	  'taxonomy' => 'product_cat',
+	// 	// 	  'field' => 'slug',
+	// 	// 	  'terms' => 'your_product_cat',
+	// 	// 	  'operator' => 'IN',
+	// 	//    )
+	// 	),
+	//  ) );
+
+//   $cats = wc_get_product_category_list();
 
 
 ?>
 
 
-
-<body <?php body_class( $class ); ?> id="<?php echo $id ?>" >
+<body page_ID="<?php echo $page_id ?>" <?php body_class( $class ); ?> id="<?php echo $id ?>" >
 <?php martfury_body_open(); ?>
 
 <div id="page" class="hfeed site">

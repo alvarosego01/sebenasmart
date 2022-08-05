@@ -21,9 +21,6 @@ function martfury_child_enqueue_scripts() {
 
 
 
-
-
-
 require get_stylesheet_directory() . '/functions/index.php';
 
 
