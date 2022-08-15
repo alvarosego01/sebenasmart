@@ -1,71 +1,18 @@
-
-<label for="coupon_code_custom">
-    <a class="collapsible" collapse_target="couponContainer_custom" open="0">
-
-        <span class="have">
-            Have a coupon? <strong>Click here</strong>
-        </span>
-
-        <span class="deploy">
-            <?php esc_html_e( 'Enter your Coupon Discount', 'martfury' ); ?>
-        </span>
-        <i class="las la-angle-right"></i>
-
-    </a>
-</label>
-<div class="collapse content couponContainer_custom" id="couponContainer_custom" >
-
-    <form onsubmit="event.preventDefault(); sendCouponCart(this)" class="woocommerce-cart-form_custom">
-        <div class="collapseContain">
-
-            <input required type="text" name="coupon_code_custom" class="input-text" id="coupon_code_custom" value=""
-                placeholder="<?php esc_attr_e( 'Coupon code', 'martfury' ); ?>" />
-            <input type="submit" class="button" name="apply_coupon_custom"
-                value="<?php esc_attr_e( 'Apply coupon', 'martfury' ); ?>" />
-            <?php do_action( 'woocommerce_cart_coupon' ); ?>
-
-        </div>
-    </form>
-
-</div>
-
-<!--  -->
-
-
-<label for="coupon_code_custom">
-    <a data-bs-toggle="collapse" href="#couponContainer_custom" role="button" aria-expanded="false"
-        aria-controls="couponContainer_custom">
-
-        <span class="have">
-            Have a coupon? <strong>Click here</strong>
-        </span>
-
-        <span class="deploy">
-            <?php esc_html_e( 'Enter your Coupon Discount', 'martfury' ); ?>
-        </span>
-        <i class="las la-angle-right"></i>
-
-    </a>
-</label>
-<div class="collapse couponContainer_custom" id="couponContainer_custom">
-
-    <form onsubmit="event.preventDefault(); sendCouponCart(this)" class="woocommerce-cart-form_custom">
-        <div class="collapseContain">
-
-            <input required type="text" name="coupon_code_custom" class="input-text" id="coupon_code_custom" value=""
-                placeholder="<?php esc_attr_e( 'Coupon code', 'martfury' ); ?>" />
-            <input type="submit" class="button" name="apply_coupon_custom"
-                value="<?php esc_attr_e( 'Apply coupon', 'martfury' ); ?>" />
-            <?php do_action( 'woocommerce_cart_coupon' ); ?>
-
-        </div>
-    </form>
-
-</div>
-
-<!--  -->
-
-<button type="button" class="collapsible">Open Collapsible</button>
-<div class="content" >
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+2022 © ExitoWeb, Inc. Todos los derechos reservados. <br class="space">
+<div class="barterElements">
+  <div class="element">
+    <p>Términos de servicio</p>
+    <div>
+      <a href="/terminos-de-servicio">Español</a> <a href="/terms-of-service ">Ingles</a>
+    </div>
+  </div>
+  <div class="element">
+    <p>Política de privacidad</p>
+    <div>
+      <a href="/politica-de-privacidad">Español</a><a href="https://escala.com/privacy-policy">Ingles</a>
+    </div>
+  </div>
+  <div class="element">
+    <a href="https://escala.com/vulnerability-program">Report Vulnerability</a>
+  </div>
 </div>

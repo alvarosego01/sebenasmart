@@ -28,7 +28,7 @@ global $product;
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
 	?>
 
-	<button type="submit" class="sbn_buttonCustom sbn_btn_normal sbn_primaryButton left_side single_add_to_cart_button  button alt">
+	<button type="submit" class="sbn_buttonCustom sbn_btn_normal sbn_primaryButton left_side button single_add_to_cart_button    alt">
 		<span class="icon_container">
 			<i aria-hidden="true" class="fas fa-cart-plus"></i>
 		</span>

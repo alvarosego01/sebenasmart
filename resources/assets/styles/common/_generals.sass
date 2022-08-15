@@ -464,7 +464,7 @@ div#page
                         background-color: rgba(white, 0.925)
                         display: flex
                         flex-direction: row
-                        justify-content: space-between
+                        justify-content: space-evenly
                         align-items: center
                         align-content: center
                         a
@@ -567,6 +567,37 @@ header#site-header.minimized
         li.slick-active
             button
                 background-color: $primaryColorYellow
+
+.elementor-widget-container
+    .mf-products-of-category-2.woocommerce
+        ul.slick-dots
+            @include responsivo(telefonoTable)
+                position: unset!important
+                margin-top: 0px!important
+                margin-bottom: 20px!important
+                padding-bottom: 5px!important
+            @include responsivo(pcMedio)
+                position: unset!important
+                margin-top: 0px!important
+                margin-bottom: 20px!important
+                padding-bottom: 5px!important
+
+ul.slick-dots
+
+    li
+        @include responsivo(telefonoTable)
+            height: 15px!important
+            width: 15px!important
+        @include responsivo(pcMedio)
+            height: 15px!important
+            width: 15px!important
+        button
+            @include responsivo(telefonoTable)
+                height: 15px!important
+                width: 15px!important
+            @include responsivo(pcMedio)
+                height: 15px!important
+                width: 15px!important
 
 
 ul.products
