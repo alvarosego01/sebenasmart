@@ -208,10 +208,12 @@ div#page
     .martfury-container
         @include containerWidth()
     div#content
-        @include responsivo(telefonoTable)
-            padding-top: 0
-        @include responsivo(pcMedio)
-            padding-top: 0
+        // padding: 75px 0
+        // @include responsivo(telefonoTable)
+        //     padding: 50px 0
+        // @include responsivo(pcMedio)
+        //     padding: 50px 0
+
         .container-fluid
             padding-left: 0
             padding-right: 0
@@ -574,7 +576,7 @@ header#site-header.minimized
             @include responsivo(telefonoTable)
                 position: unset!important
                 margin-top: 0px!important
-                margin-bottom: 20px!important
+                margin-bottom: 10px!important
                 padding-bottom: 5px!important
             @include responsivo(pcMedio)
                 position: unset!important
@@ -773,3 +775,142 @@ div#primary
         .icon_container,
         .icon_container
             margin-right: 10px
+
+
+
+
+.elementor-element.elementor-widget.elementor-widget-martfury-products-of-category-2
+    .elementor-widget-container
+        .mf-products-of-category-2.woocommerce
+            .cats-header
+                display: flex
+                flex-direction: row
+                @include responsivo(telefonoTable)
+                    padding-left: 15px
+                    padding-right: 15px
+                    flex-direction: column
+                    justify-content: flex-start
+                    align-content: flex-start
+                    align-items: flex-start
+                @include responsivo(pcMedio)
+                    padding-left: 30px
+                    padding-right: 30px
+                h2.cats-inner__heading
+                    @include responsivo(telefonoTable)
+                        margin-bottom: 10px
+                    @include responsivo(pcMedio)
+                        margin-bottom: 10px
+                ul.extra-links
+                    @include responsivo(telefonoTable)
+                        display: flex
+                        flex-direction: row
+                        justify-content: flex-start
+                        align-content: center
+                        align-items: center
+                        width: 100%
+
+                    li
+                        padding: 0
+                        padding-right: 15px
+                        @include responsivo(telefonoTable)
+                            padding-right: 7.5px
+                        &:last-child
+                            padding: 0
+                            padding: 0
+
+            .products-cat.row
+                padding-bottom: 0
+                @include responsivo(telefonoTable)
+                    padding-bottom: 5px
+
+                .has-side-product.col-product-content
+                    @include responsivo(telefonoTable)
+                        padding-left: 7.5px
+                        padding-right: 7.5px
+
+                    .images-slider
+                        padding-left: 0
+                        padding-right: 0
+                        padding-bottom: 10px
+                        @include responsivo(telefonoTable)
+                            padding-left: 0
+                            padding-right: 0
+
+                    .mf-products-tabs.woocommerce
+                        padding-left: 10px
+                        @include responsivo(telefonoTable)
+                            padding-left: 7.5px
+                            padding-right: 7.5px
+
+                        .tabs-header
+                            padding-bottom: 15px
+                            .tabs-header-nav
+                                width: 100%
+                                ul.tabs-nav
+                                    width: 100%
+                                    display: flex
+                                    flex-direction: row
+                                    li
+                                        padding: 0
+                                        padding-left: 15px
+                                        &:first-child
+                                            padding: 0
+
+                                        a
+                                            @include responsivo(telefonoTable)
+                                                font-size: 14px
+                                            @include responsivo(pcMedio)
+                                                font-size: 14px
+                        .tabs-content
+                            padding-top: 15px
+                            .tabs-panel.tab-loaded.active
+                                .woocommerce
+                                    .slick-list
+                                        li.product
+                                            .product-inner
+                                                margin-bottom: 25px
+                                                @include responsivo(telefonoTable)
+                                                    margin-bottom: 5px
+
+
+                            span.slick-arrow
+                                top: -40px
+
+                .side-products
+                    .products-side
+                        padding-top: 30px
+                        padding-left: 20px
+                        h2.side-title
+                            margin-bottom: 15px
+
+
+.elementor-element.elementor-widget.elementor-widget-martfury-icons-list
+    .elementor-widget-container
+        .mf-elementor-icons-list
+            @include responsivo(telefonoTable)
+                padding: 20px 0
+
+            .icons-list-wrapper
+                @include responsivo(telefonoTable)
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-content: flex-start
+                    align-items: flex-start
+                    width: fit-content!important
+                    margin: 0 auto
+
+                .box-item
+                    @include responsivo(telefonoTable)
+                        width: fit-content
+
+                    .martfury-icon-box
+                        @include responsivo(telefonoTable)
+                            padding-left: 0
+                            padding-right: 0
+                        @include responsivo(pcMedio)
+                            padding-left: 0
+                            padding-right: 0
+
+                        .martfury-icon-box
+                            .mf-icon.box-icon

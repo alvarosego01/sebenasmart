@@ -18,14 +18,16 @@ body#product_template
                                     margin-left: 0
                                     margin-right: 0
                                     li
-                                        width: fit-content
+                                        width: fit-content!important
+                                        height: fit-content!important
+                                        // padding: 5px!important
                                         img
                                             @include responsivo(telefonoTable)
-                                                width: 8px!important
-                                                height: 8px!important
+                                                width: 50px!important
+                                                height: 50px!important
                                             @include responsivo(pcMedio)
-                                                width: 8px!important
-                                                height: 8px!important
+                                                width: 75px!important
+                                                height: 75px!important
                                             @include responsivo(general)
                                                 height: 50px!important
                                                 width: 50px!important
@@ -104,12 +106,12 @@ body#product_template
                                     .quantity
                                         @include responsivo(telefonoTable)
                                             margin: 0 auto
-                                            margin-bottom: 15px
-                                            width: 60%
+                                            margin-bottom: 10px
+                                            width: fit-content
                                         @include responsivo(pcMedio)
                                             margin: 0 auto
-                                            margin-bottom: 15px
-                                            width: 60%
+                                            margin-bottom: 10px
+                                            width: fit-content
                                         label
                                             @include responsivo(telefonoTable)
                                                 text-align: center
