@@ -63,7 +63,18 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
                     @include responsivo(general)
                         padding: 25px
 
+                    .checkout-shipping
+                        .woocommerce-shipping-fields
+                            margin: 10px 0
                     .checkout-billing
+                        .woocommerce-account-fields
+                            margin-top: 5px
+                            margin-bottom: 5px
+                            p.form-row.form-row-wide.create-account.woocommerce-validated
+                                margin: 0
+                                label
+                                    margin: 0
+
                         .woocommerce-billing-fields
                             .woocommerce-billing-fields__field-wrapper
                                 display: flex
