@@ -23,12 +23,13 @@ if ( is_user_logged_in() || 'no' === get_option( 'woocommerce_enable_checkout_lo
 	return;
 }
 ?>
-<div class="col-xs-12 col-sm-12 col-md-7 col-form-login">
-	<div class="woocommerce-form-login-toggle">
-		<?php wc_print_notice( apply_filters( 'woocommerce_checkout_login_message', esc_html__( 'Returning customer?', 'martfury' ) ) . ' <a href="#" class="showlogin">' . esc_html__( 'Click here to login', 'martfury' ) . '</a>', 'notice' ); ?>
+<div class="col-12 col-form-login">
+	<div class="woocommerce-form-login-toggle popup-woo-register-login">
+		<?php wc_print_notice( apply_filters( 'woocommerce_checkout_login_message', esc_html__( 'Returning customer?', 'martfury' ) ) . ' <a href="#" class="  ">' . esc_html__( 'Click here to login', 'martfury' ) . '</a>', 'notice' ); ?>
 	</div>
 
 	<?php
+	/*
 	woocommerce_login_form(
 		array(
 			'message'  => esc_html__( 'If you have shopped with us before, please enter your details in the boxes below. If you are a new customer, please proceed to the Billing &amp; Shipping section.', 'martfury' ),
@@ -36,6 +37,7 @@ if ( is_user_logged_in() || 'no' === get_option( 'woocommerce_enable_checkout_lo
 			'hidden'   => true,
 		)
 	);
+	*/
 	?>
 
 </div>

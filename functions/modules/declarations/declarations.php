@@ -69,6 +69,10 @@ add_action('wp_enqueue_scripts', 'init_scripts_styles');
             if( isset($custom) && $custom == 'product_template' ){
                 // echo 'funciona esto '. $l;
 
+                wp_register_script('product.js', get_stylesheet_directory_uri() . '/dist/scripts/pages/product.js', ['jquery'], wp_get_theme()->get('Version') , true);
+                wp_enqueue_script('product.js');
+
+
             }
 
         }
@@ -164,6 +168,32 @@ function j0e_activate_gutenberg_product( $can_edit, $post_type ) {
 
     }
 
+
+
+    // add_shortcode( 'wc_login_form_bbloomer', 'bbloomer_separate_login_form' );
+
+    function bbloomer_separate_login_form() {
+       if ( is_admin() ) return;
+       if ( is_user_logged_in() ) return;
+
+       $link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']  === 'on' ? "https" : "http") .  "://" . $_SERVER['HTTP_HOST'] .  $_SERVER['REQUEST_URI'];
+
+       ob_start();
+       woocommerce_login_form( array(
+
+        // 'redirect' => 'https://custom.url'
+        'redirect' => $link
+
+        ) );
+
+
+       return ob_get_clean();
+    }
+
+
+
+
+    // echo 'link ' . $link;
 
 
 ?>

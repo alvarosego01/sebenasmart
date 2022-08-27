@@ -179,20 +179,36 @@ function martfury_extra_cart() {
 			$register      = '';
 			$register_text = esc_html__( 'Register', 'martfury' );
 
-			if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) {
+			// if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) {
+			// 	$register = sprintf(
+			// 		'<a href="%s" class="item-register" id="menu-extra-register">%s</a>',
+			// 		esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ),
+			// 		$register_text
+			// 	);
+			// }
+			// if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) {
 				$register = sprintf(
-					'<a href="%s" class="item-register" id="menu-extra-register">%s</a>',
-					esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ),
+					'<a href="#" class="item-register" id="menu-extra-register">%s</a>',
+					// esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ),
 					$register_text
 				);
-			}
+			// }
 
+			// echo sprintf(
+			// 	'<li class="extra-menu-item menu-item-account">
+			// 		<a href="%s" id="menu-extra-login"><i class="las la-user extra-icon"></i><span class="login-text">%s</span></a>
+			// 		%s
+			// 	</li>',
+			// 	esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ),
+			// 	esc_html__( 'Log in', 'martfury' ),
+			// 	$register
+			// );
 			echo sprintf(
-				'<li class="extra-menu-item menu-item-account">
-					<a href="%s" id="menu-extra-login"><i class="las la-user extra-icon"></i><span class="login-text">%s</span></a>
+				'<li class="extra-menu-item menu-item-account popup-woo-register-login">
+					<a href="#" id="menu-extra-login"><i class="las la-user extra-icon"></i><span class="login-text">%s</span></a>
 					%s
 				</li>',
-				esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ),
+				// esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ),
 				esc_html__( 'Log in', 'martfury' ),
 				$register
 			);
@@ -267,5 +283,8 @@ function martfury_extra_cart() {
         </div>
 		<?php
 	}
+
+
+
 
 ?>
