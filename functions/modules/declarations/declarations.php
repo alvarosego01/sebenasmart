@@ -193,7 +193,5 @@ function j0e_activate_gutenberg_product( $can_edit, $post_type ) {
 
 
 
-    // echo 'link ' . $link;
-
 
 ?>

@@ -208,6 +208,12 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
                                 padding-top: 10px!important
                                 padding-bottom: 10px!important
 
+                            li.wc_payment_method.payment_method_ppcp-gateway
+                                display: none
+
+                            li
+                                margin-bottom: 10px
+
                         .form-row.place-order
                             padding-left: 30px
                             padding-right: 30px
@@ -222,14 +228,12 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
                             margin-top: 0
                             *
                                 line-height: 1.25
+
+
                             label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox
                                 margin-bottom: 15px
-                            .woocommerce-privacy-policy-text
-                                p
-                                    @include responsivo(telefonoTable)
-                                        text-align: center
-                                    @include responsivo(pcMedio)
-                                        text-align: center
+
+
                             @include responsivo(telefonoTable)
                                 *
                                     font-size: 13px
@@ -244,7 +248,35 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
                                     font-size: 13px
                             @include responsivo(resto)
                                 *
-                                    font-size: 15px
+                                    font-size: 14px
+
+                            .woocommerce-privacy-policy-text
+                                p
+                                    @include responsivo(telefonoTable)
+                                        text-align: center
+                                    @include responsivo(pcMedio)
+                                        text-align: center
+                                    @include responsivo(general)
+                                        font-size: 14px
+                                    @include responsivo(resto)
+                                        font-size: 14px
+
+                            p.form-row.validate-required
+                                padding: 0
+                                margin-bottom: 0
+                                // display: none}
+
+                            span.woocommerce-terms-and-conditions-checkbox-text
+                                @include responsivo(general)
+                                    padding-left: 27px
+                                    font-size: 14px
+                                    display: flex
+                                    flex-flow: wrap
+                                @include responsivo(resto)
+                                    padding-left: 27px
+                                    font-size: 14px
+                                    display: flex
+                                    flex-flow: wrap
 
                         .woocommerce-privacy-policy-text
                             p
