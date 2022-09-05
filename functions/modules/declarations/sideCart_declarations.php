@@ -56,4 +56,10 @@ if (!defined('ABSPATH')) {
 
     add_action( 'sbn_sidebar_cart_buttons', 'sbn_sidebar_cart_buttons');
 
+
+
+    add_filter('woocommerce_paypal_payments_checkout_button_renderer_hook', function() {
+        return 'woocommerce_review_order_before_submit';
+    });
+
 ?>
