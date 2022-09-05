@@ -17,6 +17,8 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
                 font-size: 18px!important
             @include responsivo(pcMedio)
                 font-size: 18px!important
+        h3#ship-to-different-address
+            margin-bottom: 7.5px!important
         p.form-row
             @include responsivo(telefonoTable)
                 padding-left: 0
@@ -252,10 +254,10 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
 
                             .woocommerce-privacy-policy-text
                                 p
-                                    @include responsivo(telefonoTable)
-                                        text-align: center
-                                    @include responsivo(pcMedio)
-                                        text-align: center
+                                    // @include responsivo(telefonoTable)
+                                    //     text-align: center
+                                    // @include responsivo(pcMedio)
+                                    //     text-align: center
                                     @include responsivo(general)
                                         font-size: 14px
                                     @include responsivo(resto)
