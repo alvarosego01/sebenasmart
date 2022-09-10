@@ -16,6 +16,31 @@
 
 
 header#site-header
+    .main-menu.hidden-xs.hidden-sm
+        .container
+            .row.header-row
+                .i-product-cats.mr-extra-department
+                    .products-cats-menu
+                        .toggle-product-cats.nav
+                            ul#menu-shop-by-department
+                                // @include responsivo(general)
+                                    // overflow-y: scroll
+                                // @include responsivo(resto)
+                                    // overflow-y: scroll
+                                li.menu-item
+                                    padding-left: 15px
+                                    padding-right: 15px
+                                    a
+                                        height: 40px
+                                        i
+                                            font-size: 22px
+                                            margin-right: 10px
+                                            @include responsivo(smallPcTablet)
+                                                font-size: 18px
+                                        // padding: 10px 0
+                                        @include responsivo(smallPcTablet)
+                                            font-size: 12px
+
     .header-main-wapper
         .header-main
             @include responsivo(telefonoTable)
@@ -78,6 +103,9 @@ header#site-header
                     flex-wrap: unset
                     a
                         margin-bottom: 0
+
+                p#ppc-button-minicart
+                    display: none
 
 
 .page-header.page-header-page

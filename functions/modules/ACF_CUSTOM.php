@@ -36,6 +36,7 @@
                             'type' => 'select',
                             'choices' => array(
                                 'regular_template' => 'Regular',
+                                'regular_document_template' => 'Regular document',
                                 'home_template' => 'Home template',
                                 'cart_template' => 'Cart template',
                                 'checkout_template' => 'Checkout template',

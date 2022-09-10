@@ -133,14 +133,30 @@ div#page
                     //     @include responsivo(pcMedio)
                     //         width: 100%
 
+body#regular_document_template
+    div#page
+        .container,
+        .martfury-container
+            @include containerWidth()
+        div#content
+            .container-fluid
+                .row
+                    .elementor-section
+                        .elementor-container
+                            @include sbn_document_elementor_containerWidth()
 
+        div#content
+            padding-bottom: 50px
+            @include responsivo(telefonoTable)
+                padding-bottom: 25px
 
 .customPageSubTitle
     p.text
         font-weight: 500
         font-size: 16px
 
-
+// .page-breadcrumbs
+//     box-shadow: $shadow2
 
 .thinButton
     color: black
@@ -349,9 +365,11 @@ div#page
                     border: transparent
                     margin-top: 0!important
                     @include responsivo(telefonoTable)
-                        width: 35%!important
+                        font-size: 14px
+                        width: 45%!important
                     @include responsivo(pcMedio)
-                        width: 35%!important
+                        font-size: 14px
+                        width: 37.5%!important
                     @include responsivo(general)
                         font-size: 14px
                         width: 40%!important
@@ -372,7 +390,7 @@ div#page
                         background-color: rgba(white, 0.925)
                         display: flex
                         flex-direction: row
-                        justify-content: space-between
+                        justify-content: space-evenly
                         align-items: center
                         align-content: center
                         a
@@ -476,3 +494,14 @@ ul.products
 .martfury-container,
 div#primary
     padding: 0!important
+
+
+// .woocommerce ul.products li.product
+//     .product-inner
+//         padding-top: 10px!important
+//         padding-left: 10px!important
+//         padding-right: 10px!important
+//     .mf-product-details-hover
+//         padding-bottom: 10px!important
+//         padding-left: 10px!important
+//         padding-right: 10px!important
