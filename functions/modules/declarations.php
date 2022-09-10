@@ -1,12 +1,6 @@
 
-<?php
-if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly.
-}
-?>
 
 <?php
-
 
 
 
@@ -31,8 +25,6 @@ function init_scripts_styles()
 	// wp_enqueue_script('bootstrapJs',  get_stylesheet_directory_uri() . '/resources/assets/library/bootstrap/js/bootstrap.min.js', array('jquery'), rand(), 'all');
 
 	wp_enqueue_style('lineAwesome', get_stylesheet_directory_uri() . '/resources/assets/library/line-awesome/css/line-awesome.min.css', array(), rand(), 'all');
-
-	wp_enqueue_style('fontAwesome', get_stylesheet_directory_uri() . '/resources/assets/library/font-awesome/css/all.min.css', array(), rand(), 'all');
 
     wp_enqueue_style('animate.css', get_stylesheet_directory_uri() . '/resources/assets/library/animate/animate.min.css', array(), rand(), 'all');
 
@@ -68,10 +60,6 @@ add_action('wp_enqueue_scripts', 'init_scripts_styles');
 
             if( isset($custom) && $custom == 'product_template' ){
                 // echo 'funciona esto '. $l;
-
-                wp_register_script('product.js', get_stylesheet_directory_uri() . '/dist/scripts/pages/product.js', ['jquery'], wp_get_theme()->get('Version') , true);
-                wp_enqueue_script('product.js');
-
 
             }
 
@@ -152,46 +140,6 @@ function j0e_activate_gutenberg_product( $can_edit, $post_type ) {
    }
    add_filter( 'woocommerce_taxonomy_args_product_cat', 'j0e_enable_taxonomy_rest' );
    add_filter( 'woocommerce_taxonomy_args_product_tag', 'j0e_enable_taxonomy_rest' );
-
-
-    function setTypeUrl(){
-
-        if($_SERVER['SERVER_NAME'] == 'localhost') {
-
-            return '/sebenasmart';
-
-        }else{
-
-            return '';
-
-        }
-
-    }
-
-
-
-    // add_shortcode( 'wc_login_form_bbloomer', 'bbloomer_separate_login_form' );
-
-    function bbloomer_separate_login_form() {
-       if ( is_admin() ) return;
-       if ( is_user_logged_in() ) return;
-
-       $link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']  === 'on' ? "https" : "http") .  "://" . $_SERVER['HTTP_HOST'] .  $_SERVER['REQUEST_URI'];
-
-       ob_start();
-       woocommerce_login_form( array(
-
-        // 'redirect' => 'https://custom.url'
-        'redirect' => $link
-
-        ) );
-
-
-       return ob_get_clean();
-    }
-
-
-
 
 
 ?>

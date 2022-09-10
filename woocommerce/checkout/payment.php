@@ -22,12 +22,15 @@ if ( ! wp_doing_ajax() ) {
 }
 ?>
 
+
+
 <div id="payment" class="woocommerce-checkout-payment">
 
 <div class="ticketShape">
 		<span class="shape"></span>
 	</div>
 
+	<?php do_action( 'woocommerce_checkout_pre_payment_methods' ); ?>
 
 	<?php if ( WC()->cart->needs_payment() ) : ?>
 		<ul class="wc_payment_methods payment_methods methods">
