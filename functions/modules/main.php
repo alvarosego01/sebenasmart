@@ -4,9 +4,7 @@
 
     require 'ACF_CUSTOM.php';
 
-    require "declarations.php";
-
-
+    require "declarations/main.php";
 
 
 ?>
