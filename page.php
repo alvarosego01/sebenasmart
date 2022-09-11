@@ -1,10 +1,4 @@
 <?php
-if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly.
-}
-?>
-
-<?php
 /**
  * The template for displaying all pages.
  *
@@ -40,5 +34,3 @@ get_header(); ?>
     <?php get_sidebar(); ?>
 <?php } ?>
 <?php get_footer(); ?>
-
-

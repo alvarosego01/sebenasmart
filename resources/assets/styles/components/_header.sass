@@ -1,38 +1,46 @@
 
 
-div#top-promotion
-    @include responsivo(telefonoTable)
-        min-height: 75px
-    @include responsivo(pcMedio)
-        min-height: 75px
-    @include responsivo(general)
-        min-height: 100px
-    @include responsivo(resto)
-        min-height: 100px
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-content: center
-    align-items: center
-    .container
-        @include responsivo(general)
-            padding-left: 25px!important
-            padding-right: 25px!important
 
-        .promotion-content
-            display: flex
-            flex-direction: row
-
-            // .promo-inner
-
-            .promo-link
-                @include responsivo(telefonoTable)
-                    margin: auto 0
-                @include responsivo(pcMedio)
-                    margin: auto 0
+// div#content
+//     .container
+//         @include responsivo(telefonoTable)
+//             width: 95%
+//         @include responsivo(pcMedio)
+//             width: 90%
+//         @include responsivo(general)
+//             width: 100%!important
+//             max-width: 1240px!important
+//         @include responsivo(resto)
+//             width: 100%!important
+//             max-width: 1340px!important
 
 
 header#site-header
+    .main-menu.hidden-xs.hidden-sm
+        .container
+            .row.header-row
+                .i-product-cats.mr-extra-department
+                    .products-cats-menu
+                        .toggle-product-cats.nav
+                            ul#menu-shop-by-department
+                                // @include responsivo(general)
+                                    // overflow-y: scroll
+                                // @include responsivo(resto)
+                                    // overflow-y: scroll
+                                li.menu-item
+                                    padding-left: 15px
+                                    padding-right: 15px
+                                    a
+                                        height: 40px
+                                        i
+                                            font-size: 22px
+                                            margin-right: 10px
+                                            @include responsivo(smallPcTablet)
+                                                font-size: 18px
+                                        // padding: 10px 0
+                                        @include responsivo(smallPcTablet)
+                                            font-size: 12px
+
     .header-main-wapper
         .header-main
             @include responsivo(telefonoTable)
@@ -55,12 +63,7 @@ header#site-header
                         @include responsivo(pcMedio)
                             padding-right: 0
                         ul.extras-menu
-                            margin-top: 0
                             li
-                                @include responsivo(general)
-                                    padding: 0 10px
-                                @include responsivo(resto)
-                                    padding: 0 10px
                                 a
                                     @include responsivo(telefonoTable)
                                         height: fit-content!important
@@ -72,46 +75,6 @@ header#site-header
                                             font-size: 32.5px
                                         @include responsivo(pcMedio)
                                             font-size: 32.5px
-                                        @include responsivo(general)
-                                            font-size: 35px
-                                        @include responsivo(smallPcTablet)
-                                            font-size: 32.5px
-
-                            li.extra-menu-item
-                                min-height: 40px
-
-                            li.extra-menu-item.menu-item-account.logined.icon
-                                a#menu-extra-login
-                                    span.login-text
-                                        position: relative
-                                        top: 12.5px
-                                        right: 7.5px
-
-                                ul
-                                    // background-color: white
-                                    li
-                                        padding: 10px 15px
-
-                                        h3
-                                            margin: 0
-                                        &:first-of-type
-
-                                            padding-bottom: 0
-                                        ul
-                                            li
-                                                padding: 0
-                                                padding-bottom: 5px!important
-                                                &:last-of-type
-                                                    padding-bottom: 0!important
-                                    li.line-space
-                                        // display: none
-                                        padding: 0
-                                    *
-                                        font-family: "Work Sans", Arial, sans-serif
-
-
-
-
 
 
     .main-menu
@@ -134,41 +97,15 @@ header#site-header
                 padding-right: 25px
 
     .mini-cart-content
-        min-width: unset
         .widget_shopping_cart_content
-            @include responsivo(general)
-                padding: 20px
-            @include responsivo(resto)
-                padding: 20px
-            ul.woocommerce-mini-cart.cart_list.product_list_widget
-                li.woocommerce-mini-cart-item.mini_cart_item
-                    @include responsivo(general)
-                        padding-right: 20px
-                        padding-top: 10px
-                    @include responsivo(resto)
-                        padding-right: 20px
-                        padding-top: 10px
-                    &:first-of-type
-                        padding-top: 0
-
             .mf-cart-panel-footer
-                p.woocommerce-mini-cart__total.total
-                    margin-top: 10px
                 p.woocommerce-mini-cart__buttons.buttons
                     flex-wrap: unset
-                    margin-bottom: 0
                     a
-                        box-shadow: $shadow2
                         margin-bottom: 0
 
-        @include responsivo(general)
-            width: 375px
-        @include responsivo(smallPcTablet)
-            width: 350px
-        @include responsivo(resto)
-            width: 425px
-
-
+                p#ppc-button-minicart
+                    display: none
 
 
 .page-header.page-header-page

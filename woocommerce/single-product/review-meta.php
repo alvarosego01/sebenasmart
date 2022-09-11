@@ -32,21 +32,8 @@ if ( '0' === $comment->comment_approved ) { ?>
 <?php } else { ?>
 
 	<p class="meta">
-		<strong class="woocommerce-review__author">
-			<?php
-			//  esc_html_e( 'by', 'martfury' );
-			$e = get_comment_author( $comment->comment_ID );
-			// comment_author()
-			?>
-
-			<span class="author-name">
-				 <?php
-				  transformByName( $e );
-				  ?>
-			</span>
-		</strong>
-
-			<?php
+		<strong class="woocommerce-review__author"><?php esc_html_e( 'by', 'martfury' ); ?>
+			<span class="author-name"> <?php comment_author(); ?></span></strong> <?php
 
 		if ( 'yes' === get_option( 'woocommerce_review_rating_verification_label' ) && $verified ) {
 			echo '<em class="woocommerce-review__verified verified">(' . esc_attr__( 'verified owner', 'martfury' ) . ')</em> ';
