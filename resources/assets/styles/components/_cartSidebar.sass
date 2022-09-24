@@ -5,6 +5,18 @@
     .xoo-wsc-container
         z-index: 9999999
         box-shadow: $shadow2
+        @include responsivo(telefonoTable)
+            padding-left: 10px
+            padding-right: 10px
+        @include responsivo(pcMedio)
+            padding-left: 15px
+            padding-right: 15px
+        @include responsivo(general)
+            padding-left: 20px
+            padding-right: 20px
+        @include responsivo(resto)
+            padding-left: 20px
+            padding-right: 20px
         .xoo-wsc-basket
             transition: $trans
             box-shadow: $shadow2
@@ -20,7 +32,7 @@
                 font-size: 37.5px
                 color: black
             &:hover
-                background-color: $primaryColorYellow
+                background-color: $primaryColor
 
             @include responsivo(telefonoTable)
                 display: none!important
@@ -28,8 +40,10 @@
                 display: none!important
 
         .xoo-wsc-header
-            padding: 10px
-            padding-bottom: 0
+            padding: 10px 0
+            // padding-bottom: 15px
+            margin-bottom: 0
+            border-bottom: 1px solid #eee
             .xoo-wsch-top
                 // span.xoo-wsch-close.xoo-wsc-icon-cross
                 //     font-size: 22px
@@ -37,8 +51,14 @@
                 //         font-size: 18px
                 //     @include responsivo(pcMedio)
                 //         font-size: 18px
+                span.xoo-wsch-close.xoo-wsc-icon-cross
+                    @include responsivo(general)
+                        left: 20px
+                    @include responsivo(resto)
+                        left: 20px
                 span
                     font-size: 18px
+                    line-height: 1
                     @include responsivo(telefonoTable)
                         font-size: 16px
                     @include responsivo(pcMedio)
@@ -48,17 +68,16 @@
         .xoo-wsc-body
             .xoo-wsc-products
                 .xoo-wsc-product
-                    padding: 5px 10px
-                    @include responsivo(telefonoTable)
-                        padding: 5px 10px
-                    @include responsivo(pcMedio)
-                        padding: 5px 10px
+                    padding: 10px 0
+
                     .xoo-wsc-img-col
                         display: flex
                         @include responsivo(telefonoTable)
                             width: fit-content
+                            padding-right: 5px
                         @include responsivo(pcMedio)
                             width: fit-content
+                            padding-right: 5px
                         @include responsivo(general)
                             width: 25%
                         @include responsivo(resto)
@@ -81,7 +100,7 @@
                                     object-fit: cover
                                     object-position: center
                                 @include responsivo(pcMedio)
-                                    height: 100px
+                                    height: 80px
                                     max-width: unset!important
                                     object-fit: cover
                                     object-position: center
@@ -94,11 +113,7 @@
                                     width: 100px!important
 
                     .xoo-wsc-sum-col
-                        padding-left: 10px
-                        @include responsivo(telefonoTable)
-                            padding-left: 5px
-                        @include responsivo(pcMedio)
-                            padding-left: 5px
+                        padding: 0
                         @include responsivo(general)
                             width: 75%
                         @include responsivo(resto)
@@ -107,6 +122,8 @@
                             .xoo-wsc-sm-left
                                 padding-right: 7.5px
                                 span.xoo-wsc-pname
+                                    line-height: 1
+                                    padding-bottom: 5px
                                     a
                                         line-height: 1
                                         @include responsivo(telefonoTable)
@@ -116,6 +133,7 @@
                                         @include responsivo(general)
                                             font-size: 14px
                                 .xoo-wsc-qty-price
+                                    line-height: 1
                                     @include responsivo(telefonoTable)
                                         font-size: 12px
                                         *
@@ -146,24 +164,34 @@
 
 
         .xoo-wsc-footer
+            padding: 0
             padding-top: 0
             padding-bottom: 15px
             @include responsivo(telefonoTable)
-                padding: 10px
+                padding-bottom: 10px
             @include responsivo(pcMedio)
-                padding: 10px
+                padding-bottom: 10px
+
+
             .xoo-wsc-ft-totals
-                padding: 0
+                padding: 10px 0
+                margin-top: 10px
+                border-top: 1px solid #eee
                 .xoo-wsc-ft-amt.xoo-wsc-ft-amt-subtotal
                     padding: 0
+                    line-height: 1
                     *
-                        font-size: 16px
                         @include responsivo(telefonoTable)
                             font-size: 14px
                         @include responsivo(pcMedio)
                             font-size: 16px
                         @include responsivo(general)
+                            font-size: 16px
+                        @include responsivo(smallPcTablet)
                             font-size: 14px
+                        @include responsivo(resto)
+                            font-size: 18px
+
                     // margin-right: 0
             .xoo-wsc-ft-buttons-cont
                 padding-bottom: 15px
@@ -207,15 +235,21 @@
                         @include responsivo(resto)
                             width: 47.5%!important
             p.sideText
-                font-size: 14px
-                padding: 0 15px
+                padding: 0
                 margin-bottom: 0
+
+            p.sideText,
+            p.sideText a
+                line-height: 1.5
                 @include responsivo(telefonoTable)
                     font-size: 10px
                 @include responsivo(pcMedio)
                     font-size: 12px
                 @include responsivo(general)
                     font-size: 12px
+                @include responsivo(resto)
+                    font-size: 14px
+
 
 
 .xoo-wsc-modal.xoo-wsc-cart-active
@@ -224,6 +258,8 @@
         @include responsivo(telefonoTable)
             width: 95%
             max-width: 100%
+        @include responsivoSpecial(500px, 768px)
+            width: 500px
         @include responsivo(pcMedio)
             max-width: 550px
         @include responsivo(general)

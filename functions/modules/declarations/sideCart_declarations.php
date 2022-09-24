@@ -34,7 +34,7 @@ if (!defined('ABSPATH')) {
 
                 <a
                 class="sbn_buttonCustom sbn_btn_small sbn_secondaryButton left_side"
-                href="<?php echo $cart ?>">
+                href="<?php echo $shop ?>">
                     <span class="icon_container">
                         <i class="las la-undo"></i>
                     </span>
@@ -42,7 +42,7 @@ if (!defined('ABSPATH')) {
                 </a>
                 <a
                 class="sbn_buttonCustom sbn_btn_small sbn_secondaryButton left_side"
-                href="<?php echo $checkout ?>">
+                href="<?php echo $cart ?>">
                     <span class="icon_container">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </span>

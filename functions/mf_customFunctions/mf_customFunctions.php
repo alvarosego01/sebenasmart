@@ -243,7 +243,7 @@ function martfury_extra_cart() {
 	function terms_side_cart(){
 
 		echo '<p class="sideText">
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum iusto iste eum quidem sit? Illum, perspiciatis, laboriosam ipsa minima saepe, maiores sint perferendis vero natus error quasi aspernatur minus. Impedit?
+			Ultra-fast shipping and delivery times are what make us better! Nonetheless, due to our rigorous product QA, sometimes it might take one additional day or two. Check our <a href="'. setTypeUrl().'/shipping-and-delivery-policies/" class="hiperLink">Shipping and Delivery Policies</a> for more
 		</p>';
 
 	}
