@@ -55,7 +55,7 @@ header#site-header
                 margin-bottom: 10px
                 padding-bottom: 0
             .container
-                @include containerWidth()
+                @include regular_section_row_width()
                 .row.header-row
                     .header-logo
                         @include responsivo(telefonoTable)
@@ -84,7 +84,7 @@ header#site-header
 
     .main-menu
         .container
-            @include containerWidth()
+            @include regular_section_row_width()
         .cats-menu-title
             @include responsivo(general)
                 padding-left: 0
@@ -92,7 +92,7 @@ header#site-header
                 padding-left: 0
     .mobile-menu
         .container
-            @include containerWidth()
+            @include regular_section_row_width()
         a#mf-toggle-menu
             @include responsivo(telefonoTable)
                 padding: 0
@@ -102,6 +102,10 @@ header#site-header
                 padding-right: 25px
 
     .mini-cart-content
+        @include responsivo(general)
+            min-width: 400px
+        @include responsivo(resto)
+            min-width: 400px
         .widget_shopping_cart_content
             .mf-cart-panel-footer
                 p.woocommerce-mini-cart__buttons.buttons
@@ -112,10 +116,34 @@ header#site-header
                 p#ppc-button-minicart
                     display: none
 
+        ul.woocommerce-mini-cart.cart_list
+            li.woocommerce-mini-cart-item.mini_cart_item
+
+                .product-image
+                    display: block
+                    width: fit-content
+                    flex-basis: unset
+                    flex-grow: unset
+                    img
+                        @include responsivo(general)
+                            height: 65px
+                            width: 65px!important
+                        @include responsivo(resto)
+                            height: 65px
+                            width: 65px!important
+
+
+                .product-content
+                    @include responsivo(general)
+                        padding-left: 10px
+                    @include responsivo(resto)
+                        padding-left: 10px
+
+
 
 .page-header.page-header-page
     .container
-        @include containerWidth()
+        @include regular_section_row_width()
         @include responsivo(general)
             padding-left: 15px
             padding-right: 15px

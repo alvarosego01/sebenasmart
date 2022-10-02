@@ -35,7 +35,7 @@ $hastaG: $desdeG + 500
     @media only screen and (min-width: $desde) and (max-width: $hasta)
         @content
 
-@mixin containerWidth()
+@mixin regular_section_row_width()
     padding-left: 0
     padding-right: 0
     margin-left: auto!important
@@ -46,13 +46,13 @@ $hastaG: $desdeG + 500
         width: 85%
     @include responsivo(general)
         width: 100%!important
-        max-width: 1240px!important
+        max-width: 1140px!important
     @include responsivo(smallPcTablet)
         max-width: 1000px!important
 
     @include responsivo(resto)
         width: 100%!important
-        max-width: 1340px!important
+        max-width: 1240px!important
 
 @mixin elementor_containerWidth()
     padding-left: 0
@@ -67,13 +67,13 @@ $hastaG: $desdeG + 500
         // max-width: unset!important
     @include responsivo(general)
         width: 100%!important
-        max-width: 1240px!important
+        max-width: 1140px!important
     @include responsivo(smallPcTablet)
         max-width: 1000px!important
 
     @include responsivo(resto)
         width: 100%!important
-        max-width: 1340px!important
+        max-width: 1240px!important
 
 @mixin sbn_document_containerWidth()
     padding-left: 0
@@ -113,70 +113,111 @@ $hastaG: $desdeG + 500
         width: 100%!important
         max-width: 1100px!important
 
+
+@mixin h1_title_contain()
+    line-height: 0.9
+    @include responsivo(telefonoTable)
+        font-size: 30px!important
+    @include responsivo(pcMedio)
+        font-size: 35px!important
+    @include responsivo(general)
+        font-size: 45px!important
+    @include responsivo(smallPcTablet)
+        font-size: 40px!important
+    @include responsivo(resto)
+        font-size: 55px!important
+
+
 @mixin h2_title_contain()
     line-height: 0.9
     @include responsivo(telefonoTable)
-        font-size: 25px
+        font-size: 25px!important
     @include responsivo(pcMedio)
-        font-size: 30px
+        font-size: 30px!important
     @include responsivo(general)
-        font-size: 35px
+        font-size: 35px!important
     @include responsivo(smallPcTablet)
-        font-size: 32.5px
+        font-size: 32.5px!important
     @include responsivo(resto)
-        font-size: 40px
+        font-size: 40px!important
 
 @mixin h3_title_contain()
     line-height: 0.9
     @include responsivo(telefonoTable)
-        font-size: 20px
+        font-size: 20px!important
     @include responsivo(pcMedio)
-        font-size: 25px
+        font-size: 25px!important
     @include responsivo(general)
-        font-size: 30px
+        font-size: 30px!important
     @include responsivo(smallPcTablet)
-        font-size: 27px
+        font-size: 27px!important
     @include responsivo(resto)
-        font-size: 32.5px
+        font-size: 32.5px!important
 
 @mixin h4_title_small()
     line-height: 0.9
     @include responsivo(telefonoTable)
-        font-size: 18px
+        font-size: 18px!important
     @include responsivo(pcMedio)
-        font-size: 20px
+        font-size: 20px!important
     @include responsivo(smallPcTablet)
-        font-size: 20px
+        font-size: 20px!important
     @include responsivo(resto)
-        font-size: 22px
+        font-size: 22px!important
+
+
+@mixin p_text_sub_header()
+    line-height: 1.2
+    @include responsivo(telefonoTable)
+        font-size: 16px!important
+    @include responsivo(pcMedio)
+        font-size: 18px!important
+    @include responsivo(general)
+        font-size: 27.5px!important
+    @include responsivo(smallPcTablet)
+        font-size: 22px!important
+    @include responsivo(resto)
+        font-size: 32px!important
 
 
 @mixin p_text_contain()
-    line-height: 1.2
+    line-height: 1.25
     @include responsivo(telefonoTable)
-        font-size: 13px
+        font-size: 13px!important
     @include responsivo(pcMedio)
-        font-size: 14px
+        font-size: 14px!important
     @include responsivo(general)
-        font-size: 15px
+        font-size: 15px!important
     @include responsivo(smallPcTablet)
-        font-size: 15px
+        font-size: 15px!important
     @include responsivo(resto)
-        font-size: 18px
+        font-size: 18px!important
 
 @mixin p_secondaryText_contain()
+    line-height: 1.25
+    @include responsivo(telefonoTable)
+        font-size: 12px!important
+    @include responsivo(pcMedio)
+        font-size: 13px!important
+    @include responsivo(general)
+        font-size: 14px!important
+    @include responsivo(smallPcTablet)
+        font-size: 13px!important
+    @include responsivo(resto)
+        font-size: 16px!important
+
+@mixin small_preTitle_tag()
     line-height: 1.2
     @include responsivo(telefonoTable)
-        font-size: 12px
+        font-size: 12px!important
     @include responsivo(pcMedio)
-        font-size: 13px
+        font-size: 14px!important
     @include responsivo(general)
-        font-size: 14px
+        font-size: 13px!important
     @include responsivo(smallPcTablet)
-        font-size: 13px
+        font-size: 12px!important
     @include responsivo(resto)
-        font-size: 16px
-
+        font-size: 14px!important
 
 
 
@@ -186,6 +227,8 @@ $hastaG: $desdeG + 500
 
 @import variables
 @import generals
+
+
 
 
 

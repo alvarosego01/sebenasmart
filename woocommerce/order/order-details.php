@@ -40,9 +40,20 @@ if ( $show_downloads ) {
 }
 ?>
 <section class="woocommerce-order-details">
+
+<div class="sectionContainer">
 	<?php do_action( 'woocommerce_order_details_before_order_table', $order ); ?>
 
-	<h2 class="woocommerce-order-details__title"><?php esc_html_e( 'Order details', 'woocommerce' ); ?></h2>
+	<!-- <h2 class="woocommerce-order-details__title"><?php esc_html_e( 'Order details', 'woocommerce' ); ?></h2> -->
+
+	<div class="sectionTopList">
+		<div class="lineTitleSection">
+			<h3 class="woocommerce-order-details__title"><?php esc_html_e( 'Order details', 'woocommerce' ); ?></h3>
+			<div class="iconSection">
+				<i class="las la-store-alt"></i>
+			</div>
+		</div>
+	</div>
 
 	<table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
 
@@ -98,6 +109,8 @@ if ( $show_downloads ) {
 	</table>
 
 	<?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
+
+	</div>
 </section>
 
 <?php

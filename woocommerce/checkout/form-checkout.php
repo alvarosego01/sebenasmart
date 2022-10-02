@@ -61,20 +61,15 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 				<div class="sectionTopList">
 
 					<div class="lineTitleSection">
-						<h3><?php esc_html_e( 'Billing details', 'woocommerce' ); ?></h3>
-
+						<h3><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
 
 					<div class="iconSection">
-
-						<i class="las la-cash-register"></i>
-
+						<i class="las la-store-alt"></i>
 					</div>
 
 					</div>
-
 
 				</div>
-
 
 				<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'martfury' ); ?></h3>
 
