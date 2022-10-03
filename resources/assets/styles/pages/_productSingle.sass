@@ -15,15 +15,23 @@ body#product_template
                             .woocommerce-product-gallery
                                 // .flex-viewport
                                 ol.flex-control-nav.flex-control-thumbs
-                                    li
+                                    @include responsivo(telefonoTable)
+                                        margin-left: auto
+                                        margin-right: auto
                                         width: fit-content
+                                    @include responsivo(pcMedio)
+                                        margin-left: auto
+                                        margin-right: auto
+                                        width: fit-content
+                                    li
+                                        width: fit-content!important
                                         img
                                             @include responsivo(telefonoTable)
-                                                width: 8px!important
-                                                height: 8px!important
+                                                width: 35px!important
+                                                height: 35px!important
                                             @include responsivo(pcMedio)
-                                                width: 8px!important
-                                                height: 8px!important
+                                                width: 50px!important
+                                                height: 50px!important
                                             @include responsivo(general)
                                                 height: 65px!important
                                                 width: 65px!important
@@ -95,8 +103,19 @@ body#product_template
                                         align-content: center
                                         padding-left: 50px
                                         padding-right: 50px
-                                    // .quantity
-
+                                    .fsbe-wrap
+                                        @include responsivo(telefonoTable)
+                                            width: fit-content
+                                            margin: 0 auto
+                                            margin-bottom: 15px
+                                            *
+                                                text-align: center
+                                        @include responsivo(pcMedio)
+                                            width: fit-content
+                                            margin: 0 auto
+                                            margin-bottom: 15px
+                                            *
+                                                text-align: center
                                     table.variations
                                         tbody
                                             width: fit-content
@@ -107,6 +126,14 @@ body#product_template
                                                 @include responsivo(pcMedio)
                                                     // width: 100%
                                                     display: block
+                                    .quantity,
+                                    .single_variation_wrap
+                                        @include responsivo(telefonoTable)
+                                            margin-left: auto
+                                            margin-right: auto
+                                        @include responsivo(pcMedio)
+                                            margin-left: auto
+                                            margin-right: auto
 
                                     .single_variation_wrap
                                         width: fit-content
@@ -172,3 +199,37 @@ body#product_template
                                         display: flex
                                         justify-content: center
                                         align-content: center
+
+// body#product_template.mobile-version
+//     div#page
+//         div#content
+//             .row
+//                 div#primary
+//                     .product
+//                         .mf-product-detail
+//                             .woocommerce-product-gallery
+//                                 ol.flex-control-nav.flex-control-thumbs
+//                                     @include responsivo(telefonoTable)
+//                                         margin-left: auto
+//                                         margin-right: auto
+//                                         width: fit-content
+//                                     @include responsivo(pcMedio)
+//                                         margin-left: auto
+//                                         margin-right: auto
+//                                         width: fit-content
+//                                     li
+//                                         width: fit-content!important
+//                                         img
+//                                             @include responsivo(telefonoTable)
+//                                                 width: 50px!important
+//                                                 height: 50px!important
+//                                             @include responsivo(pcMedio)
+//                                                 width: 50px!important
+//                                                 height: 50px!important
+//                                             @include responsivo(general)
+//                                                 height: 65px!important
+//                                                 width: 65px!important
+
+//                                             @include responsivo(resto)
+//                                                 height: 65px!important
+//                                                 width: 65px!important
