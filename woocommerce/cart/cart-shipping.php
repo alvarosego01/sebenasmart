@@ -94,6 +94,25 @@ $calculator_text          = '';
 					?>
 				</p>
 			<?php endif; ?>
+
+		<?php
+			$ordertotal = WC()->cart->subtotal;
+			if( isset($ordertotal) && $ordertotal < 50 ){
+				$resto = 50 - $ordertotal;
+				// echo 'cantidad '. $ordertotal;
+				// echo ' resto '. $resto;
+				?>
+					<div class="sectionMention_freeShipping">
+						<i class="las la-cart-plus"></i>
+						<span>
+						Your purchase doesn't qualify for free shipping, add <strong>$<?php echo $resto ?> </strong> in products to your cart and get into the <strong>Free Shipping</strong> boat!
+						</span>
+					</div>
+				<?php
+
+			}
+		?>
+
 		<?php
 		elseif ( ! $has_calculated_shipping || ! $formatted_destination ) :
 			echo wp_kses_post( apply_filters( 'woocommerce_shipping_may_be_available_html', esc_html__( 'Enter your address to view shipping options.', 'martfury' ) ) );

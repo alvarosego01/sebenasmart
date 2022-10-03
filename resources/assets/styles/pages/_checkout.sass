@@ -355,16 +355,16 @@ tr.woocommerce-shipping-totals.shipping
         ul#shipping_method
             display: flex
             flex-direction: row
-            justify-content: center
+            justify-content: space-between
             align-content: center
             align-items: center
             flex-flow: wrap
             li
-                padding: 5px
+                padding: 0
                 @include responsivo(general)
-                    width: 50%
+                    width: 45%
                 @include responsivo(resto)
-                    width: 50%
+                    width: 45%
 
                 label.shipping_selector
                     background-color: $whiteBase1!important
@@ -376,7 +376,7 @@ tr.woocommerce-shipping-totals.shipping
                     padding: 10px 5px
                     box-shadow: $shadow2
                     transition: $trans
-                    border: 2.5px solid transparent
+                    border: 3.5px solid transparent
                     box-sizing: border-box
                     &::before
                         display: none
@@ -384,13 +384,13 @@ tr.woocommerce-shipping-totals.shipping
                         margin-bottom: 10px
 
                     p
-                        margin-bottom: 15px
-                        font-size: 20px
+                        margin-bottom: 10px
+                        font-size: 16px
                         font-weight: 800
                         color: $grayColor
                     span
                         margin-bottom: 0
-                        font-size: 18px
+                        font-size: 15px
                         font-weight: 600
                         color: $grayColor
                 &:hover
@@ -405,11 +405,28 @@ tr.woocommerce-shipping-totals.shipping
                 // display: none
                 label.shipping_selector
                     // background-color: $primaryColor!important
-                    border: 2.5px solid $primaryColor
+                    border: 3.5px solid $primaryColor
                     // .iconSection
 
                     p
                         color: $blackColor
                     span
                         color: $blackColor
+        .sectionMention_freeShipping
+            display: flex
+            flex-direction: row
+            align-content: center
+            align-items: center
+            justify-content: flex-start
+            padding: 10px 10px
+            background-color: rgba(0, 0, 0, 0.05)
+            box-shadow: $shadow2
+            i
+                font-size: 32px
+                padding-right: 10px
+            span
+                text-align: left
+                font-size: 12px
+                line-height: 1.25
 
+            // display: none!important
