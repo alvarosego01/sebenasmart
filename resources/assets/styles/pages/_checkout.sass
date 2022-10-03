@@ -361,10 +361,16 @@ tr.woocommerce-shipping-totals.shipping
             flex-flow: wrap
             li
                 padding: 0
+                @include responsivo(telefonoTable)
+                    width: 47.5%
+
+                @include responsivo(pcMedio)
+                    width: 47.5%
+
                 @include responsivo(general)
-                    width: 45%
+                    width: 47.5%
                 @include responsivo(resto)
-                    width: 45%
+                    width: 47.5%
 
                 label.shipping_selector
                     background-color: $whiteBase1!important
@@ -376,8 +382,9 @@ tr.woocommerce-shipping-totals.shipping
                     padding: 10px 5px
                     box-shadow: $shadow2
                     transition: $trans
-                    border: 3.5px solid transparent
+
                     box-sizing: border-box
+                    overflow: hidden
                     &::before
                         display: none
                     .iconSection
@@ -385,14 +392,55 @@ tr.woocommerce-shipping-totals.shipping
 
                     p
                         margin-bottom: 10px
-                        font-size: 16px
+                        font-size: 18px
                         font-weight: 800
                         color: $grayColor
+                        @include responsivo(telefonoTable)
+                            font-size: 16px
+                        @include responsivo(pcMedio)
+                            font-size: 16px
+                        @include responsivo(general)
+                            font-size: 16px
+                        @include responsivo(smallPcTablet)
+                            font-size: 14px
                     span
                         margin-bottom: 0
-                        font-size: 15px
+                        font-size: 16px
                         font-weight: 600
                         color: $grayColor
+                        @include responsivo(telefonoTable)
+                            font-size: 14px
+                        @include responsivo(pcMedio)
+                            font-size: 14px
+                        @include responsivo(general)
+                            font-size: 14px
+                        @include responsivo(smallPcTablet)
+                            font-size: 12px
+
+                    .iconCHeck
+                        position: absolute
+                        top: 5px
+                        right: 5px
+                        &::after
+                            content: ""
+                            height: 100px
+                            width: 55px
+                            background-color: $primaryColor
+                            position: absolute
+                            transform: rotate(-50deg)
+                            top: -50px
+                            right: -25px
+                            z-index: 5
+                            @include responsivo(general)
+                                right: -30px
+                        i
+                            font-size: 22px
+                            z-index: 10
+                            position: relative
+                            @include responsivo(general)
+                                font-size: 20px
+
+
                 &:hover
                     label.shipping_selector
                         transform: scale(1.1)
@@ -405,7 +453,7 @@ tr.woocommerce-shipping-totals.shipping
                 // display: none
                 label.shipping_selector
                     // background-color: $primaryColor!important
-                    border: 3.5px solid $primaryColor
+                    // border: 3.5px solid $primaryColor
                     // .iconSection
 
                     p
@@ -421,12 +469,26 @@ tr.woocommerce-shipping-totals.shipping
             padding: 10px 10px
             background-color: rgba(0, 0, 0, 0.05)
             box-shadow: $shadow2
+            @include responsivo(telefonoTable)
+                padding: 15px 20px
+            @include responsivo(pcMedio)
+                padding: 15px 25px
+            @include responsivo(smallPcTablet)
+                padding: 10px
             i
                 font-size: 32px
-                padding-right: 10px
+                padding-right: 7.5px
             span
                 text-align: left
-                font-size: 12px
+                font-size: 14px
                 line-height: 1.25
+                @include responsivo(telefonoTable)
+                    font-size: 12px
+                @include responsivo(pcMedio)
+                    font-size: 14px
+                @include responsivo(general)
+                    font-size: 13px
+                @include responsivo(smallPcTablet)
+                    font-size: 12px
 
             // display: none!important
