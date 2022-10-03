@@ -70,7 +70,12 @@ $calculator_text          = '';
 									}
 									?>
 								</span>
-
+								<?php if( str_contains( checked( $method->id, $chosen_method, false ) , 'checked') ) {
+									?>
+									<div class="iconCHeck">
+										<i class="las la-check"></i>
+									</div>
+								<?php } ?>
 							</label>
 						<?php
 						do_action( 'woocommerce_after_shipping_rate', $method, $index );

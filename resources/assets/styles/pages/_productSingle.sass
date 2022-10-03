@@ -83,27 +83,39 @@ body#product_template
                                 form.cart
                                     @include responsivo(telefonoTable)
                                         display: flex
-                                        flex-direction: row
+                                        flex-direction: column
                                         justify-content: center
                                         align-content: center
+                                        padding-left: 25px
+                                        padding-right: 25px
                                     @include responsivo(pcMedio)
                                         display: flex
-                                        flex-direction: row
+                                        flex-direction: column
                                         justify-content: center
                                         align-content: center
-                                    .quantity
-                                        @include responsivo(telefonoTable)
-                                            margin-right: 25px
-                                        @include responsivo(pcMedio)
-                                            margin-right: 25px
-                                        .qty-box
-                                            .input-text.qty.text
+                                        padding-left: 50px
+                                        padding-right: 50px
+                                    // .quantity
+
+                                    table.variations
+                                        tbody
+                                            width: fit-content
+                                            tr
                                                 @include responsivo(telefonoTable)
-                                                    min-width: unset
-                                                    width: 75px
+                                                    // width: 100%
+                                                    display: block
                                                 @include responsivo(pcMedio)
-                                                    min-width: unset
-                                                    width: 100px
+                                                    // width: 100%
+                                                    display: block
+
+                                    .single_variation_wrap
+                                        width: fit-content
+
+                                        .woocommerce-variation.single_variation
+                                            margin-bottom: 15px
+
+
+
 
                                     .actions-button
                                         @include responsivo(telefonoTable)

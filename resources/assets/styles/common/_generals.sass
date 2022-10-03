@@ -199,20 +199,15 @@ a#scroll-top
     h1.entry-title
         padding-top: 75px
         padding-bottom: 75px
+        @include h2_title_contain()
         @include responsivo(telefonoTable)
             padding-top: 50px
-            padding-bottom: 50px
-            font-size: 30px
+            padding-bottom: 25px
         @include responsivo(pcMedio)
             padding-top: 50px
             padding-bottom: 50px
-            font-size: 35px
-        @include responsivo(general)
-            font-size: 40px
         @include responsivo(smallPcTablet)
             padding: 50px 0
-        @include responsivo(resto)
-            font-size: 45px
 
 .dropdown-toggle::after
     border: none!important
@@ -552,7 +547,8 @@ header#site-header
         .container
             @include regular_section_row_width()
             .header-main.header-row
-                padding: 20px 0
+                padding: 10px 0
+                padding-top: 5px
 
                 .header-extras
                     ul.extras-menu
@@ -600,21 +596,23 @@ header#site-header.minimized
     @include responsivo(pcMedio)
         margin-bottom: 50px!important
 
-    ul.slick-dots
-        @include responsivo(telefonoTable)
-            margin: 0!important
-            margin-bottom: 15px!important
+ul.slick-dots
+    @include responsivo(telefonoTable)
+        margin: 0!important
 
-        @include responsivo(pcMedio)
-            margin: 0!important
-            margin-bottom: 15px!important
+    @include responsivo(pcMedio)
+        margin: 0!important
 
-        li
-            button
-                background-color: $lightGray_color
-        li.slick-active
-            button
-                background-color: $primaryColor
+    li
+        // margin: 0 5px!important
+        padding: 0!important
+        margin-left: 5px
+        margin-right: 5px
+        button
+            background-color: $lightGray_color
+    li.slick-active
+        button
+            background-color: $primaryColor
 
 .elementor-widget-container
     .mf-products-of-category-2.woocommerce
@@ -960,3 +958,45 @@ div#primary
 
                         // .martfury-icon-box
                         //     .mf-icon.box-icon
+
+.quantity
+    width: fit-content!important
+
+    .qty-box
+        width: fit-content
+        display: flex
+        flex-direction: row
+        align-content: center
+        align-items: center
+        justify-content: center
+        @include responsivo(telefonoTable)
+            padding: 0 5px!important
+        @include responsivo(pcMedio)
+            padding: 0 5px!important
+        @include responsivo(general)
+            padding: 0 5px!important
+        @include responsivo(resto)
+            padding: 0 5px!important
+        .increase,
+        .decrease
+            position: unset!important
+            margin: auto 0
+            height: 100%
+            transform: unset!important
+            width: 30px
+            display: flex
+            align-content: center
+            align-items: center
+            justify-self: center
+            &::before
+                display: block
+                margin: auto
+        .input-text.qty.text
+            width: fit-content!important
+            margin: 0!important
+            @include responsivo(telefonoTable)
+                min-width: unset
+                width: 75px
+            @include responsivo(pcMedio)
+                min-width: unset
+                width: 100px
