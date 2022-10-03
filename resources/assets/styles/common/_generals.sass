@@ -43,6 +43,13 @@ input.a,
     transition: $trans!important
     padding-left: 15px!important
     padding-right: 15px!important
+    // display: flex!important
+    // align-self: center!important
+    // justify-self: center!important
+    // align-items: center!important
+    // align-content: center!important
+    // line-height: 1!important
+    // width: fit-content!important
     &:hover
         transform: scale(1.075)
 
@@ -961,7 +968,6 @@ div#primary
 
 .quantity
     width: fit-content!important
-
     .qty-box
         width: fit-content
         display: flex
@@ -992,11 +998,14 @@ div#primary
                 display: block
                 margin: auto
         .input-text.qty.text
-            width: fit-content!important
             margin: 0!important
             @include responsivo(telefonoTable)
                 min-width: unset
-                width: 75px
+                width: 50px!important
             @include responsivo(pcMedio)
                 min-width: unset
-                width: 100px
+                width: 75px!important
+            @include responsivo(general)
+                width: 50px!important
+            @include responsivo(resto)
+                width: 50px!important
