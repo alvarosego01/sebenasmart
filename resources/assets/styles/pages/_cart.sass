@@ -65,7 +65,7 @@ body#cart_template.woocommerce-cart
                             width: 52.5%
 
                         input.button
-                            background-color: $primaryColorYellow
+                            background-color: $primaryColor
                             border: transparent
 
 
@@ -140,6 +140,14 @@ body#cart_template.woocommerce-cart
                                 align-items: center
                                 padding-top: 20px
                                 padding-bottom: 20px
+                                @include responsivo(telefonoTable)
+                                    width: 100%
+                                    padding: 0!important
+                                    margin-bottom: 25px
+                                @include responsivo(pcMedio)
+                                    width: 100%
+                                    padding: 0!important
+                                    margin-bottom: 25px
                                 @include responsivo(general)
                                     padding-left: 10px
                                     padding-right: 10px
@@ -163,11 +171,17 @@ body#cart_template.woocommerce-cart
                                     *
                                         font-size: 18px
 
+                                &:last-child
+                                    @include responsivo(telefonoTable)
+                                        margin-bottom: 0!important
+                                    @include responsivo(pcMedio)
+                                        margin-bottom: 0!important
+
                             td.product-thumbnail
-                                @include responsivo(telefonoTable)
-                                    display: none
-                                @include responsivo(pcMedio)
-                                    display: none
+                            //     @include responsivo(telefonoTable)
+                            //         display: none
+                            //     @include responsivo(pcMedio)
+                            //         display: none
 
                             td.product-name
                                 a
@@ -177,6 +191,21 @@ body#cart_template.woocommerce-cart
                                     &:hover
 
                                         color: var(--mf-primary-color)
+                                .product-content-detail
+                                    .product-detail-mobile
+                                        @include responsivo(telefonoTable)
+                                            display: flex
+                                            flex-direction: column
+                                            justify-content: center
+                                            align-content: center
+                                            align-items: center
+                                        @include responsivo(pcMedio)
+                                            display: flex
+                                            flex-direction: column
+                                            justify-content: center
+                                            align-content: center
+                                            align-items: center
+
 
 
                         td.actions
@@ -186,19 +215,44 @@ body#cart_template.woocommerce-cart
                             button.button.empty-cart-button
                                 background-color: white
 
-                    tbody.desktopElement
+                    tbody
                         tr
                             padding: 0 25px
                             position: relative
+                            @include responsivo(telefonoTable)
+                                position: relative
+                                margin-bottom: 35px!important
+                                padding: 25px
+                            @include responsivo(pcMedio)
+                                position: relative
+                                margin-bottom: 35px!important
+                                padding: 25px
                             td.product-name
                                 padding-left: 20px
 
+                            td.product-price,
+                            td.product-subtotal
+                                @include responsivo(telefonoTable)
+                                    display: none!important
+                                @include responsivo(pcMedio)
+                                    display: none!important
+
+                            td.product-quantity
+                                @include responsivo(telefonoTable)
+                                    margin-bottom: 0!important
+                                @include responsivo(pcMedio)
+                                    margin-bottom: 0!important
 
                             td.product-remove
-                                padding: 0
+                                padding: 0!important
                                 position: absolute
-                                right: -25px
-                                top: -15px
+                                width: fit-content
+                                @include responsivo(general)
+                                    right: -1.5%!important
+                                    top: -15px!important
+                                @include responsivo(resto)
+                                    right: -1.5%!important
+                                    top: -15px!important
                                 a
                                     border-radius: 360px
                                     background-color: $blackColor
@@ -215,23 +269,50 @@ body#cart_template.woocommerce-cart
 
                                         display: block
                                         margin: auto
-                                        position: absolute
-                                        top: 10px
+                                        // position: absolute
+                                        line-height: 0
                                         font-size: 16px
                                     &:hover
-                                        background-color: $primaryColorYellow
+                                        background-color: $primaryColor
                                         color: $blackColor!important
                                 @include responsivo(general)
                                     right: -10px
 
-                    tbody.mobileElement
-                        tr
-                            position: relative
-                            margin-bottom: 35px!important
-                            @include responsivo(telefonoTable)
-                                padding: 25px
-                            @include responsivo(pcMedio)
-                                padding: 25px
+                            td.product-remove
+
+                                @include responsivo(telefonoTable)
+                                    position: absolute
+                                    top: -10px
+                                    right: -10px!important
+                                    margin-left: auto
+                                    margin-right: 0!important
+                                    width: fit-content!important
+
+                                @include responsivo(pcMedio)
+                                    position: absolute
+                                    top: -10px
+                                    right: -10px!important
+                                    margin-left: auto
+                                    margin-right: 0!important
+                                    width: fit-content!important
+
+
+                                a
+                                    @include responsivo(telefonoTable)
+                                        width: 30px
+                                        height: 30px
+                                    @include responsivo(pcMedio)
+                                        width: 30px
+                                        height: 30px
+
+                    tbody
+                        tr.aa
+                            // position: relative
+                            // margin-bottom: 35px!important
+                            // padding: 25px
+                            // @include responsivo(telefonoTable)
+                            // @include responsivo(pcMedio)
+                            //     padding: 25px
 
                             td.product-name
                                 padding: 0
@@ -321,48 +402,6 @@ body#cart_template.woocommerce-cart
                                             position: unset
                                             margin: 0 auto
 
-                            td.product-remove
-                                position: absolute
-                                top: -20px
-                                right: -25px
-                                padding: 0
-                                @include responsivo(telefonoTable)
-                                    top: -10px
-                                @include responsivo(pcMedio)
-                                    top: -10px
-
-                                a
-                                    border-radius: 360px
-                                    background-color: $blackColor
-                                    color: white
-                                    padding: 5px
-                                    height: 40px
-                                    width: 40px
-                                    position: relative
-                                    display: flex
-                                    justify-content: center
-                                    align-content: center
-                                    align-items: center
-                                    transition: $trans
-                                    i
-                                        display: block
-                                        margin: auto
-                                        font-size: 18px
-                                    &:hover
-                                        background-color: $primaryColorYellow
-                                        color: $blackColor
-
-                                    @include responsivo(telefonoTable)
-                                        width: 30px
-                                        height: 30px
-                                    @include responsivo(pcMedio)
-                                        width: 30px
-                                        height: 30px
-
-
-
-
-
 
         .cart_totals
             margin-bottom: 0
@@ -372,6 +411,12 @@ body#cart_template.woocommerce-cart
                 background-color: $lightGray_color!important
                 margin-bottom: 0!important
                 border: none!important
+
+                tr.woocommerce-shipping-totals.shipping
+                    td
+                        p.woocommerce-shipping-destination
+                            display: none
+
             .ripTicket
                 background-color: #eee
             .wc-proceed-to-checkout

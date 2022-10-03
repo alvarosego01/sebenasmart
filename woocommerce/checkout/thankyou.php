@@ -20,6 +20,8 @@ defined( 'ABSPATH' ) || exit;
 
 <div class="woocommerce-order">
 
+
+
 	<?php
 	if ( $order ) :
 
@@ -39,45 +41,69 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php else : ?>
 
-			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+			<div class="row innserThankyouSucesss">
 
-			<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
+				<div class="leftSection col-md-12 col-lg-7 animate__animated animate__fast animate__fadeIn">
 
-				<li class="woocommerce-order-overview__order order">
-					<?php esc_html_e( 'Order number:', 'woocommerce' ); ?>
-					<strong><?php echo $order->get_order_number(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></strong>
-				</li>
+					<div class="sectionContainer">
 
-				<li class="woocommerce-order-overview__date date">
-					<?php esc_html_e( 'Date:', 'woocommerce' ); ?>
-					<strong><?php echo wc_format_datetime( $order->get_date_created() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></strong>
-				</li>
 
-				<?php if ( is_user_logged_in() && $order->get_user_id() === get_current_user_id() && $order->get_billing_email() ) : ?>
-					<li class="woocommerce-order-overview__email email">
-						<?php esc_html_e( 'Email:', 'woocommerce' ); ?>
-						<strong><?php echo $order->get_billing_email(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></strong>
-					</li>
-				<?php endif; ?>
+					<section class="innerSectionElement sct1">
 
-				<li class="woocommerce-order-overview__total total">
-					<?php esc_html_e( 'Total:', 'woocommerce' ); ?>
-					<strong><?php echo $order->get_formatted_order_total(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></strong>
-				</li>
+				<div class="containElements line_separator_section">
 
-				<?php if ( $order->get_payment_method_title() ) : ?>
-					<li class="woocommerce-order-overview__payment-method method">
-						<?php esc_html_e( 'Payment method:', 'woocommerce' ); ?>
-						<strong><?php echo wp_kses_post( $order->get_payment_method_title() ); ?></strong>
-					</li>
-				<?php endif; ?>
+						<div class="iconSection">
 
-			</ul>
+						<i class="las la-check-circle"></i>
+
+						</div>
+
+						<div class="info">
+
+							<small>
+								Order #<?php echo $order->get_order_number(); ?> - Created at <?php echo wc_format_datetime( $order->get_date_created() ); ?>
+							</small>
+							<h4>
+								Thank you. <?php echo $order->get_billing_first_name(); ?>
+							</h4>
+						</div>
+
+					</div>
+
+				</section>
+
+				<section class="innerSectionElement sct2">
+
+					<div class="containElements">
+
+						<h1>
+						Order placed and on its way!
+						</h1>
+
+						<p class="text">
+						Thank you for your purchase! All the details for your <strong>order status, tracking, and estimated delivery time</strong> have been sent to your email. Here at Sebenasmart, impeccable customer service is what makes us different 😉 feel free to contact us for any inquiries.
+						</p>
+
+					</div>
+
+				</section>
+			</div>
+
+		</div>
+
+		<div class="rightSection col-md-12 col-lg-5 animate__animated animate__fast animate__fadeIn">
+
+				<?php do_action( 'woocommerce_thankyou_' . $order->get_payment_method(), $order->get_id() ); ?>
+				<?php do_action( 'woocommerce_thankyou', $order->get_id() ); ?>
+
+		</div>
+
+		</div>
+
 
 		<?php endif; ?>
 
-		<?php do_action( 'woocommerce_thankyou_' . $order->get_payment_method(), $order->get_id() ); ?>
-		<?php do_action( 'woocommerce_thankyou', $order->get_id() ); ?>
+
 
 	<?php else : ?>
 

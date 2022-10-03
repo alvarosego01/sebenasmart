@@ -273,3 +273,160 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
                             p
                                 margin-bottom: 15px
 
+
+body#checkout_template.woocommerce-checkout.page.woocommerce-page.woocommerce-order-received
+
+    h1.entry-title
+        display: none
+
+    div#content
+        padding: 75px 0
+        @include responsivo(telefonoTable)
+            padding: 25px 0
+        @include responsivo(pcMedio)
+            padding: 50px 0
+
+        .row.innserThankyouSucesss
+            .leftSection
+                padding: 0
+                @include responsivo(telefonoTable)
+                    margin-bottom: 25px
+                @include responsivo(pcMedio)
+                    margin-bottom: 25px
+                @include responsivo(general)
+                    padding-right: 12.5px
+                @include responsivo(resto)
+                    padding-right: 12.5px
+                .sectionContainer
+                    padding: 25px
+                    background-color: $lightGray_color
+                    box-shadow: $shadow2
+                    .innerSectionElement.sct1
+                        .containElements
+                            display: flex
+                            flex-direction: row
+                            width: 100%
+                            .iconSection
+                                margin-right: 15px
+                                @include responsivo(telefonoTable)
+                                    margin-right: 10px
+                                @include responsivo(pcMedio)
+                                    margin-right: 10px
+                            .info
+                                display: flex
+                                flex-direction: column
+                                align-content: center
+                                align-items: flex-start
+                                justify-content: center
+                                small
+                                    margin-bottom: 5px
+                                    color: $grayColor
+                                    @include small_preTitle_tag()
+                                h4
+                                    margin: 0
+                                    color: $blackColor
+                                    @include h4_title_small()
+
+                    .innerSectionElement.sct2
+                        .containElements
+                            h1
+                                @include h2_title_contain()
+                            p.text
+                                margin-bottom: 0
+                                @include p_secondaryText_contain()
+            .rightSection
+                padding: 0
+                @include responsivo(general)
+                    padding-left: 12.5px
+                @include responsivo(resto)
+                    padding-left: 12.5px
+
+                section.woocommerce-order-details
+                    .sectionContainer
+                        background-color: $lightGray_color
+                        box-shadow: $shadow2
+                        padding: 25px
+
+
+
+tr.woocommerce-shipping-totals.shipping
+    td
+        // h4.shipping-title
+        ul#shipping_method
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-content: center
+            align-items: center
+            flex-flow: wrap
+            li
+                padding: 0
+                @include responsivo(general)
+                    width: 45%
+                @include responsivo(resto)
+                    width: 45%
+
+                label.shipping_selector
+                    background-color: $whiteBase1!important
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-content: center
+                    align-items: center
+                    padding: 10px 5px
+                    box-shadow: $shadow2
+                    transition: $trans
+                    border: 3.5px solid transparent
+                    box-sizing: border-box
+                    &::before
+                        display: none
+                    .iconSection
+                        margin-bottom: 10px
+
+                    p
+                        margin-bottom: 10px
+                        font-size: 16px
+                        font-weight: 800
+                        color: $grayColor
+                    span
+                        margin-bottom: 0
+                        font-size: 15px
+                        font-weight: 600
+                        color: $grayColor
+                &:hover
+                    label.shipping_selector
+                        transform: scale(1.1)
+
+            li.free_shipping
+                label.shipping_selector
+                    span
+                        color: green!important
+            li[checked="checked"]
+                // display: none
+                label.shipping_selector
+                    // background-color: $primaryColor!important
+                    border: 3.5px solid $primaryColor
+                    // .iconSection
+
+                    p
+                        color: $blackColor
+                    span
+                        color: $blackColor
+        .sectionMention_freeShipping
+            display: flex
+            flex-direction: row
+            align-content: center
+            align-items: center
+            justify-content: flex-start
+            padding: 10px 10px
+            background-color: rgba(0, 0, 0, 0.05)
+            box-shadow: $shadow2
+            i
+                font-size: 32px
+                padding-right: 10px
+            span
+                text-align: left
+                font-size: 12px
+                line-height: 1.25
+
+            // display: none!important

@@ -6,6 +6,14 @@
         width: 33.33333333%!important
 
 @media (min-width: 992px)
+    .col-lg-5
+        width: 41.66666667%!important
+
+@media (min-width: 992px)
+    .col-lg-7
+        width: 58.33333333%!important
+
+@media (min-width: 992px)
     .col-lg-8
         flex: 0 0 auto
         width: 66.66666667%!important
@@ -23,6 +31,9 @@ html.yith_welrp_opened, body.yith_welrp_opened
 a,
 button
     transition: $trans
+
+strong
+    font-weight: bold!important
 
 .button,
 input.a,
@@ -54,6 +65,10 @@ input.a,
 .hiperRed
     &:hover
         color: red!important
+
+.hiperLink
+    &:hover
+        color: $primaryColor!important
 
 
 .sectionParent
@@ -212,7 +227,7 @@ a#scroll-top
 div#page
     .container,
     .martfury-container
-        @include containerWidth()
+        @include regular_section_row_width()
     div#content
         // padding: 75px 0
         // @include responsivo(telefonoTable)
@@ -245,7 +260,7 @@ body#regular_document_template
     div#page
         .container,
         .martfury-container
-            @include containerWidth()
+            @include regular_section_row_width()
         div#content
             .container-fluid
                 .row
@@ -327,8 +342,8 @@ body#regular_document_template
 
 .sectionTopList
     .lineTitleSection
-        margin-bottom: 20px
-        padding-bottom: 15px
+        margin-bottom: 20px!important
+        padding-bottom: 15px!important
         border-bottom: 1px solid rgba(0,0,0,0.15)
         display: flex
         flex-direction: row
@@ -345,10 +360,19 @@ body#regular_document_template
 
         h3
             margin: auto 0!important
-            @include responsivo(telefonoTable)
-                font-size: 18px!important
-            @include responsivo(pcMedio)
-                font-size: 18px!important
+            @include h4_title_small()
+
+.line_separator_section
+    margin-bottom: 20px
+    padding-bottom: 15px
+    border-bottom: 1px solid rgba(0,0,0,0.15)
+.iconSection
+    i
+        font-size: 30px
+        padding: 10px
+        background-color: var(--mf-primary-color)
+        color: black
+        border-radius: 360px
 
 
 .elementor-column-gap-default
@@ -413,7 +437,7 @@ body#regular_document_template
                 // padding-right: 15px
                 font-size: 18px
                 padding: 7.5px
-                background-color: $primaryColorYellow
+                background-color: $primaryColor
                 border-radius: 100%
             span
                 width: fit-content
@@ -461,7 +485,7 @@ body#regular_document_template
                         width: 60%!important
 
                 input.button
-                    background-color: $primaryColorYellow
+                    background-color: $primaryColor
                     border: transparent
                     margin-top: 0!important
                     @include responsivo(telefonoTable)
@@ -526,7 +550,7 @@ header#site-header
     .header-mobile-v1,
     .header-mobile-v2
         .container
-            @include containerWidth()
+            @include regular_section_row_width()
             .header-main.header-row
                 padding: 20px 0
 
@@ -590,7 +614,7 @@ header#site-header.minimized
                 background-color: $lightGray_color
         li.slick-active
             button
-                background-color: $primaryColorYellow
+                background-color: $primaryColor
 
 .elementor-widget-container
     .mf-products-of-category-2.woocommerce
@@ -771,7 +795,7 @@ div#primary
 
 
     &.sbn_primaryButton
-        background-color: $primaryColorYellow
+        background-color: $primaryColor
         color: $blackColor
     &.sbn_secondaryButton
         background-color: $lightGray_color
