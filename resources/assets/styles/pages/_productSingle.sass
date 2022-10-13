@@ -12,6 +12,11 @@ body#product_template
                 div#primary
                     .product
                         .mf-product-detail
+                            display: flex
+                            @include responsivo(general)
+                                flex-direction: row
+                            @include responsivo(resto)
+                                flex-direction: row
                             .woocommerce-product-gallery
                                 // .flex-viewport
                                 ol.flex-control-nav.flex-control-thumbs
