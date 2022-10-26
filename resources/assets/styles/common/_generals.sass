@@ -18,6 +18,10 @@
         width: 58.33333333%!important
 
 @media (min-width: 992px)
+    .col-lg-9
+        width: 75%!important
+
+@media (min-width: 992px)
     .col-lg-8
         flex: 0 0 auto
         width: 66.66666667%!important
@@ -1016,3 +1020,50 @@ div#primary
 
 .sticky-product-info-wapper.viewport
     z-index: 1000!important
+
+
+div#mf-quick-view-modal
+    .modal-content
+        .product-modal-content.loading
+            width: 100%
+            .mf-single-product
+                width: 100%!important
+
+                .woocommerce-variation
+                    margin-bottom: 25px
+
+
+.swal2-container
+    z-index: 999999!important
+    @include responsivo(general)
+        padding-top: 75px!important
+        left: 35px!important
+        width: 400px!important
+    @include responsivo(resto)
+        padding-top: 75px!important
+        left: 35px!important
+        width: 400px!important
+
+    .swal2-popup.swal2-toast
+        font-size: 18px
+        padding: 10px 15px
+        .swal2-icon
+            margin-right: 2.5px
+
+
+        h2#swal2-title
+            font-size: 16px
+            margin-left: 10px
+            margin-bottom: 7.5px
+            margin-right: 0
+        div#swal2-html-container
+            margin-left: 10px
+            font-size: 13px
+            margin-top: 0
+            margin-right: 0
+
+    .swal2-timer-progress-bar
+        background-color: $primaryColor
+
+
+

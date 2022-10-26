@@ -12,11 +12,6 @@ body#product_template
                 div#primary
                     .product
                         .mf-product-detail
-                            display: flex
-                            @include responsivo(general)
-                                flex-direction: row
-                            @include responsivo(resto)
-                                flex-direction: row
                             .woocommerce-product-gallery
                                 // .flex-viewport
                                 ol.flex-control-nav.flex-control-thumbs
@@ -44,6 +39,12 @@ body#product_template
                                             @include responsivo(resto)
                                                 height: 65px!important
                                                 width: 65px!important
+
+                                    .slick-list
+                                        .slick-track
+                                            display: flex
+                                            flex-direction: row
+
 
 
                             .summary.entry-summary

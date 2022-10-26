@@ -129,6 +129,65 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
                             h3
                                 margin-bottom: 15px
 
+                        .shipping_address
+                            .woocommerce-shipping-fields__field-wrapper
+                                display: flex
+                                flex-direction: column
+                                flex-flow: wrap
+                                p
+                                    position: relative
+                                    span.ywccp_error
+                                        position: relative
+                                        top: -2.5px
+                                    @include responsivo(telefonoTable)
+                                        width: 100%
+                                        margin-bottom: 15px
+                                    @include responsivo(pcMedio)
+                                        width: 50%
+                                        margin-bottom: 15px
+                                    @include responsivo(general)
+                                        width: 50%
+                                    @include responsivo(resto)
+                                        width: 50%
+
+                                    &:last-child
+                                        margin-bottom: 0
+
+                                    label
+
+                                        @include responsivo(pcMedio)
+                                            position: absolute
+
+                                        @include responsivo(general)
+                                            position: absolute
+                                            font-size: 12.5px
+
+                                        @include responsivo(resto)
+                                            position: absolute
+
+                                    span.woocommerce-input-wrapper
+                                        display: block
+                                        height: 45px
+
+                                        @include responsivo(pcMedio)
+                                            margin-top: 30px
+
+                                        @include responsivo(general)
+                                            margin-top: 35px
+                                        @include responsivo(resto)
+                                            margin-top: 35px
+                                        input.input-text,
+                                        span.select2.select2-container.select2-container--default.select2-container--below
+                                            height: 45px
+                                            min-height: unset
+                                            line-height: 1
+
+                                        .select2-container
+                                            .select2-selection--single
+                                                min-height: unset
+                                                height: 45px
+                                                line-height: 1
+
             .checkoutPayCustom
                 box-shadow: $shadow2
                 background-color: $lightGray_color
