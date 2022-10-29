@@ -185,7 +185,6 @@ function custom_add_to_cart_ajax(event = null, xhr = null, settings = null) {
 
             }
 
-
             Toast.fire({
                 icon: 'success',
                 title: productName,
@@ -195,11 +194,6 @@ function custom_add_to_cart_ajax(event = null, xhr = null, settings = null) {
             jQuery('.xoo-wsc-basket').click();
 
         }
-
-        // console.log('settings.url', settings.url);
-        // console.log('settings.method', settings.method);
-        // console.log('xhr', xhr.status);
-        // console.log('settings_data', settings_data);
 
         if (
             (
