@@ -66,6 +66,8 @@ add_action('wp_enqueue_scripts', 'init_scripts_styles');
         }
     }
 
+
+
     function customCouponField()
     {
         if (wc_coupons_enabled()) { ?>

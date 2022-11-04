@@ -16,42 +16,11 @@
  */
 defined('ABSPATH') || exit;
 
-do_action('woocommerce_before_cart'); ?>
+do_action('woocommerce_before_cart');
+
+?>
 
 <div class="row customCart01">
-
-<div class="col-12 stepsProcess">
-
-	<ol class="steps">
-
-		<li class="item">
-			<div class="iconSection">
-			<i class="las la-shopping-cart"></i>
-			</div>
-			<p>
-				Cart
-			</p>
-		</li>
-		<li class="item">
-			<div class="iconSection grey">
-			<i class="lar la-credit-card"></i>
-			</div>
-			<p>
-				Checkout
-			</p>
-		</li>
-		<li class="item">
-			<div class="iconSection grey">
-			<i class="lar la-smile-beam"></i>
-			</div>
-			<p>
-				Order complete
-			</p>
-		</li>
-
-	</ol>
-
-</div>
 
 <div class="cartList col-md-12 col-lg-8">
 
@@ -283,3 +252,48 @@ do_action('woocommerce_before_cart'); ?>
 <?php do_action('woocommerce_after_cart'); ?>
 
 
+<?php
+
+function sets_tepsProcess_shop()
+{
+    ?>
+
+<div class="col-12 stepsProcess">
+
+<ol class="steps">
+
+<li class="item">
+    <div class="iconSection">
+    <i class="las la-shopping-cart"></i>
+    </div>
+    <p>
+        Cart
+    </p>
+</li>
+<li class="item">
+    <div class="iconSection grey">
+    <i class="lar la-credit-card"></i>
+    </div>
+    <p>
+        Checkout
+    </p>
+</li>
+<li class="item">
+    <div class="iconSection grey">
+    <i class="lar la-smile-beam"></i>
+    </div>
+    <p>
+        Order complete
+    </p>
+</li>
+
+</ol>
+
+</div>
+
+<?php
+}
+
+add_action('special_preTitle_section', 'sets_tepsProcess_shop', 'prueba de parametro');
+
+?>
