@@ -135,16 +135,16 @@ function custom_add_to_cart_ajax(event = null, xhr = null, settings = null) {
         target_element = event.target.activeElement || null;
 
 
-        console.log('settings.type', settings.type);
-        console.log('xhr.status', xhr.status);
-        console.log('settings_url', settings_url);
-        console.log('settings_data', settings_data);
+        // console.log('settings.type', settings.type);
+        // console.log('xhr.status', xhr.status);
+        // console.log('settings_url', settings_url);
+        // console.log('settings_data', settings_data);
 
 
         let urlSearchParams = new URLSearchParams(settings_data);
         let params_data = Object.fromEntries(urlSearchParams.entries());
 
-        console.log('los params params_data', params_data );
+        // console.log('los params params_data', params_data );
 
         if (
             ( settings.type === 'POST' && xhr.status === 200 ) &&
@@ -159,7 +159,8 @@ function custom_add_to_cart_ajax(event = null, xhr = null, settings = null) {
 
             let productName = null;
             let qty = params_data.quantity || 0;
-            console.log('entra aca');
+            // console.log('entra aca');
+
 
             if (jQuery('h1.product_title.entry-title').length > 0) {
 
@@ -232,9 +233,9 @@ jQuery(document).ready(function () {
 
 jQuery(document).ajaxSuccess(function (event, xhr, settings) {
 
-    console.log('ajax success event', event);
-    console.log('ajax success xhr', xhr);
-    console.log('ajax success settings', settings);
+    // console.log('ajax success event', event);
+    // console.log('ajax success xhr', xhr);
+    // console.log('ajax success settings', settings);
 
     action_collapsibleButton();
     action_openCartButton();
@@ -243,5 +244,7 @@ jQuery(document).ajaxSuccess(function (event, xhr, settings) {
     custom_add_to_cart_ajax(event, xhr, settings)
 
 });
+
+
 
 

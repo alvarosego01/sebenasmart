@@ -65,19 +65,53 @@ header#site-header
             // background-color:
             @include responsivo(telefonoTable)
                 margin-bottom: 10px
-                padding-bottom: 0
+                padding-bottom: 15px
+                // padding-bottom: 0
             @include responsivo(pcMedio)
                 margin-bottom: 10px
-                padding-bottom: 0
+                padding-bottom: 15px
+                // padding-bottom: 0
+            @include responsivo(general)
+                padding-bottom: 15px
+            @include responsivo(resto)
+                padding-bottom: 15px
             .container
                 @include regular_section_row_width()
                 .row.header-row
+                    @include responsivo(telefonoTable)
+                        align-content: center
+                        align-items: center
+                    @include responsivo(pcMedio)
+                        align-content: center
+                        align-items: center
                     .header-logo
                         margin: 0
+                        // display: none
                         @include responsivo(telefonoTable)
                             padding: 0
                         @include responsivo(pcMedio)
                             padding: 0
+                        @include responsivo(general)
+                            width: 25%
+                            padding-right: 5px
+                        @include responsivo(resto)
+                            width: 25%
+                            padding-right: 5px
+                        .d-logo
+                            .logo
+                                a
+                                    img
+                                        @include responsivo(telefonoTable)
+                                            height: 35px
+                                        @include responsivo(pcMedio)
+                                            height: 50px
+                                        @include responsivo(general)
+                                            height: 50px
+                                        @include responsivo(smallPcTablet)
+                                            height: 50px
+                                        @include responsivo(resto)
+                                            height: 60px
+                                            width: auto!important
                     .header-extras
                         @include responsivo(telefonoTable)
                             padding-right: 0
@@ -137,7 +171,24 @@ header#site-header
 
 
 
-
+    .mobile-menu
+        // display: none
+        padding-bottom: 0
+        background-color: $whiteBase1
+        border-bottom: 1px solid $gray_ult_color
+        padding-bottom: 15px
+        // border-top: 1px solid $gray_ult_color
+        .container
+            width: 100%!important
+            .mobile-menu-row
+                a#mf-toggle-menu
+                .product-extra-search
+                    form.products-search
+                        .psearch-content
+                            // .search-wrapper
+                            button.search-submit.mf-background-primary
+                                background-color: $primaryColor
+                                color: $whiteBase1
     .main-menu
         .container
             @include regular_section_row_width()
@@ -178,16 +229,7 @@ header#site-header
                 padding-left: 0
             @include responsivo(resto)
                 padding-left: 0
-    .mobile-menu
-        .container
-            @include regular_section_row_width()
-        a#mf-toggle-menu
-            @include responsivo(telefonoTable)
-                padding: 0
-                padding-right: 25px
-            @include responsivo(pcMedio)
-                padding: 0
-                padding-right: 25px
+
 
     .mini-cart-content
         @include responsivo(general)
@@ -255,3 +297,131 @@ header#site-header
             color: $darkBlue_color!important
             &:hover
                 color: $primaryColor!important
+
+
+
+
+header#site-header.minimized
+    .header-main-wapper
+        .header-main
+            .container
+                .header-row.header-main
+                    @include responsivo(telefonoTable)
+                        padding-left: 5%
+                        padding-right: 5%
+                    @include responsivo(pcMedio)
+                        padding-left: 5%
+                        padding-right: 5%
+
+                .products-cats-menu
+                    .cats-menu-title
+                        color: $whiteBase1!important
+                        transition: $trans
+                        span.text
+                            transition: $trans
+                            color: $whiteBase1!important
+                        &:hover
+                            color: $primaryColor!important
+
+
+
+body.mobile-version
+    header#site-header
+        .header-mobile-v1,
+        .header-mobile-v2
+            .container
+                // @include regular_section_row_width()
+                width: 100%!important
+                max-width: 100%!important
+                .header-main.header-row
+                    padding: 10px 0
+                    padding-top: 5px
+                    background-color: $darkBlue_color
+                    @include responsivo(telefonoTable)
+                        padding: 10px 5%!important
+                    @include responsivo(pcMedio)
+                        padding: 15px 5%!important
+                    @include responsivo(general)
+                        padding: 15px 5%!important
+                    @include responsivo(resto)
+                        padding: 15px 5%!important
+
+                    .header-logo
+                        .logo
+                            a
+                                img
+                                    height: 75px
+                                    @include responsivo(telefonoTable)
+                                        height: 35px
+                                    @include responsivo(pcMedio)
+                                        height: 50px
+                    .header-title
+                        a
+                            *
+                                transition: $trans
+                                color: $whiteBase1
+                            &:hover
+                                *
+                                    color: $primaryColor
+
+                    .header-extras
+                        ul.extras-menu
+                            @include responsivo(telefonoTable)
+                                margin-left: 0
+                            @include responsivo(pcMedio)
+                                margin-left: 0
+                            li.extra-menu-item
+                                a
+                                    padding-top: 0
+                                    color: $whiteBase1
+                                    transition: $trans
+                                    i
+                                        font-size: 37.5px
+                                        // color: $whiteBase1
+                                    &:hover
+                                        color: $primaryColor
+                                        // i
+
+                                    span.mini-item-counter
+                                        background-color: $yellow_color!important
+                                        color: $blackColor
+
+
+                .mobile-menu
+                    padding-bottom: 0
+                    ul.hot-words
+                        margin: 0
+                        background-color: $whiteBase1
+                        border-bottom: 1px solid $gray_ult_color
+                        border-top: 1px solid $gray_ult_color
+                        @include responsivo(telefonoTable)
+                            padding: 10px 2.5%!important
+                        @include responsivo(pcMedio)
+                            padding: 15px 2.5%!important
+                        @include responsivo(general)
+                            padding: 15px 5%!important
+                        @include responsivo(resto)
+                            padding: 15px 5%!important
+                    .product-extra-search
+                        form.products-search
+                            .psearch-content
+                                button.search-submit
+                                    background-color: $primaryColor
+                                    color: $whiteBase1
+
+                // .container
+                //     @include regular_section_row_width()
+                // a#mf-toggle-menu
+                //     @include responsivo(telefonoTable)
+                //         padding: 0
+                //         padding-right: 25px
+                //     @include responsivo(pcMedio)
+                //         padding: 0
+                //         padding-right: 25px
+
+    header#site-header.minimized
+        .header-main.header-row
+            @include responsivo(telefonoTable)
+                padding: 10px 5%!important
+            @include responsivo(pcMedio)
+                padding: 15px 5%!important

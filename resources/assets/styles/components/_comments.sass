@@ -4,28 +4,68 @@
 .mf-product-rating.row
     padding: 0 25px
 
-div#comments
-    margin-top: 25px!important
-    h2.woocommerce-Reviews-title
-        margin-bottom: 25px!important
-    ol.commentlist
-        padding-left: 25px!important
-        padding-right: 25px!important
-        li.review
-            padding-bottom: 30px!important
-            margin-bottom: 30px!important
 
-            .comment_container
-                .comment-text
-                    margin-left: 75px!important
-                    .description
-                        p
-                            margin-bottom: 0!important
-                            font-size: 16px!important
-                            @include responsivo(telefonoTable)
-                                font-size: 14px!important
-                            @include responsivo(pcMedio)
-                                font-size: 14px!important
+.woocommerce #reviews .bar-rating .star-item .bar-content span
+    background-color: $turcGreen_color!important
+
+.woocommerce .star-rating span:before
+    color: $turcGreen_color!important
+
+
+div#tab-reviews
+    div#reviews
+        .mf-product-rating.row
+            .col-average-rating
+                .average-rating
+                    h3.average-value
+                        color: $turcGreen_color
+
+                    .woocommerce-product-rating
+                        .mf-rating
+                            margin: 7.5px 0
+                            .star-rating
+                                margin: 0
+            .col-review_form
+                div#review_form_wrapper
+                    form#commentform
+                        .comment-form-rating
+                            p.stars
+                                span
+                                    a
+                                        color: $turcGreen_color
+                        p.form-submit
+                            input#submit
+                                background-color: $turcGreen_color
+                                border-radius: 7.5px
+                                box-shadow: $shadow2
+                                color: $whiteBase1
+                                transition: $trans
+                                &:hover
+                                    transform: scale(1.1)
+                                    cursor: pointer
+
+        div#comments
+            margin-top: 25px!important
+            h2.woocommerce-Reviews-title
+                margin-bottom: 25px!important
+            ol.commentlist
+                padding-left: 25px!important
+                padding-right: 25px!important
+                li.review
+                    padding-bottom: 30px!important
+                    margin-bottom: 30px!important
+
+                    .comment_container
+                        .comment-text
+                            margin-left: 75px!important
+                            .description
+                                p
+                                    margin-bottom: 0!important
+                                    font-size: 16px!important
+                                    @include responsivo(telefonoTable)
+                                        font-size: 14px!important
+                                    @include responsivo(pcMedio)
+                                        font-size: 14px!important
 
 
 
