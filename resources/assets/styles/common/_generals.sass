@@ -34,7 +34,7 @@
 
 // body
     // background-color: $whiteBase1!important
-    // background-color: red!important
+    // background-color: $primaryColor!important
 
 body
     overflow-x: hidden!important
@@ -87,19 +87,40 @@ input.a,
 .hiperRed
     font-weight: 600
     &:hover
-        color: red!important
+        color: $primaryColor!important
 
 .hiperLink,
 a.content-link,
-a.woocommerce-privacy-policy-link
+a.woocommerce-privacy-policy-link,
+td.woocommerce-table__product-name.product-name a
     color: $darkBlue_color
     transition: $trans
-    font-weight: 600
+    font-weight: 700
     &:hover
         color: $primaryColor!important
 
 
+.navbar-nav
+    li
+        a
+            color: $darkBlue_color
+            transition: $trans
+            &:hover
+                color: $primaryColor!important
 
+
+.slick-dots
+    li.slick-active
+        button
+            background-color: $primaryColor!important
+        &:hover,
+        &:focus
+            button
+                background-color: $primaryColor!important
+
+
+.woocommerce div.product .wc-tabs-wrapper ul.tabs .tl-wc-tab
+    background-color: $primaryColor!important
 
 .sectionParent
     background-color: $whiteBase1!important
@@ -433,7 +454,7 @@ body#regular_document_template
 
 .cart-discount
     .innerDiscount
-        color: red!important
+        color: $primaryColor!important
         display: flex
         flex-direction: row
         justify-content: center
@@ -444,9 +465,13 @@ body#regular_document_template
         width: fit-content
         margin-left: auto
         span.woocommerce-Price-amount.amount
-            color: red!important
+            color: $primaryColor!important
             margin-right: 5px
 
+
+.amount,
+span.woocommerce-Price-amount.amount
+    color: $primaryColor!important
 
 
 .customCouponSection
@@ -592,50 +617,7 @@ body#regular_document_template
                             margin: 0
 
 
-header#site-header
-    .header-mobile-v1,
-    .header-mobile-v2
-        .container
-            @include regular_section_row_width()
-            .header-main.header-row
-                padding: 10px 0
-                padding-top: 5px
 
-                .header-extras
-                    ul.extras-menu
-                        @include responsivo(telefonoTable)
-                            margin-left: 0
-                        @include responsivo(pcMedio)
-                            margin-left: 0
-                        li.extra-menu-item
-                            a
-                                padding-top: 0
-                                i
-                                    font-size: 37.5px
-
-header#site-header.minimized
-    .header-main-wapper
-        .header-main
-            .container
-                .header-row
-                    @include responsivo(telefonoTable)
-                        padding-left: 5%
-                        padding-right: 5%
-                    @include responsivo(pcMedio)
-                        padding-left: 5%
-                        padding-right: 5%
-
-                    .d-department.hidden-xs.hidden-sm
-                        .products-cats-menu
-                            .cats-menu-title
-                                color: $whiteBase1
-                                transition: $trans
-                                span.text
-                                    transition: $trans
-                                    color: $whiteBase1
-
-                                &:hover
-                                    color: $primaryColor
 
 
 

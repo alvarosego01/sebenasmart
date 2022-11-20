@@ -2,6 +2,18 @@
 
 
 body#product_template
+
+    div#sticky-product-info-wapper
+        .container
+            .sticky-product-inner
+                .sc-product-cart
+                    a.button
+                        background-color: $primaryColor
+                        color: $whiteBase1
+                        transition: $trans
+                        box-shadow: $shadow2
+                        border-radius: 7.5px
+
     div#page
         div#content
             @include responsivo(telefonoTable)
@@ -160,6 +172,12 @@ body#product_template
 
                                         .woocommerce-variation.single_variation
                                             margin-bottom: 15px
+
+                                        button.single_add_to_cart_button.button
+                                            background-color: $primaryColor
+                                            color: $whiteBase1
+                                            border-radius: 7.5px
+                                            box-shadow: $shadow2
 
 
 
