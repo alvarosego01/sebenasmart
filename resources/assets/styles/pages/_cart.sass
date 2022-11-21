@@ -98,6 +98,7 @@ body#cart_template.woocommerce-cart
                 width: 100%
                 h2
                     display: none
+
                 table.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents
                     margin-bottom: 0
                     thead
@@ -116,6 +117,7 @@ body#cart_template.woocommerce-cart
                                         height: 100px
                                     @include responsivo(resto)
                                         height: 125px
+
                         tr.woocommerce-cart-form__cart-item.cart_item
                             margin-bottom: 35px
                             border: none
@@ -187,10 +189,10 @@ body#cart_template.woocommerce-cart
                                     @include responsivo(pcMedio)
                                         margin-bottom: 0!important
 
-                            td.product-thumbnail
+                            // td.product-thumbnail
                             //     @include responsivo(telefonoTable)
                             //         display: none
-                            //     @include responsivo(pcMedio)
+                            //     @include responsivo(pcMedio)va
                             //         display: none
 
                             td.product-name
@@ -345,6 +347,11 @@ body#cart_template.woocommerce-cart
                     td
                         p.woocommerce-shipping-destination
                             display: none
+
+                tr.order-total
+                    td
+                        bdi
+                            color: $primaryColor
 
             .ripTicket
                 background-color: #eee

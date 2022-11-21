@@ -16,12 +16,20 @@
 
 
 div#top-promotion
+    background-repeat: no-repeat!important
+    background-position: center!important
+    background-attachment: inherit!important
+    background-size: cover!important
     .container
         .promotion-content
             padding: 25px 0
 
 header#site-header
     background-color: unset
+    // @include responsivo(telefonoTable)
+    //     background-color: $darkBlue_color
+    // @include responsivo(pcMedio)
+    //     background-color: $darkBlue_color
     .main-menu.hidden-xs.hidden-sm
         .container
             .row.header-row
@@ -64,11 +72,11 @@ header#site-header
             background-color: $darkBlue_color!important
             // background-color:
             @include responsivo(telefonoTable)
-                margin-bottom: 10px
+                margin-bottom: 0
                 padding-bottom: 15px
                 // padding-bottom: 0
             @include responsivo(pcMedio)
-                margin-bottom: 10px
+                margin-bottom: 0
                 padding-bottom: 15px
                 // padding-bottom: 0
             @include responsivo(general)
@@ -177,11 +185,15 @@ header#site-header
         background-color: $whiteBase1
         border-bottom: 1px solid $gray_ult_color
         padding-bottom: 15px
+        @include responsivo(telefonoTable)
+            padding-bottom: 0
+        @include responsivo(pcMedio)
+            padding-bottom: 0
         // border-top: 1px solid $gray_ult_color
         .container
             width: 100%!important
             .mobile-menu-row
-                a#mf-toggle-menu
+                // a#mf-toggle-menu
                 .product-extra-search
                     form.products-search
                         .psearch-content
@@ -189,12 +201,17 @@ header#site-header
                             button.search-submit.mf-background-primary
                                 background-color: $primaryColor
                                 color: $whiteBase1
+                    ul.hot-words
+                        @include responsivo(telefonoTable)
+                            margin-bottom: 10px
+                        @include responsivo(pcMedio)
+                            margin-bottom: 10px
     .main-menu
         .container
             @include regular_section_row_width()
 
             .row.header-row
-                .i-product-cats.mr-extra-department
+                // .i-product-cats.mr-extra-department
                 .col-nav-menu.mr-header-menu
                     .recently-viewed
                         h3.recently-title
@@ -236,6 +253,8 @@ header#site-header
             min-width: 400px
         @include responsivo(resto)
             min-width: 400px
+        a.remove_from_cart_button
+            color: $blackColor!important
         .widget_shopping_cart_content
             .mf-cart-panel-footer
                 p.woocommerce-mini-cart__buttons.buttons
@@ -245,6 +264,13 @@ header#site-header
 
                 p#ppc-button-minicart
                     display: none
+
+                p.woocommerce-mini-cart__total.total
+                    span.woocommerce-Price-amount.amount
+                        bdi
+                            color: $primaryColor
+
+
 
         ul.woocommerce-mini-cart.cart_list
             li.woocommerce-mini-cart-item.mini_cart_item

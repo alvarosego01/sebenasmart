@@ -49,8 +49,21 @@ div#tab-reviews
             h2.woocommerce-Reviews-title
                 margin-bottom: 25px!important
             ol.commentlist
-                padding-left: 25px!important
-                padding-right: 25px!important
+                @include responsivo(telefonoTable)
+                    padding-left: 15px!important
+                    padding-right: 15px!important
+                @include responsivo(pcMedio)
+                    padding-left: 15px!important
+                    padding-right: 15px!important
+
+                @include responsivo(general)
+                    padding-left: 25px!important
+                    padding-right: 25px!important
+
+                @include responsivo(resto)
+                    padding-left: 25px!important
+                    padding-right: 25px!important
+
                 li.review
                     padding-bottom: 30px!important
                     margin-bottom: 30px!important
@@ -69,3 +82,11 @@ div#tab-reviews
 
 
 
+body.mobile-version.woocommerce
+    div#reviews
+        div#comments
+            ol.commentlist
+                li.review
+                    .comment_container
+                        img.avatar
+                            display: block!important

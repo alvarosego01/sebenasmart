@@ -3,6 +3,29 @@
 
 body#product_template
 
+
+    aside#primary-sidebar
+        @include responsivo(telefonoTable)
+            margin-top: 25px
+        @include responsivo(pcMedio)
+            margin-top: 25px
+        .widget
+            ul.mf-shipping-info
+                @include responsivo(telefonoTable)
+                    width: fit-content
+                    margin: 0 auto
+                @include responsivo(pcMedio)
+                    width: fit-content
+                    margin: 0 auto
+
+            .imageBannerContain
+                @include responsivo(telefonoTable)
+                    width: fit-content
+                    margin: 0 auto
+                @include responsivo(pcMedio)
+                    width: fit-content
+                    margin: 0 auto
+
     div#sticky-product-info-wapper
         .container
             .sticky-product-inner
@@ -39,8 +62,8 @@ body#product_template
                                         width: fit-content!important
                                         img
                                             @include responsivo(telefonoTable)
-                                                width: 35px!important
-                                                height: 35px!important
+                                                width: 40px!important
+                                                height: 40px!important
                                             @include responsivo(pcMedio)
                                                 width: 50px!important
                                                 height: 50px!important
@@ -52,10 +75,28 @@ body#product_template
                                                 height: 65px!important
                                                 width: 65px!important
 
+                                        img.flex-active
+                                            border-color: $primaryColor
+
+
                                     .slick-list
                                         .slick-track
                                             display: flex
                                             flex-direction: row
+
+                                    .slick-track
+                                        @include responsivo(telefonoTable)
+                                            width: fit-content!important
+                                            margin-left: auto!important
+                                            margin-right: auto!important
+                                        @include responsivo(pcMedio)
+                                            width: fit-content!important
+                                            margin-left: auto!important
+                                            margin-right: auto!important
+
+                                        li.slick-slide
+                                            img.flex-active
+                                                border-color: $primaryColor
 
 
 
@@ -87,6 +128,9 @@ body#product_template
                                     @include responsivo(pcMedio)
                                         text-align: center
 
+                                    ins
+                                        color: $primaryColor
+
                                 .mf-summary-header
                                     @include responsivo(telefonoTable)
                                         display: flex
@@ -112,15 +156,21 @@ body#product_template
                                         flex-direction: column
                                         justify-content: center
                                         align-content: center
-                                        padding-left: 25px
-                                        padding-right: 25px
+                                        // padding-left: 25px
+                                        // padding-right: 25px
+                                        width: fit-content
+                                        margin: 0 auto
+                                        margin-bottom: 25px
                                     @include responsivo(pcMedio)
                                         display: flex
                                         flex-direction: column
                                         justify-content: center
                                         align-content: center
-                                        padding-left: 50px
-                                        padding-right: 50px
+                                        // padding-left: 50px
+                                        // padding-right: 50px
+                                        width: fit-content
+                                        margin: 0 auto
+                                        margin-bottom: 25px
                                     .fsbe-wrap
                                         @include responsivo(telefonoTable)
                                             width: fit-content
@@ -143,10 +193,10 @@ body#product_template
                                     table.variations
                                         @include responsivo(telefonoTable)
                                             width: fit-content
-                                            margin: 0 auto
+                                            // margin: 0 auto
                                         @include responsivo(pcMedio)
                                             width: fit-content
-                                            margin: 0 auto
+                                            // margin: 0 auto
                                         tbody
                                             width: fit-content
                                             tr
@@ -156,31 +206,82 @@ body#product_template
                                                 @include responsivo(pcMedio)
                                                     // width: 100%
                                                     display: block
-                                    .quantity,
-                                    .single_variation_wrap
-                                        @include responsivo(telefonoTable)
-                                            margin-left: auto
-                                            margin-right: auto
-                                        @include responsivo(pcMedio)
-                                            margin-left: auto
-                                            margin-right: auto
+
+                                                &:last-child
+                                                    td.value
+                                                        @include responsivo(telefonoTable)
+                                                            margin-bottom: 0
+                                                        @include responsivo(pcMedio)
+                                                            margin-bottom: 0
+                                                td.value
+                                                    a.reset_variations
+                                                        margin-top: 5px
+                                                        margin-bottom: 5px
+                                    // .quantity,
+                                    // .single_variation_wrap
+                                    //     @include responsivo(telefonoTable)
+                                    //         margin-left: auto
+                                    //         margin-right: auto
+                                    //     @include responsivo(pcMedio)
+                                    //         margin-left: auto
+                                    //         margin-right: auto
 
                                     .quantity
+                                        @include responsivo(telefonoTable)
+                                            margin-left: 0
+                                            margin-right: 0
+                                            width: 100%!important
+                                        @include responsivo(pcMedio)
+                                            margin-left: 0
+                                            margin-right: 0
+                                            width: 100%!important
 
+                                        // .qty-box
+                                        //     @include responsivo(telefonoTable)
+                                        //         width: 100%!important
+                                        //     @include responsivo(pcMedio)
+                                        //         width: 100%!important
+
+                                    button.single_add_to_cart_button.button
+                                        background-color: $primaryColor
+                                        color: $whiteBase1
+                                        border-radius: 7.5px
+                                        box-shadow: $shadow2
+                                        @include responsivo(telefonoTable)
+                                            margin-top: 25px
+                                        @include responsivo(pcMedio)
+                                            margin-top: 25px
                                     .single_variation_wrap
                                         width: fit-content
+
+                                        @include responsivo(telefonoTable)
+                                            width: 100%
+                                        @include responsivo(pcMedio)
+                                            width: 100%
 
                                         .woocommerce-variation.single_variation
                                             margin-bottom: 15px
 
-                                        button.single_add_to_cart_button.button
-                                            background-color: $primaryColor
-                                            color: $whiteBase1
-                                            border-radius: 7.5px
-                                            box-shadow: $shadow2
 
+                                        .woocommerce-variation-add-to-cart.variations_button
+                                            @include responsivo(telefonoTable)
+                                                display: flex
+                                                flex-direction: column
+                                                align-content: center
+                                                align-items: center
+                                                justify-content: center
+                                            @include responsivo(pcMedio)
+                                                display: flex
+                                                flex-direction: column
+                                                align-content: center
+                                                align-items: center
+                                                justify-content: center
 
-
+                                            button.single_add_to_cart_button.button
+                                                @include responsivo(telefonoTable)
+                                                    margin-top: 15px
+                                                @include responsivo(pcMedio)
+                                                    margin-top: 15px
 
                                     .actions-button
                                         @include responsivo(telefonoTable)
