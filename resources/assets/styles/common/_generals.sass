@@ -92,12 +92,23 @@ input.a,
 .hiperLink,
 a.content-link,
 a.woocommerce-privacy-policy-link,
-td.woocommerce-table__product-name.product-name a
+td.woocommerce-table__product-name.product-name a,
+a.waffle-rich-text-link
     color: $darkBlue_color
     transition: $trans
-    font-weight: 700
+    font-weight: 600
     &:hover
         color: $primaryColor!important
+
+p.stock.in-stock
+    color: $turcGreen_color!important
+    label
+        color: black
+p.stock.out-of-stock
+    color: red!important
+    label
+        color: black
+
 
 
 .navbar-nav
@@ -118,6 +129,9 @@ td.woocommerce-table__product-name.product-name a
             button
                 background-color: $primaryColor!important
 
+    li
+        button
+            border-color: $primaryColor!important
 
 .woocommerce div.product .wc-tabs-wrapper ul.tabs .tl-wc-tab
     background-color: $primaryColor!important
@@ -141,11 +155,7 @@ header#site-header.minimized
             padding: 20px 0
             z-index: 1000!important
 
-a
-    color: $darkBlue_color
-    // color: red
-    &:hover
-        text-decoration: none!important
+
 
 
 
@@ -452,6 +462,36 @@ body#regular_document_template
 //     color: red
 //     margin-left: 2.5px
 
+nav.woocommerce-pagination
+    ul.page-numbers
+
+        li
+            span.page-numbers,
+            a
+                transition: $trans
+            span.page-numbers.current
+                background-color: $turcGreen_color
+                color: $whiteBase1
+
+            &:hover
+                a
+                    background-color: $turcGreen_color!important
+                    color: $whiteBase1!important
+
+p.form-row
+    button.button
+        transition: $trans
+        border-radius: 7.5px
+        background-color: $primaryColor
+        color: $whiteBase1
+        box-shadow: $shadow2
+
+
+.mf-loading
+    &::before
+        border-color: $turcGreen_color $turcGreen_color $turcGreen_color transparent!important
+        // border-color: $primaryColor!important
+
 .cart-discount
     .innerDiscount
         color: $primaryColor!important
@@ -469,10 +509,11 @@ body#regular_document_template
             margin-right: 5px
 
 
-.amount,
-span.woocommerce-Price-amount.amount
-    color: $primaryColor!important
-
+.primary-mobile-nav
+    .mobile-nav-header
+        background-color: $darkBlue_color!important
+        *
+            color: $whiteBase1!important
 
 .customCouponSection
     .coupon_custom
@@ -580,41 +621,53 @@ span.woocommerce-Price-amount.amount
                 .mf-product-thumbnail
                     // a
                     .footer-button
-                        background-color: rgba(white, 0.925)
+                        // background-color: rgba(#FFF0C8, 0.925)
+                        // background-color: rgba($yellow_color, 0.9)
+                        background-color: transparent
                         display: flex
                         flex-direction: row
                         justify-content: space-evenly
                         align-items: center
                         align-content: center
                         a
-                            max-width: 35px!important
-                            max-height: 35px!important
+                            max-width: 40px!important
+                            max-height: 40px!important
                             width: 100%
                             height: 100%
                             padding: 0!important
                             margin: 0!important
                             position: relative
+                            background-color: $turcGreen_color
+                            color: $whiteBase1
                             i
                                 position: relative
                                 margin: auto
-                                width: 35px
-                                height: 35px
-                                font-size: 23.5px
+                                width: 40px
+                                height: 40px
+                                font-size: 25px
                                 display: flex
                                 align-content: center
                                 align-items: center
                                 justify-content: center
                                 justify-items: center
                                 &::before
-                                    font-size: 23.5px
+                                    font-size: 25px
 
                             &::before
-                                font-size: 23.5px
+                                font-size: 25px
+                            &:hover
+                                background-color: $primaryColor!important
+                                color: $whiteBase1
+
 
                         .yith-wcwl-add-to-wishlist
                             margin: 0
                         .compare-button.mf-compare-button
                             margin: 0
+
+
+                        a.mf-product-quick-view
+                            display: none
 
 
 
@@ -1107,8 +1160,37 @@ div#mf-quick-view-modal
             .mf-single-product
                 width: 100%!important
 
+                p.price
+                    span.woocommerce-Price-amount.amount
+                        bdi
+                            color: $primaryColor
+
                 .woocommerce-variation
                     margin-bottom: 25px
+
+            .woocommerce-variation-add-to-cart
+                @include responsivo(telefonoTable)
+                    display: flex
+                    flex-direction: column
+                @include responsivo(pcMedio)
+                    display: flex
+                    flex-direction: column
+
+            button.single_add_to_cart_button.button.alt
+                background-color: $primaryColor
+                color: $whiteBase1
+                border-radius: 7.5px
+                box-shadow: $shadow2
+
+
+            form.cart
+                @include responsivo(telefonoTable)
+                    display: flex
+                    flex-direction: column
+                @include responsivo(pcMedio)
+                    display: flex
+                    flex-direction: column
+
 
 
 .swal2-container
