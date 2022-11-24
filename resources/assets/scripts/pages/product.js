@@ -1,4 +1,6 @@
 
+console.log('product');
+
 function add_this_product_cart(){
 
     jQuery('form.cart .single_add_to_cart_button').click();

@@ -1,7 +1,7 @@
 
 
 
-
+console.log('global');
 
 const Toast = Swal.mixin({
     toast: true,

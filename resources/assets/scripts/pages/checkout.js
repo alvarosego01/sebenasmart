@@ -1,5 +1,5 @@
 
-
+console.log('checkout');
 
 function sendCouponCart(form){
 

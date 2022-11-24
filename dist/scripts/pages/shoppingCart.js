@@ -1,1 +1,1 @@
-function sendCouponCart(o){var e=jQuery("#coupon_code_custom").val();e&&null!=e&&(jQuery("#coupon_code").val(e),jQuery('.woocommerce-cart-form [type="submit"]').click(),o.reset())}jQuery(document).ready(function(){});
+function sendCouponCart(o){var e=jQuery("#coupon_code_custom").val();e&&null!=e&&(jQuery("#coupon_code").val(e),jQuery('.woocommerce-cart-form [type="submit"]').click(),o.reset())}console.log("shoppingCart"),jQuery(document).ready(function(){});
