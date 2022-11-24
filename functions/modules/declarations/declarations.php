@@ -1,12 +1,9 @@
-
 <?php
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 ?>
-
 <?php
-
 function get_current_post_ID()
 {
     $postid = get_queried_object_id();

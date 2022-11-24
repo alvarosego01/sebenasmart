@@ -3,10 +3,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 ?>
-
 <?php
-
-
 if(!function_exists('cart_remove_actions')){
 	function cart_remove_actions(){
 		remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10 );

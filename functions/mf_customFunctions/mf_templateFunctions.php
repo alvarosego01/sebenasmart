@@ -3,9 +3,7 @@ if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 ?>
-
 <?php
-
 if ( ! function_exists( 'sbn_get_content_columns' ) ) :
 	function sbn_get_content_columns( $layout = null ) {
 		$layout  = $layout ? $layout : martfury_get_layout();

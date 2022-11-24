@@ -3,11 +3,7 @@ if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 ?>
-
 <?php
-
-
-
 function martfury_extra_cart() {
 		$extras = martfury_menu_extras();
 
