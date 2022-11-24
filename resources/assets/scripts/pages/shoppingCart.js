@@ -1,6 +1,6 @@
 
 
-
+console.log('shoppingCart');
 function sendCouponCart(form){
 
     var a = jQuery('#coupon_code_custom').val();

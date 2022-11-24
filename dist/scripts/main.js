@@ -1,1 +1,1 @@
-jQuery(document).ready(function(){});
+console.log("main"),jQuery(document).ready(function(){});
