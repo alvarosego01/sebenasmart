@@ -3,9 +3,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 ?>
-
 <?php
-
 if(!function_exists('topHeader_remove_actions')){
 	function topHeader_remove_actions(){
 
@@ -69,7 +67,5 @@ if ( ! function_exists( 'sbn_custom_promotion' ) ) {
 	}
 }
 add_action( 'martfury_before_header', 'sbn_custom_promotion', 5 );
-
-
 
 ?>

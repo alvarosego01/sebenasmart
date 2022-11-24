@@ -1,19 +1,14 @@
-
 <?php
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 ?>
-
-
 <?php
     // sbn_sidebar_cart_buttons
     add_action( 'sbn_sidebar_cart_buttons', 'sbn_sidebar_cart_buttons');
     if ( ! function_exists( 'sbn_sidebar_cart_buttons' ) ) {
-
         function sbn_sidebar_cart_buttons() {
-
-             $checkout = setTypeUrl() . '/checkout';
+            $checkout = setTypeUrl() . '/checkout';
             $cart = setTypeUrl() . '/cart';
             $shop = setTypeUrl() . '/shop';
             ?>
@@ -50,16 +45,11 @@ if (!defined('ABSPATH')) {
                 </a>
 
             </div>
-
             <?php
-
         }
     }
     add_filter('woocommerce_paypal_payments_checkout_button_renderer_hook', function() {
         return 'woocommerce_review_order_before_submit';
     });
-
-
-
 
 ?>

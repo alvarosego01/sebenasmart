@@ -3,23 +3,16 @@ if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 ?>
-
 <?php
-
-
      function setACF()
     {
-
         if (function_exists('acf_add_local_field_group')) {
 
             registerFieldGroups(
                 allWeb()
             );
-
-
         }
     }
-
     function allWeb()
     {
         return array(
@@ -140,13 +133,6 @@ if (! defined('ABSPATH')) {
         }
 
     }
-
-
-
-
-
     add_action('acf/init', setACF() );
-
-
 
 ?>
