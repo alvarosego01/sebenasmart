@@ -60,6 +60,13 @@ body#product_template
                                         width: fit-content
                                     li
                                         width: fit-content!important
+                                        @include responsivo(general)
+                                            padding: 5px
+                                            padding-top: 0
+                                        @include responsivo(resto)
+                                            padding: 5px
+                                            padding-top: 0
+
                                         img
                                             @include responsivo(telefonoTable)
                                                 width: 40px!important
@@ -213,12 +220,112 @@ body#product_template
                                                             margin-bottom: 0
                                                         @include responsivo(pcMedio)
                                                             margin-bottom: 0
+                                                td.label
+                                                    display: flex
+                                                    flex-direction: row
+                                                    label
+                                                        @include responsivo(telefonoTable)
+                                                            text-align: center
+                                                            margin: 0 auto
+                                                            display: block
+
+                                                        @include responsivo(pcMedio)
+                                                            text-align: center
+                                                            margin: 0 auto
+                                                            display: block
+
                                                 td.value
                                                     a.reset_variations
-                                                        margin-top: 5px
-                                                        margin-bottom: 5px
+                                                        margin-top: 10px
+                                                        font-size: 18px
+                                                        margin-bottom: 0
+                                                        @include responsivo(telefonoTable)
+                                                            margin-bottom: 10px
+                                                            text-align: center
+
+                                                        @include responsivo(pcMedio)
+                                                            margin-bottom: 10px
+                                                            text-align: center
+
+                                                    .adsw-attribute-option
+                                                        box-sizing: border-box
+                                                        @include responsivo(telefonoTable)
+                                                            display: grid
+                                                            grid-template-columns: repeat(4, 1fr)
+                                                            grid-auto-rows: 1fr
+                                                            grid-column-gap: 10px
+                                                            grid-row-gap: 10px
+                                                            width: 100%
+                                                        @include responsivo(pcMedio)
+                                                            display: grid
+                                                            grid-template-columns: repeat(6, 1fr)
+                                                            grid-auto-rows: 1fr
+                                                            grid-column-gap: 10px
+                                                            grid-row-gap: 10px
+                                                            width: 100%
+                                                        @include responsivo(general)
+                                                            display: grid
+                                                            grid-template-columns: repeat(6, 1fr)
+                                                            grid-auto-rows: 1fr
+                                                            grid-column-gap: 10px
+                                                            grid-row-gap: 10px
+                                                            width: 100%
+
+                                                        @include responsivo(resto)
+                                                            display: grid
+                                                            grid-template-columns: repeat(7, 1fr)
+                                                            grid-auto-rows: 1fr
+                                                            grid-column-gap: 10px
+                                                            grid-row-gap: 10px
+                                                            width: 100%
+
+
+                                                        span.meta-item-img.sku-set,
+                                                        span.meta-item-text.sku-set,
+                                                        span.meta-item-img.sku-set i
+                                                            transition: $trans
+                                                            box-sizing: border-box
+                                                            margin: 0
+                                                            border: 1.25px solid transparent
+                                                            border-radius: 0
+                                                            &:hover
+                                                                border: 1.25px solid $primaryColor
+                                                                transform: scale(1.05)
+
+                                                        span.meta-item-img.sku-set,
+                                                        span.meta-item-text.sku-set
+                                                            box-shadow: $shadow2
+
+                                                        span.meta-item-img.sku-set i
+                                                            box-shadow: none!important
+
+                                                        span.meta-item-img.sku-set.active,
+                                                        span.meta-item-text.sku-set.active,
+                                                        span.meta-item-img.sku-set.active i
+                                                            border: 1.25px solid $primaryColor
+                                                            transform: scale(1.1)
+
+
                                     // .quantity,
-                                    // .single_variation_wrap
+                                    .single_variation_wrap
+                                        .woocommerce-variation.single_variation
+                                            p.stock.in-stock
+                                                @include responsivo(telefonoTable)
+                                                    display: flex
+                                                    flex-direction: column
+                                                    justify-content: center
+                                                    align-content: center
+                                                    align-items: center
+                                                    text-align: center
+                                                @include responsivo(pcMedio)
+                                                    display: flex
+                                                    flex-direction: column
+                                                    justify-content: center
+                                                    align-content: center
+                                                    align-items: center
+                                                    text-align: center
+
+
                                     //     @include responsivo(telefonoTable)
                                     //         margin-left: auto
                                     //         margin-right: auto
@@ -235,8 +342,17 @@ body#product_template
                                             margin-left: 0
                                             margin-right: 0
                                             width: 100%!important
+                                        label.label
+                                            @include responsivo(telefonoTable)
+                                                text-align: center
+                                            @include responsivo(pcMedio)
+                                                text-align: center
 
-                                        // .qty-box
+                                        .qty-box
+                                            @include responsivo(telefonoTable)
+                                                margin: 0 auto
+                                            @include responsivo(pcMedio)
+                                                margin: 0 auto
                                         //     @include responsivo(telefonoTable)
                                         //         width: 100%!important
                                         //     @include responsivo(pcMedio)
