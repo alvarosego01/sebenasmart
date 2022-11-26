@@ -305,18 +305,30 @@ div#page
                 padding-left: 0
                 padding-right: 0
 
-    .container-fluid
-        .row
-            .elementor-section
-                .elementor-container
-                    @include elementor_containerWidth()
-                    .row
-                        flex-wrap: unset
+    // .container-fluid
+    //     .row
+    //         .elementor-section
+    //             .elementor-container
+    //                 @include elementor_containerWidth()
                     // .elementor-column
                     //     @include responsivo(telefonoTable)
                     //         width: 100%
                     //     @include responsivo(pcMedio)
                     //         width: 100%
+
+    .container-fluid
+        .row
+            .elementor-section.elementor-top-section
+                &:not(.elementor-inner-section)
+                    .elementor-container
+                        @include elementor_containerWidth()
+                        .row
+                            flex-wrap: unset
+
+            .elementor-section
+                &:has(.elementor-inner-section)
+                    .elementor-container
+                        width: 100%!important
 
 body#regular_document_template
     div#page
@@ -326,9 +338,10 @@ body#regular_document_template
         div#content
             .container-fluid
                 .row
-                    .elementor-section
-                        .elementor-container
-                            @include sbn_document_elementor_containerWidth()
+                    .elementor-section.elementor-top-section
+                        &:not(.elementor-inner-section)
+                            .elementor-container
+                                @include sbn_document_elementor_containerWidth()
 
         div#content
             padding-bottom: 50px
@@ -734,15 +747,15 @@ ul.slick-dots
 
     li
         @include responsivo(telefonoTable)
-            height: 15px!important
-            width: 15px!important
+            height: 10px!important
+            width: 10px!important
         @include responsivo(pcMedio)
             height: 15px!important
             width: 15px!important
         button
             @include responsivo(telefonoTable)
-                height: 15px!important
-                width: 15px!important
+                height: 10px!important
+                width: 10px!important
             @include responsivo(pcMedio)
                 height: 15px!important
                 width: 15px!important

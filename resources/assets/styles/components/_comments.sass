@@ -46,6 +46,10 @@ div#tab-reviews
 
         div#comments
             margin-top: 25px!important
+            @include responsivo(telefonoTable)
+                padding-bottom: 25px
+            @include responsivo(pcMedio)
+                padding-bottom: 25px
             h2.woocommerce-Reviews-title
                 margin-bottom: 25px!important
             ol.commentlist
@@ -79,6 +83,10 @@ div#tab-reviews
                                         font-size: 14px!important
                                     @include responsivo(pcMedio)
                                         font-size: 14px!important
+
+                    &:last-child
+                        padding-bottom: 0!important
+                        margin-bottom: 0!important
 
 
 

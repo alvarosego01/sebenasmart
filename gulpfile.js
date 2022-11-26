@@ -56,8 +56,8 @@ gulp.task('browserSync-Server', () => {
     online: true,
     notify: true,
     injectChanges: true,
-    proxy: "https://general1.sebenas.com/",
-
+    proxy: "https://sebenasmart.com/",
+    port: 3035,
   serveStatic: ["dist/styles"],
     files: ['dist/styles/main.css'],
     snippetOptions: {
