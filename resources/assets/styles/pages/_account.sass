@@ -29,10 +29,16 @@ body#dashboard_template
                         .entry-content
                             .woocommerce
                                 // .account-info
+                                .account-info
+                                    width: 100%
+                                    // margin-bottom: 0
+                                    // padding-bottom: 25px
+                                    // border-bottom: 1px solid $gray_ult_color
 
                                 // nav.woocommerce-MyAccount-navigation
 
                                 .woocommerce-MyAccount-content
+                                    padding-top: 0
                                     p.woocommerce-form-row
 
 
@@ -47,15 +53,31 @@ body#dashboard_template
                                         @include responsivo(telefonoTable)
                                             font-size: 12px
 
-    button,
-    a.button
-        box-shadow: $shadow2
 
 
+    &.logged-in
+        div#content
+            button,
+            .woocommerce-Button,
+            button.woocommerce-Button.button,
+            a.button
+                box-shadow: $shadow2
+                background-color: $turcGreen_color
+                color: $whiteBase1
+                @include responsivo(telefonoTable)
+                    font-size: 13px!important
+                @include responsivo(pcMedio)
+                    font-size: 14px!important
+                @include responsivo(general)
+                    font-size: 14px!important
+                @include responsivo(smallPcTablet)
+                    font-size: 12px!important
+                @include responsivo(resto)
+                    font-size: 16px!important
 
+        // display: none
 
 body#dashboard_template.woocommerce-edit-account
-
     div#content
         .container
             div#primary
@@ -63,10 +85,6 @@ body#dashboard_template.woocommerce-edit-account
                     article.page
                         .entry-content
                             .woocommerce
-                                // .account-info
-
-                                // nav.woocommerce-MyAccount-navigation
-
                                 .woocommerce-MyAccount-content
                                     display: flex
                                     flex-flow: wrap
@@ -74,11 +92,11 @@ body#dashboard_template.woocommerce-edit-account
                                     position: relative
                                     p.woocommerce-form-row
                                         @include responsivo(general)
-                                            width: 375px
+                                            width: 335px
                                         @include responsivo(smallPcTablet)
                                             width: 300px
                                         @include responsivo(resto)
-                                            width: 425px
+                                            width: 375px
 
                                         em
                                             font-size: 12px
@@ -121,21 +139,65 @@ body#dashboard_template.woocommerce-edit-account
                                         p.woocommerce-form-row
                                             width: 100%
                                             @include responsivo(general)
-                                                width: 375px
+                                                width: 335px
                                             @include responsivo(smallPcTablet)
                                                 width: 300px
                                             @include responsivo(resto)
-                                                width: 425px
+                                                width: 375px
 
 
 body#dashboard_template.sbn_accountPage
 
     div#page
+        // display: none
         .page-header.page-header-page
             h1.entry-title
                 background-color: white
-        // div#content
-            // .container
-            //     div#primary
-            //         main#main
+        div#content
+            .container
+                div#primary
+                    .customer-login
+                        .row
+                            @include responsivo(telefonoTable)
+                                display: flex
+                            @include responsivo(pcMedio)
+                                display: flex
+                            .col-login
+                                @include responsivo(telefonoTable)
+                                    margin: 0 auto!important
+                                    display: block
+                                    width: 95%!important
+                                @include responsivo(pcMedio)
+                                    margin: 0 auto!important
+                                    display: block
+                                    width: 75%!important
+                                .martfury-login-tabs
+                                    ul.tabs-nav
+                                        li
+                                            a
+                                                transition: $trans
+                                            a.active
+                                                color: $turcGreen_color
+
+                                    .tabs-content
+                                        form
+                                            button.woocommerce-Button.button
+                                                color: $whiteBase1!important
+                                                background-color: $primaryColor!important
+                                                @include responsivo(telefonoTable)
+                                                    font-size: 13px!important
+                                                @include responsivo(pcMedio)
+                                                    font-size: 18px!important
+                                                @include responsivo(general)
+                                                    font-size: 18px!important
+                                                @include responsivo(smallPcTablet)
+                                                    font-size: 16px!important
+                                                @include responsivo(resto)
+                                                    font-size: 20px!important
+                                span.woocommerce-form-row__remember
+                                    @include responsivo(telefonoTable)
+                                        display: flex
+                                        flex-direction: column
+
+
 
