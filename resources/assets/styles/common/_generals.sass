@@ -57,6 +57,8 @@ input.a,
     transition: $trans!important
     padding-left: 15px!important
     padding-right: 15px!important
+    box-shadow: $shadow2
+    border-radius: 7.5px!important
     // display: flex!important
     // align-self: center!important
     // justify-self: center!important
@@ -89,6 +91,14 @@ input.a,
     &:hover
         color: $primaryColor!important
 
+// .woocommerce-info
+//     border-top-color: $darkBlue_color!important
+
+// .woocommerce-message
+//     border-top-color: $turcGreen_color!important
+
+a.edit,
+p a,
 .hiperLink,
 a.content-link,
 a.woocommerce-privacy-policy-link,
@@ -325,10 +335,9 @@ div#page
                         .row
                             flex-wrap: unset
 
-            .elementor-section
-                &:has(.elementor-inner-section)
-                    .elementor-container
-                        width: 100%!important
+                        .elementor-section.elementor-inner-section
+                            .elementor-container
+                                width: 100%!important
 
 body#regular_document_template
     div#page
@@ -500,7 +509,8 @@ p.form-row
         box-shadow: $shadow2
 
 
-.mf-loading
+.mf-loading,
+.mf-vc-loading--wrapper
     &::before
         border-color: $turcGreen_color $turcGreen_color $turcGreen_color transparent!important
         // border-color: $primaryColor!important
@@ -788,14 +798,29 @@ div#primary
             color: $whiteBase1!important
 
 
+
+
 // botones
 
+// .button.woocommerce-Button,
+p.form-row button.button,
 .sbn_btn_primary
     // background-color: $yellow_color!important
     background-color: $primaryColor!important
     transition: $trans
     color: $whiteBase1!important
     border-radius: 7.5px!important
+    @include responsivo(telefonoTable)
+        font-size: 13px!important
+    @include responsivo(pcMedio)
+        font-size: 18px!important
+    @include responsivo(general)
+        font-size: 18px!important
+    @include responsivo(smallPcTablet)
+        font-size: 16px!important
+    @include responsivo(resto)
+        font-size: 20px!important
+
 
 
 .sbn_buttonCustom,

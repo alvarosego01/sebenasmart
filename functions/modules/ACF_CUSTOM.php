@@ -37,6 +37,7 @@ if (! defined('ABSPATH')) {
                                 'regular_template' => 'Regular',
                                 'regular_document_template' => 'Regular document',
                                 'home_template' => 'Home template',
+                                'dashboard_template' => 'Dashboard template',
                                 'cart_template' => 'Cart template',
                                 'checkout_template' => 'Checkout template',
                                 'tracking_template' => 'Track order template',
