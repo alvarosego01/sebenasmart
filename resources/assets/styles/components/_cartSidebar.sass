@@ -21,6 +21,7 @@
             transition: $trans
             box-shadow: $shadow2
             right: 15px
+            border-radius: 100px
             background-color: $yellow_color
             span.xoo-wsc-items-count
                 width: 30px
@@ -49,46 +50,88 @@
             margin-bottom: 0
             border-bottom: 1px solid #eee
             .xoo-wsch-top
-                // span.xoo-wsch-close.xoo-wsc-icon-cross
-                //     font-size: 22px
-                //     @include responsivo(telefonoTable)
-                //         font-size: 18px
-                //     @include responsivo(pcMedio)
-                //         font-size: 18px
+                display: flex
+                flex-direction: row
+                justify-content: center
+                align-content: center
+                align-items: center
+                .xoo-wsch-basket
+                    line-height: 1
+                span.xoo-wsch-text
+                    line-height: 1
                 span.xoo-wsch-close.xoo-wsc-icon-cross
                     @include responsivo(general)
                         left: 20px
                     @include responsivo(resto)
                         left: 20px
                 span
-                    font-size: 18px
+                    font-size: 20px
                     line-height: 1
+                    font-weight: 700
                     @include responsivo(telefonoTable)
-                        font-size: 16px
+                        font-size: 14px
                     @include responsivo(pcMedio)
                         font-size: 16px
                     @include responsivo(general)
+                        font-size: 18px
+
+            .xoo-wsc-ship-bar-cont
+                margin-top: 5px
+                span.xoo-wsc-sb-txt
+                    span.woocommerce-Price-amount.amount
+
+                        bdi
+                            font-weight: 700
+                            color: $primaryColor
+                            @include responsivo(telefonoTable)
+                                font-size: 15px
+                            @include responsivo(pcMedio)
+                                font-size: 17px
+                            @include responsivo(general)
+                                font-size: 15px
+                            @include responsivo(resto)
+                                font-size: 17px
+
+                    @include responsivo(telefonoTable)
+                        font-size: 14px
+                    @include responsivo(pcMedio)
                         font-size: 16px
+                    @include responsivo(general)
+                        font-size: 14px
+                    @include responsivo(resto)
+                        font-size: 16px
+
+                .xoo-wsc-sb-bar
+                    span
+                        background-color: $turcGreen_color
+
+
         .xoo-wsc-body
+            .xoo-wsc-empty-cart
+                a.button.btn
+                    background-color: $turcGreen_color
+                    color: $whiteBase1
+                    margin-bottom: 0
             .xoo-wsc-products
                 .xoo-wsc-product
                     padding: 10px 0
 
                     .xoo-wsc-img-col
                         display: flex
+                        margin-right: 15px!important
                         @include responsivo(telefonoTable)
                             width: fit-content
-                            padding-right: 5px
+                            padding: 0
                         @include responsivo(pcMedio)
                             width: fit-content
-                            padding-right: 5px
+                            padding: 0
                         @include responsivo(general)
                             width: 25%
                         @include responsivo(resto)
                             width: 25%
                         a
                             display: block
-                            margin-left: auto
+                            margin-left: 0
                             margin-right: auto
                             @include responsivo(telefonoTable)
                                 margin-left: 5px
@@ -99,7 +142,7 @@
                             img
                                 width: auto
                                 @include responsivo(telefonoTable)
-                                    height: 75px
+                                    height: 80px
                                     max-width: unset!important
                                     object-fit: cover
                                     object-position: center
@@ -109,8 +152,8 @@
                                     object-fit: cover
                                     object-position: center
                                 @include responsivo(general)
-                                    height: 75px
-                                    width: 75px!important
+                                    height: 100px
+                                    width: 100px!important
 
                                 @include responsivo(resto)
                                     height: 100px
@@ -122,6 +165,25 @@
                             width: 75%
                         @include responsivo(resto)
                             width: 75%
+                        .xoo-wsc-sm-sales
+                            border: 0
+                            border-radius: 0
+                            padding: 0
+                            width: fit-content
+                            color: $grayColor
+                            font-weight: 500
+                            line-height: 1
+                            @include responsivo(telefonoTable)
+                                font-size: 11px
+                            @include responsivo(pcMedio)
+                                font-size: 11px
+                            @include responsivo(general)
+                                font-size: 12px
+                            @include responsivo(resto)
+                                font-size: 12px
+                            // text-transform: capitalize
+
+                            // display:
                         .xoo-wsc-sm-info
                             .xoo-wsc-sm-left
                                 padding-right: 7.5px
@@ -130,27 +192,72 @@
                                     padding-bottom: 5px
                                     a
                                         line-height: 1
+                                        font-size: 16px
                                         @include responsivo(telefonoTable)
                                             font-size: 14px
                                         @include responsivo(pcMedio)
-                                            font-size: 14px
+                                            font-size: 16px
                                         @include responsivo(general)
-                                            font-size: 14px
+                                            font-size: 15px
+
                                 .xoo-wsc-qty-price
                                     line-height: 1
+                                    font-size: 14px
                                     @include responsivo(telefonoTable)
                                         font-size: 12px
-                                        *
-                                            font-size: 12px
                                     @include responsivo(pcMedio)
                                         font-size: 14px
-                                        *
-                                            font-size: 14px
+                                    @include responsivo(general)
+                                        font-size: 13px
+
+                                .xoo-wsc-pprice,
+                                .xoo-wsc-pprice span.woocommerce-Price-amount.amount
+                                    line-height: 1
+                                    font-size: 14px
+                                    @include responsivo(telefonoTable)
+                                        font-size: 12px
+                                    @include responsivo(pcMedio)
+                                        font-size: 14px
+                                    @include responsivo(general)
+                                        font-size: 13px
+
+                                .xoo-wsc-qty-box.xoo-wsc-qtb-square
+                                    //     color: $blackColor
+                                    //     background-color: $lightGray_color
+                                    @include responsivo(telefonoTable)
+                                        max-width: unset!important
+                                        width: 100px
+
+                                    @include responsivo(pcMedio)
+                                        max-width: unset!important
+                                        width: 100px
 
                                     @include responsivo(general)
-                                        font-size: 14px
-                                        *
-                                            font-size: 14px
+                                        max-width: unset!important
+                                        width: 110px
+                                    @include responsivo(smallPcTablet)
+                                        width: 100px!important
+
+                                    @include responsivo(resto)
+                                        max-width: unset!important
+                                        width: 125px
+                                    span.xoo-wsc-plus.xoo-wsc-chng
+                                        background-color: $turcGreen_color
+                                        color: $whiteBase1
+
+                                    span.xoo-wsc-plus.xoo-wsc-chng,
+                                    span.xoo-wsc-minus.xoo-wsc-chng
+                                        // width: 20px
+                                        display: block
+                                        min-width: unset!important
+                                        @include responsivo(telefonoTable)
+                                            padding: 0 10px
+                                        @include responsivo(pcMedio)
+                                            padding: 0 10px
+                                        @include responsivo(general)
+                                            padding: 0 10px
+                                        @include responsivo(resto)
+                                            padding: 0 12.5px
 
 
                             .xoo-wsc-sm-right
@@ -165,6 +272,22 @@
                                     align-content: center
                                     align-items: center
 
+                                span.xoo-wsc-smr-ptotal
+                                    span.woocommerce-Price-amount.amount
+                                        bdi
+                                            font-weight: 700
+                                            line-height: 1
+                                            font-size: 16px
+                                            @include responsivo(telefonoTable)
+                                                font-size: 14px
+                                            @include responsivo(pcMedio)
+                                                font-size: 16px
+                                            @include responsivo(general)
+                                                font-size: 15px
+
+
+
+
 
 
         .xoo-wsc-footer
@@ -176,6 +299,126 @@
             @include responsivo(pcMedio)
                 padding-bottom: 10px
 
+            .xoo-wsc-sp-container.xoo-wsc-sp-wide
+                background-color: $lightGray_color
+                padding-top: 5px
+                padding-bottom: 5px
+                .lSSlideOuter
+                    .lSSlideWrapper.usingCss
+                        .lSAction
+                            a
+                                height: 15px
+                                background-size: contain
+                                margin-top: auto
+                                margin-bottom: auto
+                                top: 45%
+                        ul.xoo-wsc-sp-slider
+                            display: flex
+                            flex-direction: row
+                            align-content: center
+                            align-items: center
+                            li
+                                padding: 0 25px
+                                padding-right: 35px
+                                margin-top: auto
+                                margin-bottom: auto
+
+                                .xoo-wsc-sp-left-col
+                                    padding: 0
+                                    a
+                                        img
+                                            object-fit: cover
+                                            object-position: center
+                                            @include responsivo(telefonoTable)
+                                                height: 80px!important
+                                                width: 80px!important
+                                                max-width: 80px!important
+                                                max-height: 80px!important
+
+                                            @include responsivo(pcMedio)
+                                                height: 80px!important
+                                                width: 80px!important
+                                                max-width: 80px!important
+                                                max-height: 80px!important
+
+                                            @include responsivo(general)
+                                                height: 90px!important
+                                                width: 90px!important
+                                                max-width: 90px!important
+                                                max-height: 90px!important
+                                            @include responsivo(resto)
+                                                height: 100px!important
+                                                width: 100px!important
+                                                max-width: 100px!important
+                                                max-height: 100px!important
+
+
+                                .xoo-wsc-sp-right-col
+                                    .xoo-wsc-sp-rc-top
+                                        span.xoo-wsc-sp-title
+                                            line-height: 1
+                                            padding-bottom: 5px
+                                            a
+                                                line-height: 1
+                                                font-size: 16px
+                                                color: $blackColor
+                                                font-weight: 600
+                                                display: block
+                                                transition: $trans
+                                                @include responsivo(telefonoTable)
+                                                    font-size: 14px
+                                                @include responsivo(pcMedio)
+                                                    font-size: 16px
+                                                @include responsivo(general)
+                                                    font-size: 15px
+                                                &:hover
+                                                    color: $primaryColor
+
+                                    .xoo-wsc-sp-rc-bottom
+                                        span.xoo-wsc-sp-price
+                                            span.woocommerce-Price-amount.amount
+                                                bdi
+                                                    font-weight: 700
+                                                    line-height: 1
+                                                    font-size: 16px
+                                                    @include responsivo(telefonoTable)
+                                                        font-size: 14px
+                                                    @include responsivo(pcMedio)
+                                                        font-size: 16px
+                                                    @include responsivo(general)
+                                                        font-size: 15px
+                                        span.xoo-wsc-sp-atc
+                                            a.button
+                                                background-color: $turcGreen_color
+                                                color: $whiteBase1
+                                                border-radius: 7.5px
+                                                transition: $trans
+                                                font-weight: 400!important
+                                                box-shadow: $shadow2
+                                                display: flex
+                                                align-content: center
+                                                align-items: center
+                                                justify-content: center
+                                                line-height: 1!important
+                                                height: fit-content
+                                                @include responsivo(telefonoTable)
+                                                    font-size: 13px!important
+                                                    padding: 12.5px 25px!important
+                                                @include responsivo(pcMedio)
+                                                    font-size: 14px!important
+                                                    padding: 10px 25px!important
+                                                @include responsivo(general)
+                                                    font-size: 14px!important
+                                                    padding: 10px 20px!important
+                                                @include responsivo(smallPcTablet)
+                                                    font-size: 12px!important
+                                                    padding: 10px 20px!important
+                                                @include responsivo(resto)
+                                                    font-size: 16px!important
+                                                    padding: 10px 20px!important
+
+
+
 
             .xoo-wsc-ft-totals
                 padding: 10px 0
@@ -183,6 +426,7 @@
                 border-top: 1px solid #eee
                 .xoo-wsc-ft-amt.xoo-wsc-ft-amt-subtotal
                     padding: 0
+                    padding-bottom: 5px
                     line-height: 1
                     *
                         @include responsivo(telefonoTable)
@@ -198,14 +442,55 @@
 
                     span.xoo-wsc-ft-amt-value
                         span.woocommerce-Price-amount.amount
+                            // color: $primaryColor!important
+                            font-weight: 700
+
+                .xoo-wsc-ft-amt.xoo-wsc-ft-amt-shipping
+                    padding: 0
+                    padding-bottom: 5px
+                    line-height: 1
+                    *
+                        @include responsivo(telefonoTable)
+                            font-size: 14px
+                        @include responsivo(pcMedio)
+                            font-size: 16px
+                        @include responsivo(general)
+                            font-size: 16px
+                        @include responsivo(smallPcTablet)
+                            font-size: 14px
+                        @include responsivo(resto)
+                            font-size: 18px
+
+                    span.xoo-wsc-toggle-slider
+                        span.xoo-wsc-icon-pencil
+                            display: none
+
+                .xoo-wsc-ft-amt.xoo-wsc-ft-amt-total
+                    padding: 10px 0
+                    padding-bottom: 5px
+                    line-height: 1
+                    *
+                        @include responsivo(telefonoTable)
+                            font-size: 14px
+                        @include responsivo(pcMedio)
+                            font-size: 16px
+                        @include responsivo(general)
+                            font-size: 16px
+                        @include responsivo(smallPcTablet)
+                            font-size: 14px
+                        @include responsivo(resto)
+                            font-size: 18px
+                    span.xoo-wsc-ft-amt-value
+                        span.woocommerce-Price-amount.amount
+                            font-weight: 700
                             color: $primaryColor!important
 
-                    // margin-right: 0
+
             .xoo-wsc-ft-buttons-cont
                 padding-bottom: 15px
                 padding-left: 0
                 padding-right: 0
-                margin-bottom: 15px
+                margin-bottom: 7.5px
                 border-bottom: 1px solid #eee
                 display: flex
                 flex-direction: column
@@ -248,15 +533,15 @@
 
             p.sideText,
             p.sideText a
-                line-height: 1.5
+                line-height: 1.25
                 @include responsivo(telefonoTable)
                     font-size: 12px
                 @include responsivo(pcMedio)
-                    font-size: 12px
+                    font-size: 13px
                 @include responsivo(general)
-                    font-size: 14px
+                    font-size: 12px
                 @include responsivo(resto)
-                    font-size: 14px
+                    font-size: 13px
 
 
 
@@ -264,24 +549,23 @@
     .xoo-wsc-container
         overflow: hidden
         @include responsivo(telefonoTable)
-            width: 95%
+            width: 87.5%
             max-width: 100%
         @include responsivoSpecial(500px, 768px)
-            width: 500px
+            width: 400px
         @include responsivo(pcMedio)
-            max-width: 550px
+            max-width: 500px
         @include responsivo(general)
             max-width: 500px
         @include responsivo(resto)
-            max-width: 500px
+            max-width: 550px
         // @include responsivo(resto)
 
         .xoo-wsc-basket
             @include responsivo(general)
-                right: 510px
-
+                right: 550px
             @include responsivo(resto)
-                right: 510px
+                right: 575px
 
 
 

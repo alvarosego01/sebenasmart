@@ -134,13 +134,6 @@ function custom_add_to_cart_ajax(event = null, xhr = null, settings = null) {
 
         target_element = event.target.activeElement || null;
 
-
-        // console.log('settings.type', settings.type);
-        // console.log('xhr.status', xhr.status);
-        // console.log('settings_url', settings_url);
-        // console.log('settings_data', settings_data);
-
-
         let urlSearchParams = new URLSearchParams(settings_data);
         let params_data = Object.fromEntries(urlSearchParams.entries());
 
@@ -210,7 +203,7 @@ function custom_add_to_cart_ajax(event = null, xhr = null, settings = null) {
                 title: 'The product has been removed from the shopping cart',
             });
 
-            // jQuery('.xoo-wsc-basket').click();
+            jQuery('.xoo-wsc-basket').click();
 
         }
 

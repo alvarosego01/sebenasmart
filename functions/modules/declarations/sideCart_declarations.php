@@ -41,7 +41,7 @@ if (!defined('ABSPATH')) {
                     <span class="icon_container">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </span>
-                    View cart
+                    View cart page
                 </a>
 
             </div>

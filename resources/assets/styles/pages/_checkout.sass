@@ -277,6 +277,7 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
                                 background-color: $primaryColor!important
                                 transition: $trans!important
                                 color: $whiteBase1!important
+                                font-weight: 400!important
                             @include responsivo(telefonoTable)
                                 padding: 0 25px
                             @include responsivo(pcMedio)
@@ -354,6 +355,7 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page.woocommerce-or
             padding: 50px 0
 
         .row.innserThankyouSucesss
+            margin-bottom: 25px!important
             .leftSection
                 padding: 0
                 @include responsivo(telefonoTable)
@@ -413,6 +415,129 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page.woocommerce-or
                         background-color: $lightGray_color
                         box-shadow: $shadow2
                         padding: 25px
+
+
+        .row.thanksGod
+            position: relative
+            width: 100%
+            &::after
+                content: ''
+                display: block
+                margin: auto
+                position: absolute
+                left: -100vw
+                top: 0
+                bottom: 0
+                right: 0
+                height: 50%
+                width: 2000%
+                background-color: $turcGreen_color
+                z-index: -1
+                @include responsivo(telefonoTable)
+                    height: 60%
+                @include responsivo(pcMedio)
+                    height: 60%
+            .blockMessage
+                display: flex
+                flex-direction: row
+                justify-self: center
+                align-content: center
+                align-items: center
+                padding: 25px 0
+                z-index: 10
+                @include responsivo(telefonoTable)
+                    padding: 0
+                    padding-bottom: 25px
+                @include responsivo(pcMedio)
+                    padding: 0
+                    padding-bottom: 25px
+                .sectionContainer.containElements
+                    padding: 50px 75px
+                    padding-top: 100px
+                    display: block
+                    margin: 0 auto
+                    background-color: $whiteBase1
+                    box-shadow: $shadow2
+                    position: relative
+                    @include responsivo(telefonoTable)
+                        width: 95%
+                        padding: 50px 25px
+                        padding-bottom: 25px
+                        padding-top: 75px
+                    @include responsivo(pcMedio)
+                        width: 85%
+                        padding: 50px
+                        padding-top: 75px
+                    @include responsivo(general)
+                        width: 75%
+                    @include responsivo(smallPcTablet)
+                        width: 80%!important
+                    @include responsivo(resto)
+                        width: 65%
+                    .imageContainer
+                        position: absolute
+                        left: 50px
+                        top: -25px
+                        @include responsivo(telefonoTable)
+                            top: -15px
+                            left: 35px
+                        @include responsivo(pcMedio)
+                            top: -15px
+                        img
+                            height: 100px
+                            @include responsivo(telefonoTable)
+                                height: 75px
+                            @include responsivo(pcMedio)
+                                height: 75px
+                    .text
+                        line-height: 1.25
+                        font-weight: 500
+                        margin-bottom: 25px
+                        text-align: center
+                        color: $blackColor
+                        @include responsivo(telefonoTable)
+                            font-size: 16px
+                        @include responsivo(pcMedio)
+                            font-size: 18px
+                        @include responsivo(general)
+                            font-size: 20px
+                        @include responsivo(resto)
+                            font-size: 22.5px
+                    .byMessage
+                        text-align: center
+                        display: flex
+                        flex-direction: column
+                        justify-self: center
+                        align-content: center
+                        align-items: center
+                        font-size: 42.5px
+                        font-weight: 700
+                        margin: 0 auto
+                        line-height: 1
+                        color: $primaryColor
+                        small
+                            line-height: 1
+                            font-size: 25px
+                            font-weight: 500
+                            color: $grayColor
+                            padding-top: 5px
+                        @include responsivo(telefonoTable)
+                            font-size: 25px
+                            small
+                                font-size: 16px
+                        @include responsivo(pcMedio)
+                            font-size: 30px
+                            small
+                                font-size: 18px
+                        @include responsivo(general)
+                            font-size: 35px
+                            small
+                                font-size: 20px
+                        @include responsivo(resto)
+                            font-size: 37.5px
+                            small
+                                font-size: 22.5px
+
 
 
 
