@@ -100,6 +100,33 @@ defined( 'ABSPATH' ) || exit;
 
 		</div>
 
+		<div class="row thanksGod ">
+
+			<div class="blockMessage animate__animated animate__delay-1s yellow_color">
+
+				<div class="sectionContainer containElements">
+
+					<div class="imageContainer">
+					<!-- book_reference_stick.png -->
+					<img src="<?php echo get_stylesheet_directory_uri() . '/resources/assets/images/icons/book_reference_stick.png' ?>" alt="">
+					</div>
+
+					<p class="text">
+						I will bless Israel's people, like rain that falls on dry ground. They will grow like beautiful flowers. They will have strong roots, like the great trees in Lebanon. They will grow like a tree that makes new branches. They will be beautiful like olive trees. They will have a sweet smell, like the forests in Lebanon. I will give my people shade to live in safely. They will plant crops that give them plenty of food. They will be successful, like a vine that gives many grapes. They will be famous, like the wine from Lebanon.
+					</p>
+					<h3 class="byMessage">
+						Hosea
+						<small>
+							14:5-7
+						</small>
+					</h3>
+
+				</div>
+
+			</div>
+
+		</div>
+
 
 		<?php endif; ?>
 

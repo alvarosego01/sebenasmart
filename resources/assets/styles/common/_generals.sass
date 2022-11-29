@@ -59,6 +59,7 @@ input.a,
     padding-right: 15px!important
     box-shadow: $shadow2
     border-radius: 7.5px!important
+    font-weight: 400!important
     // display: flex!important
     // align-self: center!important
     // justify-self: center!important
@@ -91,11 +92,12 @@ input.a,
     &:hover
         color: $primaryColor!important
 
-// .woocommerce-info
-//     border-top-color: $darkBlue_color!important
 
-// .woocommerce-message
-//     border-top-color: $turcGreen_color!important
+.woocommerce-message
+    border-top-color: $turcGreen_color
+
+.woocommerce-info
+    border-top-color: $darkBlue_color!important
 
 a.edit,
 p a,
@@ -495,10 +497,15 @@ nav.woocommerce-pagination
                 background-color: $turcGreen_color
                 color: $whiteBase1
 
+            a
+                padding: 0 10px!important
+
             &:hover
                 a
                     background-color: $turcGreen_color!important
                     color: $whiteBase1!important
+
+
 
 p.form-row
     button.button
@@ -507,10 +514,13 @@ p.form-row
         background-color: $primaryColor
         color: $whiteBase1
         box-shadow: $shadow2
+        font-weight: 400!important
 
 
 .mf-loading,
-.mf-vc-loading--wrapper
+.mf-vc-loading--wrapper,
+.blockUI.blockOverlay
+    &::after,
     &::before
         border-color: $turcGreen_color $turcGreen_color $turcGreen_color transparent!important
         // border-color: $primaryColor!important
@@ -537,6 +547,21 @@ p.form-row
         background-color: $darkBlue_color!important
         *
             color: $whiteBase1!important
+
+div#mf-els-modal-mobile
+    div#mf-search-mobile
+        form.products-search
+            .search-wrapper
+                background-color: $darkBlue_color
+                button.search-submit
+                    background-color: $primaryColor
+                    color: $whiteBase1
+
+        .search-trending
+            margin-top: 25px
+            ul.hot-words
+                li
+                    padding-top: 0
 
 .customCouponSection
     .coupon_custom
@@ -810,6 +835,7 @@ p.form-row button.button,
     transition: $trans
     color: $whiteBase1!important
     border-radius: 7.5px!important
+    font-weight: 400!important
     @include responsivo(telefonoTable)
         font-size: 13px!important
     @include responsivo(pcMedio)
@@ -841,6 +867,7 @@ p.form-row button.button,
     min-width: unset!important
     box-shadow: $shadow2!important
     border-radius: 7.5px
+    font-weight: 400!important
     .icon_container
         display: flex
         flex-direction: column
@@ -1152,40 +1179,70 @@ li.product
         align-content: center
         align-items: center
         justify-content: center
-        @include responsivo(telefonoTable)
-            padding: 0 5px!important
-        @include responsivo(pcMedio)
-            padding: 0 5px!important
-        @include responsivo(general)
-            padding: 0 5px!important
-        @include responsivo(resto)
-            padding: 0 5px!important
+        padding: 0!important
+        border: 1px solid black!important
         .increase,
         .decrease
             position: unset!important
             margin: auto 0
-            height: 100%
             transform: unset!important
-            width: 30px
+            // width: 30px
+            margin: 0
+            padding: 0
             display: flex
-            align-content: center
-            align-items: center
-            justify-self: center
+            position: relative!important
+            left: 0!important
+            right: 0!important
             &::before
                 display: block
-                margin: auto
-        .input-text.qty.text
-            margin: 0!important
+                margin: auto!important
+                height: fit-content
+                width: fit-content
+                position: absolute
+                left: 0!important
+                right: 0!important
+                top: 0!important
+                bottom: 0!important
             @include responsivo(telefonoTable)
-                min-width: unset
-                width: 50px!important
+                height: 40px!important
+                width: 40px!important
             @include responsivo(pcMedio)
+                height: 40px!important
+                width: 40px!important
+            @include responsivo(general)
+                height: 35px!important
+                width: 35px!important
+            @include responsivo(resto)
+                height: 35px!important
+                width: 35px!important
+
+        .input-text.qty.text
+            padding-top: 5px
+            padding-bottom: 5px
+            margin: 0!important
+            box-sizing: border-box
+            border: 1px solid black
+            border-top: 0
+            border-bottom: 0
+            height: 35px
+
+            @include responsivo(telefonoTable)
+                height: 40px
+                min-width: unset
+                width: 60px!important
+            @include responsivo(pcMedio)
+                height: 40px
                 min-width: unset
                 width: 75px!important
             @include responsivo(general)
                 width: 50px!important
             @include responsivo(resto)
                 width: 50px!important
+        .decrease
+            color: black!important
+        .increase
+            background-color: $turcGreen_color
+            color: $whiteBase1!important
 
 .sticky-product-info-wapper.viewport
     z-index: 1000!important
@@ -1219,6 +1276,7 @@ div#mf-quick-view-modal
                 color: $whiteBase1
                 border-radius: 7.5px
                 box-shadow: $shadow2
+                font-weight: 400!important
 
 
             form.cart
