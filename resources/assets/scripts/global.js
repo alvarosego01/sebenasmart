@@ -179,11 +179,11 @@ function custom_add_to_cart_ajax(event = null, xhr = null, settings = null) {
 
             }
 
-            Toast.fire({
-                icon: 'success',
-                title: productName,
-                text: 'Has been added to cart'
-            });
+            // Toast.fire({
+            //     icon: 'success',
+            //     title: productName,
+            //     text: 'Has been added to cart'
+            // });
 
             jQuery('.xoo-wsc-basket').click();
 
@@ -198,10 +198,10 @@ function custom_add_to_cart_ajax(event = null, xhr = null, settings = null) {
             )
         ) {
 
-            Toast.fire({
-                icon: 'success',
-                title: 'The product has been removed from the shopping cart',
-            });
+            // Toast.fire({
+            //     icon: 'success',
+            //     title: 'The product has been removed from the shopping cart',
+            // });
 
             jQuery('.xoo-wsc-basket').click();
 
@@ -232,7 +232,6 @@ jQuery(document).ajaxSuccess(function (event, xhr, settings) {
 
     action_collapsibleButton();
     action_openCartButton();
-
 
     custom_add_to_cart_ajax(event, xhr, settings)
 

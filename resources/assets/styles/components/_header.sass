@@ -374,6 +374,10 @@ body.mobile-version
                         padding: 15px 5%!important
 
                     .header-logo
+                        @include responsivo(telefonoTable)
+                            padding-left: 10px
+                        @include responsivo(pcMedio)
+                            padding-left: 10px
                         .logo
                             a
                                 img
@@ -398,6 +402,10 @@ body.mobile-version
                             @include responsivo(pcMedio)
                                 margin-left: 0
                             li.extra-menu-item
+                                @include responsivo(telefonoTable)
+                                    padding: 0 10px!important
+                                @include responsivo(pcMedio)
+                                    padding: 0 10px!important
                                 a
                                     padding-top: 0
                                     color: $whiteBase1
