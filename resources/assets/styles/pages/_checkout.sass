@@ -9,8 +9,9 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
     div#content
         padding-top: 0
 
-
-
+    .row
+        .col-form-login
+            padding: 0!important
     .customCheckout01
         h3
             @include responsivo(telefonoTable)
@@ -66,6 +67,17 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
                         padding: 25px
 
                     .checkout-billing
+                        .woocommerce-account-fields
+                            @include responsivo(telefonoTable)
+                                margin-top: 10px
+                            @include responsivo(pcMedio)
+                                margin-top: 10px
+                            @include responsivo(general)
+                                margin-top: 15px
+                            @include responsivo(resto)
+                                margin-top: 15px
+                            p.form-row.form-row-wide.create-account
+                                padding: 0!important
                         .woocommerce-billing-fields
                             .woocommerce-billing-fields__field-wrapper
                                 display: flex
@@ -125,6 +137,16 @@ body#checkout_template.woocommerce-checkout.page.woocommerce-page
                                                 height: 45px
                                                 line-height: 1
                     .checkout-shipping
+                        .woocommerce-shipping-fields
+                            @include responsivo(telefonoTable)
+                                margin-top: 10px
+                            @include responsivo(pcMedio)
+                                margin-top: 10px
+                            @include responsivo(general)
+                                margin-top: 15px
+                            @include responsivo(resto)
+                                margin-top: 15px
+
                         .woocommerce-additional-fields
                             h3
                                 margin-bottom: 15px
