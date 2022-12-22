@@ -257,9 +257,9 @@ header#site-header
 
     .mini-cart-content
         @include responsivo(general)
-            min-width: 400px
+            min-width: 450px
         @include responsivo(resto)
-            min-width: 400px
+            min-width: 475px
         a.remove_from_cart_button
             color: $blackColor!important
         .widget_shopping_cart_content
@@ -268,7 +268,7 @@ header#site-header
                     flex-wrap: unset
                     a
                         margin-bottom: 0
-
+                        width: fit-content!important
                 p#ppc-button-minicart
                     display: none
 
@@ -280,20 +280,31 @@ header#site-header
 
 
         ul.woocommerce-mini-cart.cart_list
+            overflow: hidden
             li.woocommerce-mini-cart-item.mini_cart_item
-
+                padding-right: 0
                 .product-image
                     display: block
-                    width: fit-content
-                    flex-basis: unset
-                    flex-grow: unset
-                    img
+                    @include responsivo(general)
+                        height: 65px
+                        width: 65px!important
+                    @include responsivo(resto)
+                        height: 65px
+                        width: 65px!important
+                    a
                         @include responsivo(general)
                             height: 65px
                             width: 65px!important
                         @include responsivo(resto)
                             height: 65px
                             width: 65px!important
+                        img
+                            @include responsivo(general)
+                                height: 65px
+                                width: 65px!important
+                            @include responsivo(resto)
+                                height: 65px
+                                width: 65px!important
 
 
                 .product-content
@@ -307,6 +318,11 @@ header#site-header
                             color: $darkBlue_color!important
                             &:hover
                                 color: $primaryColor!important
+                a.remove_from_cart_button
+                    margin-left: auto
+                    display: block
+                    width: fit-content!important
+                    top: 5px
 
 
 
